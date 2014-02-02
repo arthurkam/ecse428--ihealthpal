@@ -11,10 +11,6 @@
 |
 */
 
-	Route::get('users', function()
-	{
-    	return 'Users!';
-	});
 
 	// route to show the login form
 	Route::get('login', array('uses' => 'HomeController@showLogin'));
@@ -24,3 +20,5 @@
 	
 	// route to logout the current user
 	Route::get('logout', array('uses' => 'HomeController@doLogout'));
+	
+	Route::controller('users', 'UsersController');
