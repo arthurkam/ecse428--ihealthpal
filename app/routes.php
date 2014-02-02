@@ -10,6 +10,9 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+	Route::get('users', function(){
+    	return 'Users!';
+	});
 
 	// route to show the login form
 	Route::get('login', array('uses' => 'HomeController@showLogin'));
