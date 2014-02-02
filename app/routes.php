@@ -21,4 +21,6 @@
 
 	// route to process the form
 	Route::post('login', array('uses' => 'HomeController@doLogin'));
-
+	
+	// route to logout the current user
+	Route::get('logout', array('uses' => 'HomeController@doLogout'));
