@@ -53,7 +53,7 @@ class HomeController extends BaseController {
 				// return Redirect::to('secure');
 				// for now we'll just echo success (even though echoing in a controller is bad)
 				echo 'SUCCESS!';
-
+				
 			} else {	 	
 
 				// validation not successful, send back to form	
@@ -62,5 +62,11 @@ class HomeController extends BaseController {
 			}
 
 		}
+	}
+	
+	public function doLogout()
+	{
+		Session::flush();	// clear the session
+		return Redirect::to('login'); // redirect the user to the login screen
 	}
 }
