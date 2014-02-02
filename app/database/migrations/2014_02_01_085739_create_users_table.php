@@ -23,6 +23,12 @@ class CreateUsersTable extends Migration {
 
 			$table->timestamps();
 		});
+		
+		Schema::table('users', function(Blueprint $table)
+		{
+		    $table->string('firstname', 32);
+		    $table->string('lastname', 32);
+		});
 	}
 
 	/**
