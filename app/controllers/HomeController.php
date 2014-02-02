@@ -1,5 +1,3 @@
-// app/controllers/HomeController.php
-
 <?php
 
 class HomeController extends BaseController {
@@ -17,7 +15,8 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showLogin(){
+	public function showLogin()
+	{
 		// show the form
 		return View::make('login');
 	}
@@ -63,4 +62,5 @@ class HomeController extends BaseController {
 			}
 
 		}
-	}}
+	}
+}
