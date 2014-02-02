@@ -1,7 +1,7 @@
 <?php
 
 class HomeController extends BaseController {
-
+	   protected $layout = "layouts.main";
 	/*
 	|--------------------------------------------------------------------------
 	| Default Home Controller
