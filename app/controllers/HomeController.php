@@ -14,7 +14,10 @@ class HomeController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
-
+	public function deploy()
+	{
+		return View::make('deploy');
+	}
 	public function showLogin()
 	{
 		// show the form

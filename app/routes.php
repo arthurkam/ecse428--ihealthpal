@@ -11,8 +11,8 @@
 |
 */
 
-
-	// route to show the login form
+ //    Route::get('', array('uses' => 'HomeController@index'));
+	// // route to show the login form
 	Route::get('login', array('uses' => 'HomeController@showLogin'));
 
 	// route to process the form
@@ -22,3 +22,6 @@
 	Route::get('logout', array('uses' => 'HomeController@doLogout'));
 	
 	Route::controller('users', 'UsersController');
+
+	// Route::post('deploy',array('uses' => 'HomeController@deploy'));
+	Route::get('deploy',array('uses' => 'HomeController@deploy'));
