@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
     <title>Authentication App With Laravel 4</title>
-    	{{ HTML::style('packages/bootstrap/css/bootstrap.min.css') }}
+    	{{ HTML::style('css/bootstrap.min.css') }}
+    	{{ HTML::style('css/jumbotron.css')}}
 		{{ HTML::style('css/main.css')}}
   </head>
  
