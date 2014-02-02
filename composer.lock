@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1629abbb640a9fe0280e95fc215de768",
+    "hash": "d623dd287f9c4a8c394f5f60a2b0df7a",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1510,6 +1510,48 @@
             "description": "Symfony Translation Component",
             "homepage": "http://symfony.com",
             "time": "2013-12-31 13:43:26"
+        },
+        {
+            "name": "twitter/bootstrap",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "1409cde7e800ca83fd761f87e5ad8f0d259e38d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/1409cde7e800ca83fd761f87e5ad8f0d259e38d1",
+                "reference": "1409cde7e800ca83fd761f87e5ad8f0d259e38d1",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2014-01-30 16:30:37"
         }
     ],
     "packages-dev": [
