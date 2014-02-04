@@ -8,6 +8,7 @@ if ($GLOBALS['_SERVER']['SCRIPT_NAME'] != '-') {
 }
 
 define('__PHPUNIT_PHAR__', str_replace(DIRECTORY_SEPARATOR, '/', $phar));
+define('__PHPUNIT_PHAR_ROOT__', 'phar://___PHAR___');
 
 spl_autoload_register(
   function ($class)
@@ -23,7 +24,7 @@ spl_autoload_register(
       $class = strtolower($class);
 
       if (isset($classes[$class])) {
-          require 'phar://___PHAR___' . $classes[$class];
+          require __PHPUNIT_PHAR_ROOT__ . $classes[$class];
       }
   }
 );
