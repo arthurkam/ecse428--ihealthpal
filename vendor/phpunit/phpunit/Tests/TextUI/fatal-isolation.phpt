@@ -8,7 +8,7 @@ $_SERVER['argv'][2] = '--process-isolation';
 $_SERVER['argv'][3] = 'FatalTest';
 $_SERVER['argv'][4] = dirname(dirname(__FILE__)) . '/_files/FatalTest.php';
 
-require_once dirname(dirname(dirname(__FILE__))) . '/PHPUnit/Autoload.php';
+require __DIR__ . '/../bootstrap.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
@@ -21,8 +21,7 @@ Time: %s, Memory: %sMb
 There was 1 error:
 
 1) FatalTest::testFatalError
-PHPUnit_Framework_Exception: %s error: Call to undefined function non_existing_function() in %s
-
+%s
 
 FAILURES!
 Tests: 1, Assertions: 0, Errors: 1.
