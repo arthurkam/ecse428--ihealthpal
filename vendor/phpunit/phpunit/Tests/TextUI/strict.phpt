@@ -9,15 +9,15 @@ $_SERVER['argv'][2] = '--strict';
 $_SERVER['argv'][3] = 'NothingTest';
 $_SERVER['argv'][4] = dirname(dirname(__FILE__)) . '/_files/NothingTest.php';
 
-require_once dirname(dirname(dirname(__FILE__))) . '/PHPUnit/Autoload.php';
+require __DIR__ . '/../bootstrap.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
 PHPUnit %s by Sebastian Bergmann.
 
-I
+R
 
 Time: %s, Memory: %sMb
 
-OK, but incomplete or skipped tests!
-Tests: 1, Assertions: 0, Incomplete: 1.
+OK, but incomplete, skipped, or risky tests!
+Tests: 1, Assertions: 0, Risky: 1.

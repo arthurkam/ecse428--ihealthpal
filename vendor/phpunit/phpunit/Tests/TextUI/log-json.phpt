@@ -2,9 +2,8 @@
 phpunit --log-json php://stdout BankAccountTest ../_files/BankAccountTest.php
 --SKIPIF--
 <?php
-if (!defined("JSON_PRETTY_PRINT")) {
-    echo "Skip: Test requires JSON_PRETTY_PRINT / PHP >= 5.4";
-}
+if (!defined('JSON_PRETTY_PRINT')) print 'skip: expected test data generated with JSON_PRETTY_PRINT';
+?>
 --FILE--
 <?php
 define('PHPUNIT_TESTSUITE', TRUE);
@@ -15,7 +14,7 @@ $_SERVER['argv'][3] = 'php://stdout';
 $_SERVER['argv'][4] = 'BankAccountTest';
 $_SERVER['argv'][5] = dirname(__FILE__).'/../_files/BankAccountTest.php';
 
-require_once dirname(dirname(dirname(__FILE__))) . '/PHPUnit/Autoload.php';
+require __DIR__ . '/../bootstrap.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
