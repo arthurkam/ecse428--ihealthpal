@@ -1758,7 +1758,6 @@ return array(
     'Symfony\\Component\\Yaml\\Parser' => $vendorDir . '/symfony/yaml/Symfony/Component/Yaml/Parser.php',
     'Symfony\\Component\\Yaml\\Unescaper' => $vendorDir . '/symfony/yaml/Symfony/Component/Yaml/Unescaper.php',
     'Symfony\\Component\\Yaml\\Yaml' => $vendorDir . '/symfony/yaml/Symfony/Component/Yaml/Yaml.php',
-    'TestCase' => $baseDir . '/app/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/Text/Template.php',
     'User' => $baseDir . '/app/models/User.php',
     'UserTableSeeder' => $baseDir . '/app/database/seeds/UserTableSeeder.php',
