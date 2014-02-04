@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "a113949e4829451dc7f72521da6040c4",
+    "hash": "ad7543de3c5f3c52be49ea6b7c44e755",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -164,7 +164,7 @@
             "authors": [
                 {
                     "name": "Anthony Ferrara",
-                    "email": "ircmaxell@php.net",
+                    "email": "ircmaxell@ircmaxell.com",
                     "homepage": "http://blog.ircmaxell.com"
                 }
             ],
@@ -999,12 +999,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "7bd04476b53d676189196ba4c526ccde4302a8de"
+                "reference": "684a4c9e5f3d0c5c3a53c4a6fbece8fa0a2cd6b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/7bd04476b53d676189196ba4c526ccde4302a8de",
-                "reference": "7bd04476b53d676189196ba4c526ccde4302a8de",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/684a4c9e5f3d0c5c3a53c4a6fbece8fa0a2cd6b8",
+                "reference": "684a4c9e5f3d0c5c3a53c4a6fbece8fa0a2cd6b8",
                 "shasum": ""
             },
             "require": {
@@ -1045,7 +1045,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "http://symfony.com",
-            "time": "2014-01-07 13:28:54"
+            "time": "2014-02-04 10:54:30"
         },
         {
             "name": "symfony/dom-crawler",
@@ -1107,12 +1107,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "a37a9430e2eafb6a66de240ac13f91b45b4c3d37"
+                "reference": "8f680ceb1eaec6f5f2404bea5c1c2af516a68494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/a37a9430e2eafb6a66de240ac13f91b45b4c3d37",
-                "reference": "a37a9430e2eafb6a66de240ac13f91b45b4c3d37",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/8f680ceb1eaec6f5f2404bea5c1c2af516a68494",
+                "reference": "8f680ceb1eaec6f5f2404bea5c1c2af516a68494",
                 "shasum": ""
             },
             "require": {
@@ -1154,7 +1154,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-01-07 13:29:57"
+            "time": "2014-02-04 11:21:37"
         },
         {
             "name": "symfony/filesystem",
@@ -1307,12 +1307,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "8da2b0f1908be2490ca553dd5acbc6787c127051"
+                "reference": "3934f25e23f0a507a7f7ca6611b1022794620ab3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/8da2b0f1908be2490ca553dd5acbc6787c127051",
-                "reference": "8da2b0f1908be2490ca553dd5acbc6787c127051",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/3934f25e23f0a507a7f7ca6611b1022794620ab3",
+                "reference": "3934f25e23f0a507a7f7ca6611b1022794620ab3",
                 "shasum": ""
             },
             "require": {
@@ -1369,7 +1369,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2014-02-03 17:15:33"
+            "time": "2014-02-04 10:54:30"
         },
         {
             "name": "symfony/process",
@@ -1378,12 +1378,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "597b921d82673c0b1442f7b3498fcc4a978ad26f"
+                "reference": "4ce5409a9264242ee793afe1d20681a3d28e8b50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/597b921d82673c0b1442f7b3498fcc4a978ad26f",
-                "reference": "597b921d82673c0b1442f7b3498fcc4a978ad26f",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/4ce5409a9264242ee793afe1d20681a3d28e8b50",
+                "reference": "4ce5409a9264242ee793afe1d20681a3d28e8b50",
                 "shasum": ""
             },
             "require": {
@@ -1416,7 +1416,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2014-01-21 09:48:43"
+            "time": "2014-02-03 17:15:33"
         },
         {
             "name": "symfony/routing",
