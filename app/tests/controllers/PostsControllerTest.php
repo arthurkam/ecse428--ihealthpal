@@ -6,7 +6,7 @@ class PostsControllerTest extends TestCase {
  
   public function testIndex()
   {
-      $this->client->request('GET', 'posts');
+      $this->call('GET', 'posts');
   }
  
 }
