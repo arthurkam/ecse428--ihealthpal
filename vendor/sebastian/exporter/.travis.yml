@@ -4,9 +4,15 @@ before_script:
     - composer install --prefer-source
 
 php:
+  - 5.3.3
+  - 5.3
   - 5.4
   - 5.5
   - hhvm
+
+matrix:
+  allow_failures:
+    - php: hhvm
 
 notifications:
   email: false
