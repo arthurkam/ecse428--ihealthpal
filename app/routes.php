@@ -20,6 +20,7 @@
 	// route to process the form
 	Route::post('login', array('uses' => 'HomeController@doLogin'));
 	
+	// route to the home page, after login
 	Route::any('home', array('uses' => 'UsersController@getDashboard'));
 	
 	// route to logout the current user
