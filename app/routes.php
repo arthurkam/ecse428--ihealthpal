@@ -11,8 +11,10 @@
 |
 */
 
- //    Route::get('', array('uses' => 'HomeController@index'));
-	// // route to show the login form
+	//Route for the index page
+	Route::any('/', array( 'as' => 'home', 'uses' => 'HomeController@index' ));	
+	
+	// route to show the login form
 	Route::get('login', array('uses' => 'HomeController@showLogin'));
 
 	// route to process the form
