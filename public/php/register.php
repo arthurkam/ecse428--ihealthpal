@@ -22,7 +22,7 @@ $Password2=$_POST['password2'];
 
 echo "Hello World once more\n";
 
-/*
+
 // Required field names
 $required = array('Email1', 'Email2', 'Password1', 'Password2' );
 
@@ -34,6 +34,9 @@ foreach($required as $field) {
   }
 }
 
+echo "Hello World Checkpoint\n";
+
+/*
 if ($error) {
   echo "All fields are required.";
   echo "<BR>";
