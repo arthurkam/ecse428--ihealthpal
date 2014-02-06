@@ -1,6 +1,6 @@
 <?php
 
-echo "Hello World";
+echo "Hello World\n";
 
 
 $host="localhost"; // Host name 
@@ -15,14 +15,16 @@ mysql_select_db("$db_name")or die("cannot select DB");
 
 
 // Get values from form 
-$Email1=$_POST['email1'];
-$Email2=$_POST['email2'];
 $Password1=$_POST['password1'];
 $Password2=$_POST['password2'];
+$Email1=$_POST['email1'];
+$Email2=$_POST['email2'];
 
 //TEST
+echo "\n";
 echo $Emai11;
 echo $Emai12;
+echo "\n";
 echo $Password1;
 echo $Password2;
 
