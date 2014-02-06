@@ -1,5 +1,8 @@
 <?php
 
+echo "Hello World";
+
+/*
 $host="localhost"; // Host name 
 $username="root"; // Mysql username 
 $password="ecse428"; // Mysql password 
@@ -20,8 +23,6 @@ $Password2=$_POST['password2'];
 // Required field names
 $required = array('Email1', 'Email2', 'Password1', 'Password2' );
 
-echo "TEST1";
-
 // Loop over fields, make sure each one exists and is not empty
 $error = false;
 foreach($required as $field) {
@@ -29,8 +30,6 @@ foreach($required as $field) {
     $error = true;
   }
 }
-
-echo "TEST2";
 
 if ($error) {
   echo "All fields are required.";
@@ -58,5 +57,6 @@ else{
 
 // close connection 
 mysql_close();
+*/
 
 ?>
