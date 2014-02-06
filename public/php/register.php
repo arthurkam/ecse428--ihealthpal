@@ -15,7 +15,6 @@ $Email1=$_POST['email1'];
 $Email2=$_POST['email2'];
 $Password1=$_POST['password1'];
 $Password2=$_POST['password2'];
-$RegistrationDate= date("Y-m-d");
 
 
 // Required field names
