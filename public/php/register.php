@@ -20,9 +20,6 @@ $Email2=$_POST['email2'];
 $Password1=$_POST['password1'];
 $Password2=$_POST['password2'];
 
-echo "Hello World once more\n";
-
-
 // Required field names
 $required = array('Email1', 'Email2', 'Password1', 'Password2' );
 
@@ -34,7 +31,16 @@ foreach($required as $field) {
   }
 }
 
-echo "Hello World Checkpoint\n";
+if ($error) {
+  echo "All fields are required.";
+  echo "<BR>";
+  echo "<a href='signup.html'>Back to registration page</a>";
+} 
+else {
+  echo "All fields were filled. Thank you.";
+  echo "<BR>";
+  echo "<a href='signup.html'>Back to registration page</a>";
+}
 
 /*
 if ($error) {
