@@ -13,15 +13,16 @@ $tbl_name="users"; // Table name
 mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 
-echo "Hello World once more";
-/*
+
 // Get values from form 
 $Email1=$_POST['email1'];
 $Email2=$_POST['email2'];
 $Password1=$_POST['password1'];
 $Password2=$_POST['password2'];
 
+echo "Hello World once more\n";
 
+/*
 // Required field names
 $required = array('Email1', 'Email2', 'Password1', 'Password2' );
 
