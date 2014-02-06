@@ -31,6 +31,11 @@ foreach($required as $field) {
   }
 }
 
+echo $Emai11;
+echo $Emai12;
+echo $Password1;
+echo $Password2;
+
 if ($error) {
   echo "All fields are required.";
   echo "<BR>";
