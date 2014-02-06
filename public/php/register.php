@@ -2,7 +2,7 @@
 
 echo "Hello World";
 
-/*
+
 $host="localhost"; // Host name 
 $username="root"; // Mysql username 
 $password="ecse428"; // Mysql password 
@@ -13,6 +13,8 @@ $tbl_name="users"; // Table name
 mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 
+echo "Hello World once more";
+/*
 // Get values from form 
 $Email1=$_POST['email1'];
 $Email2=$_POST['email2'];
@@ -54,9 +56,9 @@ else{
     echo "<BR>";
     echo "<a href='signup.html'>Back to registration page</a>";
   }
-
+*/
 // close connection 
 mysql_close();
-*/
+
 
 ?>
