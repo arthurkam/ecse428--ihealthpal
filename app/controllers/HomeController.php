@@ -75,7 +75,7 @@ class HomeController extends BaseController {
 	
 	public function doLogout()
 	{
-		Session::flush();	// clear the session
+		Auth::logout();
 		// redirect the user to the login screen
 		return Redirect::to('/')->with('message', 'Your are now logged out!'); 	}
 }
