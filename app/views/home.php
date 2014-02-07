@@ -40,7 +40,8 @@
           <a class="navbar-brand" href="">Account Settings</a>
           <a class="navbar-brand" href="about.html">About</a>
           <a class="navbar-brand" href="contact.html">Contact</a>
-          <a class="navbar-brand" href="contact.html">Help</a>          
+          <a class="navbar-brand" href="contact.html">Help</a> 
+          <a class="navbar-brand" href="logout">Logout</a>         
         </div>
       </div>
     </div>
