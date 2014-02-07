@@ -1,11 +1,11 @@
 <!-- app/views/login.blade.php -->
 
-<!doctype html>
+<!doctype html>	
+
+<h2 class="form-signin-heading">
+	<title>Login</title>
 	
-<h2 class="form-signin-heading">	<title>Login</title>
-
 <body>
-
 	{{ Form::open(array('url' => 'login')) }}
 		<h1>Login</h1>
 
