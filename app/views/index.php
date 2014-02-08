@@ -49,7 +49,9 @@
             <div class="form-group">
               <input name="password" type="password" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="submit" class="btn btn-success">
+              <span class="glyphicon glyphicon-log-in"></span> &nbsp;Login
+            </button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
