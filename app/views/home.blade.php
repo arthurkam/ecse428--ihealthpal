@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>UserName</title>
+    <title>iHealthPal | {{{ $name }}}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,14 +40,22 @@
           <a class="navbar-brand" href="">Account Settings</a>
           <a class="navbar-brand" href="about.html">About</a>
           <a class="navbar-brand" href="contact.html">Contact</a>
-          <a class="navbar-brand" href="contact.html">Help</a> 
-          <a class="navbar-brand" href="logout">Logout</a>         
+          <a class="navbar-brand" href="contact.html">Help</a>         
         </div>
+        <div class="navbar-collapse collapse">
+          <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
+            <button type="submit" class="btn btn-danger">
+              Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
+            </button>
+          </form>
+        </div><!--/.navbar-collapse -->
       </div>
     </div>
     <div class="jumbotron">
-      <img src="img/logo.png" alt="logo" height="100">
-      <p>Welcome, user!</p>
+      <div class="container">
+        <img src="img/logo.png" alt="logo" height="100">
+        <p>Welcome, {{{ $name }}}!</p>
+      </div>
     </div>
     <div class="container">
       <div class="row">
@@ -79,7 +87,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

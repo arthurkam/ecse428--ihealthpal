@@ -1,8 +1,5 @@
 <?php
 
-echo "Hello World\n";
-
-
 $host="localhost"; // Host name 
 $username="root"; // Mysql username 
 $password="ecse428"; // Mysql password 
@@ -21,10 +18,8 @@ $Email1=$_POST['email1'];
 $Email2=$_POST['email2'];
 
 //TEST
-echo "\n";
 echo $Emai11;
 echo $Emai12;
-echo "\n";
 echo $Password1;
 echo $Password2;
 

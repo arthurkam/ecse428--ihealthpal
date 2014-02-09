@@ -37,7 +37,9 @@ class UsersController extends BaseController
 	
 	public function getDashboard()
 	{
-		    $this->layout->content = View::make('home');	
+		Session::regenerate();
+		    $this->layout->content = View::make('home', array('name' => Session::get('name')));	
 	}
 }
+
 

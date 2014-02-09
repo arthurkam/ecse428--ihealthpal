@@ -17,6 +17,10 @@ class HomeController extends BaseController {
 	
 	public function index()
 	{
+		Session::regenerate();
+		if(Session::has('loggedIn')){
+			return Redirect::to('home');
+		}
 		return View::make('index');
 	}
 	
@@ -58,6 +62,9 @@ class HomeController extends BaseController {
 			if (Auth::attempt($userdata)) {
 
 				// validation successful!
+				// now lets create session
+				Session::put('name',Auth::user()->firstname);
+				Session::put('loggedIn',true);
 				// redirect them to the secure section or whatever
 				// return Redirect::to('secure');
 				// for now we'll just echo success (even though echoing in a controller is bad)
@@ -75,6 +82,7 @@ class HomeController extends BaseController {
 	
 	public function doLogout()
 	{
+		Session::flush();
 		Auth::logout();
 		// redirect the user to the login screen
 		return Redirect::to('/')->with('message', 'Your are now logged out!'); 	}
