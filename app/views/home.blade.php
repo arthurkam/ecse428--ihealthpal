@@ -40,14 +40,22 @@
           <a class="navbar-brand" href="">Account Settings</a>
           <a class="navbar-brand" href="about.html">About</a>
           <a class="navbar-brand" href="contact.html">Contact</a>
-          <a class="navbar-brand" href="contact.html">Help</a> 
-          <a class="navbar-brand" href="logout">Logout</a>         
+          <a class="navbar-brand" href="contact.html">Help</a>         
         </div>
+        <div class="navbar-collapse collapse">
+          <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
+            <button type="submit" class="btn btn-danger">
+              Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
+            </button>
+          </form>
+        </div><!--/.navbar-collapse -->
       </div>
     </div>
     <div class="jumbotron">
-      <img src="img/logo.png" alt="logo" height="100">
-      <p>Welcome, {{{ $name }}}!</p>
+      <div class="container">
+        <img src="img/logo.png" alt="logo" height="100">
+        <p>Welcome, {{{ $name }}}!</p>
+      </div>
     </div>
     <div class="container">
       <div class="row">
