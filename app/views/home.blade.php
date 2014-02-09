@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>UserName</title>
+    <title>iHealthPal | {{{ $name }}}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
     </div>
     <div class="jumbotron">
       <img src="img/logo.png" alt="logo" height="100">
-      <p>Welcome, user!</p>
+      <p>Welcome, {{{ $name }}}!</p>
     </div>
     <div class="container">
       <div class="row">
