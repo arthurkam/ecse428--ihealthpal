@@ -77,7 +77,14 @@
         </div>
 
       </div>   
-
+      </div> 
+      <div class="row">
+        <div class="col-md-3">
+          <h3>BMI Calculator</h3>
+            <input type="image" name="BMI" value="BMI" src="img/BMI_icon.png" width="90" style="margin-bottom:15px"; />
+        </div>
+      </div> 
+      
       <footer>
         <p>&copy; iHealthPal 2014</p>
       </footer>
