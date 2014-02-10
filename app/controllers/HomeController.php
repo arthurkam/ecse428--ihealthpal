@@ -65,6 +65,8 @@ class HomeController extends BaseController {
 				// now lets create session
 				Session::put('name',Auth::user()->firstname);
 				Session::put('loggedIn',true);
+				Session::put('weight',Auth::user()->weight);
+				Session::put('height',Auth::user()->height);
 				// redirect them to the secure section or whatever
 				// return Redirect::to('secure');
 				// for now we'll just echo success (even though echoing in a controller is bad)
