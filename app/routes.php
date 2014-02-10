@@ -30,3 +30,6 @@
 
 	// Route::post('deploy',array('uses' => 'HomeController@deploy'));
 	Route::get('deploy',array('uses' => 'HomeController@deploy'));
+
+	Route::get('BMI', array('uses' => 'UsersController@BMICalculator'));
+	Route::post('BMI', array('uses' => 'UsersController@updateBMI'));

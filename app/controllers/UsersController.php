@@ -21,6 +21,8 @@ class UsersController extends BaseController
 		  $user->lastname = Input::get('lastname');
 		  $user->email = Input::get('email');
 		  $user->password = Hash::make(Input::get('password'));
+		  $user->height =0;
+		  $user->weight =0;
 		  $user->save();
  
 		  return Redirect::to('/')->with('message', 'Thanks for registering!');
@@ -31,7 +33,7 @@ class UsersController extends BaseController
 	 }
 	
 	public function __construct() {
-	   $this->beforeFilter('csrf', array('on'=>'post'));
+	   $this->beforeFilter('csrf', array('on'=>'post','only'=>array('postCreate')));
 	   $this->beforeFilter('auth', array('only'=>array('getDashboard')));
 	}
 	
@@ -39,6 +41,31 @@ class UsersController extends BaseController
 	{
 		Session::regenerate();
 		    $this->layout->content = View::make('home', array('name' => Session::get('name')));	
+	}
+
+	public function BMICalculator(){
+		Session::regenerate();
+		if(Session::has('loggedIn')){
+			$this->layout->content = View::make('BMI',array('height'=>Session::get("height"),'weight'=>Session::get('weight'),'name' => Session::get('name')));
+			return;
+			}
+		return Redirect::to('/')->with('message', 'Please log in first!');
+	}
+	public function updateBMI(){
+		Session::regenerate();
+
+		if(Session::has('loggedIn')){
+			$user = Auth::user();
+			$user->height = Input::get('height');
+			$user->weight = Input::get("weight");
+			$user->save();
+			Session::put('weight',Auth::user()->weight);
+			Session::put('height',Auth::user()->height);
+			return "200";
+
+		}
+		// return "error in process your request";
+		return "404";
 	}
 }
 
