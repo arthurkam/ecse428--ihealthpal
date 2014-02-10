@@ -65,7 +65,7 @@
        </div>
         <div class="col-md-3">
           <h3>Goals</h3>
-          <input type="image" name="goals" value="goals" src="img/goals_icon.png" width="70" style="margin-bottom:15px"; />
+          <a href="goals"><input type="image" name="goals" value="goals" src="img/goals_icon.png" width="70" style="margin-bottom:15px"; /></a>
        </div>
         <div class="col-md-3">
           <h3>Personal stats</h3>
