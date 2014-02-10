@@ -15,7 +15,7 @@ class HomeController extends BaseController {
 	|
 	*/
 	
-	public function index()
+	public function showIndex()
 	{
 		Session::regenerate();
 		if(Session::has('loggedIn')){
@@ -33,6 +33,11 @@ class HomeController extends BaseController {
 	{
 		// show the form
 		return View::make('login');
+	}
+	
+	public function showAbout()
+	{
+		return View::make('about');	
 	}
 	
 	public function doLogin()

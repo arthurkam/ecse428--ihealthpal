@@ -46,8 +46,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">iHealthPal</a>
-          <a class="navbar-brand" href="about.html">About</a>
+          <a class="navbar-brand" href="/">iHealthPal</a>
+          <a class="navbar-brand" href="about">About</a>
           <a class="navbar-brand" href="contact.html">Contact</a>
         </div>
         <div class="navbar-collapse collapse">
