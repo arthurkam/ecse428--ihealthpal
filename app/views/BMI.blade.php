@@ -115,6 +115,10 @@
             alert("Please make sure your height is a valid positive nonzero number!");
             return false;
           }
+          if(weight<=0){
+            alert("Please make sure your weight is a valid positive nonzero number!");
+            return false;
+          }
           height/=100;
           var BMIVal = weight/(height*height);
           $("#BMI").html(" "+BMIVal);
