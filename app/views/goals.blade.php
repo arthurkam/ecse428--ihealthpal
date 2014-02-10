@@ -61,10 +61,6 @@
           <h3>Goals</h3>
           <a href="goals"><input type="image" name="goals" value="goals" src="img/goals_icon.png" width="70" style="margin-bottom:15px"; /></a>
        </div>
-      
-      <footer>
-        <p>&copy; iHealthPal 2014</p>
-      </footer>
     </div> <!-- /container -->
 
 	<br>
