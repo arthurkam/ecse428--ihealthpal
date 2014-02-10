@@ -131,7 +131,7 @@
               type:"post",
               data:{
                 weight:weight,
-                height:height
+                height:height*100
               }
             })
           }
