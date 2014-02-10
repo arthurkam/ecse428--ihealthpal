@@ -17,6 +17,9 @@
 	// Route for the About page
 	Route::any('about', array('uses' => 'HomeController@showAbout'));
 	
+	// Route for the Contact page
+	Route::any('contact', array('uses' => 'HomeController@showContact'));
+	
 	// route to show the login form
 	Route::get('login', array('uses' => 'HomeController@showLogin'));
 
