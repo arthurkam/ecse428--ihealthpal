@@ -40,6 +40,10 @@ class HomeController extends BaseController {
 		return View::make('about');	
 	}
 	
+	public function showContact(){		
+		return View::make('contact');
+	}
+	
 	public function doLogin()
 	{
 		// validate the info, create rules for the inputs
