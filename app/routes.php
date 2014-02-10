@@ -20,17 +20,21 @@
 	// Route for the Contact page
 	Route::any('contact', array('uses' => 'HomeController@showContact'));
 	
-	// route to show the login form
+	// Route to show the login form
 	Route::get('login', array('uses' => 'HomeController@showLogin'));
 
-	// route to process the form
+	// Route to process the form
 	Route::post('login', array('uses' => 'HomeController@doLogin'));
 	
-	// route to the home page, after login
+	// Route to the home page, after login
 	Route::any('home', array('uses' => 'UsersController@getDashboard'));
 	
-	// route to logout the current user
+	// Route to logout the current user
 	Route::get('logout', array('uses' => 'HomeController@doLogout'));
+	
+	// Route to Goals page
+	Route::any('goals', array('uses' => 'UsersController@showGoals'));
+	
 	
 	Route::controller('users', 'UsersController');
 

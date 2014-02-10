@@ -43,15 +43,18 @@ class UsersController extends BaseController
 		    $this->layout->content = View::make('home', array('name' => Session::get('name')));	
 	}
 
-	public function BMICalculator(){
+	public function BMICalculator()
+	{
 		Session::regenerate();
 		if(Session::has('loggedIn')){
-			$this->layout->content = View::make('BMI',array('height'=>Session::get("height"),'weight'=>Session::get('weight'),'name' => Session::get('name')));
+			$this->layout->content = 	View::make('BMI',array('height'=>Session::get("height"),'weight'=>Session::get('weight'),'name' => Session::get('name')));
 			return;
 			}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
-	public function updateBMI(){
+	
+	public function updateBMI()
+	{
 		Session::regenerate();
 
 		if(Session::has('loggedIn')){
@@ -66,6 +69,18 @@ class UsersController extends BaseController
 		}
 		// return "error in process your request";
 		return "404";
+	}
+	
+	public function ShowGoals()
+	{
+		Session::regenerate();
+		
+		if(Auth::check())
+		{
+			$this->layout->content = View::make('goals');	
+			return;
+		}
+			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 }
 
