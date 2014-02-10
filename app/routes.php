@@ -11,8 +11,11 @@
 |
 */
 
-	//Route for the index page
-	Route::any('/', array( 'as' => 'home', 'uses' => 'HomeController@index' ));	
+	// Route for the index page
+	Route::any('/', array( 'as' => 'home', 'uses' => 'HomeController@showIndex' ));	
+	
+	// Route for the About page
+	Route::andy('about', array('uses' => 'HomeController@'));
 	
 	// route to show the login form
 	Route::get('login', array('uses' => 'HomeController@showLogin'));

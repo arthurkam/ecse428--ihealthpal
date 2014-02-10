@@ -28,6 +28,7 @@ class HomeController extends BaseController {
 	{
 		return View::make('deploy');
 	}
+	
 	public function showLogin()
 	{
 		// show the form
@@ -87,5 +88,6 @@ class HomeController extends BaseController {
 		Session::flush();
 		Auth::logout();
 		// redirect the user to the login screen
-		return Redirect::to('/')->with('message', 'Your are now logged out!'); 	}
+		return Redirect::to('/')->with('message', 'Your are now logged out!'); 	
+	}
 }
