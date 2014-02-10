@@ -15,7 +15,7 @@
 	Route::any('/', array( 'as' => 'home', 'uses' => 'HomeController@showIndex' ));	
 	
 	// Route for the About page
-	Route::andy('about', array('uses' => 'HomeController@'));
+	Route::any('about', array('uses' => 'HomeController@showAbout'));
 	
 	// route to show the login form
 	Route::get('login', array('uses' => 'HomeController@showLogin'));

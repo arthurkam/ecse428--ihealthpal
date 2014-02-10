@@ -38,7 +38,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="">Account Settings</a>
-          <a class="navbar-brand" href="about.html">About</a>
+          <a class="navbar-brand" href="about">About</a>
           <a class="navbar-brand" href="contact.html">Contact</a>
           <a class="navbar-brand" href="contact.html">Help</a>         
         </div>
