@@ -58,7 +58,7 @@
           <div class="col-md-8 col-md-offset-2">
             <h2>Your BMI is :<span id="BMI">
             @if ($height>0)
-            {{{$weight/($height*$height)}}}
+            {{{100*100*$weight/($height*$height)}}}
             @else
             0
             @endif
