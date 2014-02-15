@@ -67,12 +67,14 @@
               <!-- Tab panes -->
               <div class="tab-content">
                 <div class="tab-pane fade in active" id="overview">
+                  <br />
                   <p>First Name: </p>
                   <p>Last Name: </p>
                   <p>Email: </p>
                   <p>Member since </p>
                 </div>
                 <div class="tab-pane fade" id="edit">
+                  <br />
                   TO BE COMPLETED
                   This should be a form where placeholders correspond to data currently
                   stored in database.
@@ -81,12 +83,15 @@
                   </button>
                 </div>
                 <div class="tab-pane fade" id="share">
+                  <br />
                   TO BE COMPLETED
                   Add some of the following here:
                   Facebook / Twitter / LinkedIn / GooglePlus
                 </div>
                 <div class="tab-pane fade" id="delete">
+                  <br />
                   <p>**This action is irreversible. Your profile and any related data will be removed from our servers the moment you submit your request.</p>
+                  <br />
                   <button type="submit" class="btn btn-danger btn-lg">
                     <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete Account
                   </button>
@@ -96,9 +101,6 @@
         </div>
       </div>
 
-      <footer>
-        <p>&copy; iHealthPal 2014</p>
-      </footer>
     </div> <!-- /container -->
 
 
