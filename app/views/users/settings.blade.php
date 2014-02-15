@@ -55,7 +55,6 @@
       <h3>Account Settings</h3>
       <div class="container">
         <div class="row">
-            <div class="col-md-8">
               <!-- Nav tabs -->
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
@@ -97,7 +96,6 @@
                   </button>
                 </div>
               </div>
-            </div>
         </div>
       </div>
 
