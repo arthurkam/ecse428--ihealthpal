@@ -74,18 +74,19 @@
                 </div>
                 <div class="tab-pane fade" id="edit">
                   <br />
-                  TO BE COMPLETED
-                  This should be a form where placeholders correspond to data currently
-                  stored in database.
+                  <p>TO BE COMPLETED</p>
+                  <p>This should be a form where placeholders correspond to data currently
+                  stored in database.</p>
+                  <br />
                   <button type="submit" class="btn btn-primary">
                     <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Save Changes
                   </button>
                 </div>
                 <div class="tab-pane fade" id="share">
                   <br />
-                  TO BE COMPLETED
-                  Add some of the following here:
-                  Facebook / Twitter / LinkedIn / GooglePlus
+                  <p>TO BE COMPLETED</p>
+                  <p>Add some of the following here: <br />
+                  Facebook / Twitter / LinkedIn / GooglePlus</p>
                 </div>
                 <div class="tab-pane fade" id="delete">
                   <br />
