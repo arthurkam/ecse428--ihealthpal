@@ -71,13 +71,25 @@ class UsersController extends BaseController
 		return "404";
 	}
 	
-	public function ShowGoals()
+	public function showGoals()
 	{
 		Session::regenerate();
 		
 		if(Auth::check())
 		{
 			$this->layout->content = View::make('goals');	
+			return;
+		}
+			return Redirect::to('/')->with('message', 'Please log in first!');
+	}
+
+	public function showSettings()
+	{
+		Session::regenerate();
+		
+		if(Auth::check())
+		{
+			$this->layout->content = View::make('settings');	
 			return;
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
