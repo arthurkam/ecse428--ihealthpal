@@ -67,7 +67,7 @@
               <!-- Tab panes -->
               <div class="tab-content">
                 <div class="tab-pane fade in active" id="overview">
-                  <p>First Name: {{{ $name }}}</p>
+                  <p>First Name: </p>
                   <p>Last Name: </p>
                   <p>Email: </p>
                   <p>Member since </p>
