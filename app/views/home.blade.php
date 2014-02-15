@@ -83,6 +83,10 @@
           <h3>BMI Calculator</h3>
             <a href="BMI"><input type="image" name="BMI" value="BMI" src="img/BMI_icon.png" width="90" style="margin-bottom:15px"; /></a>
         </div>
+          <div class="col-md-3">
+            <h3>Settings</h3>
+            <a href="settings"><input type="image" name="settings" value="settings" src="img/settings_icon.png" width="90" style="margin-bottom:15px"; /></a>
+        </div>
       </div> 
       
       <footer>
