@@ -43,14 +43,10 @@
           <a class="navbar-brand" href="">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form" method="post">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+          <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
+            <button type="submit" class="btn btn-danger">
+              Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
+            </button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
