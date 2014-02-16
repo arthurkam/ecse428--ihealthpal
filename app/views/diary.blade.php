@@ -37,9 +37,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">iHealthPal</a>
-          <a class="navbar-brand" href="about.html">About</a>
-          <a class="navbar-brand" href="contact.html">Contact</a>
+          <a class="navbar-brand" href="home"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+          <a class="navbar-brand" href="about">About</a>
+          <a class="navbar-brand" href="contact">Contact</a>
+          <a class="navbar-brand" href="">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>
         </div>
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form" method="post">
