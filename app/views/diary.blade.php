@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>iHealthPal | Sign Up</title>
+    <title>iHealthPal | Diary </title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
