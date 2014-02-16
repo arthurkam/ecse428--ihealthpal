@@ -27,15 +27,16 @@
 	Route::post('users/login', array('uses' => 'HomeController@doLogin'));
 	
 	// Route to facebook login
-	Route::get('login/facebook', function(){
+	Route::get('login/fb', function(){
 		$facebook = new Facebook(Config::get('facebook'));	
 		$params = array(
-			'redirect_uri'=>url('/login/facebook/callback'),
+			'redirect_uri'=>url('/login/fb/callback'),
 			'scope'=>'email',
 		);
 		return Redirect::to($facebook->getLoginUrl($params));
 	});
 	
+<<<<<<< HEAD
 	// Route for facebook callback
 	Route::get('login/facebook/callback', function() {
 	    $code = Input::get('code');
@@ -75,6 +76,8 @@
 	    return Redirect::to('/')->with('message', 'Logged in with Facebook');
 });	
 
+=======
+>>>>>>> parent of 7549228... The firstname, lastname, email address are able to wrtie to the usrs table.
 	// Route to the home page, after login
 	Route::any('home', array('uses' => 'UsersController@getDashboard'));
 	
