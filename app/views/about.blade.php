@@ -8,13 +8,13 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>iHealthPal | Sign Up</title>
+    <title>iHealthPal</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/jumbotron.css" rel="stylesheet">
+    <link href="/css/jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -66,10 +66,16 @@
       </div>
     </div>
 
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <img src="/img/logo.png" alt="logo" height="200">
+	<p>Health and Fitness Tracking System.</p>
+
     <div class="container" id="body">
       <div class="row">
-        <h1>About Us</h1>
-         <div style="height: 400px;">
+        <h2>About Us</h2>
+         <div style="height: 500px;">
             <p><b>Current Scrum Master:</b> Bryan Gingras</p>
             <p><b>ECSE 428:</b> Software Engineering Practice </p>
             <p><b>Programmer:</b> Anita Szilagyi, Arthur Kam, Bruno Boivin, Bryan Gingras, ChanWoo Yang, Gavin Zhou</p>
