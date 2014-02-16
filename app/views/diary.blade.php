@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>iHealthPal | Sign Up</title>
+    <title>iHealthPal | Diary </title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -37,19 +37,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">iHealthPal</a>
-          <a class="navbar-brand" href="about.html">About</a>
-          <a class="navbar-brand" href="contact.html">Contact</a>
+          <a class="navbar-brand" href="home"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+          <a class="navbar-brand" href="about">About</a>
+          <a class="navbar-brand" href="contact">Contact</a>
+          <a class="navbar-brand" href="">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form" method="post">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+          <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
+            <button type="submit" class="btn btn-danger">
+              Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
+            </button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
