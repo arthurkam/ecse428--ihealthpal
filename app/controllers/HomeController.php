@@ -29,22 +29,22 @@ class HomeController extends BaseController {
 		return View::make('deploy');
 	}
 	
-	public function showLogin()
-	{
-		// show the form
-		return View::make('login');
-	}
-	
 	public function showAbout()
 	{
 		return View::make('about');	
 	}
 	
-	public function showContact(){		
+	public function showContact()
+	{		
 		return View::make('contact');
 	}
 	
-	public function doLogin()
+	public function showLogin()
+	{
+		// show the form
+		return View::make('users/login');
+	}
+		public function doLogin()
 	{
 		// validate the info, create rules for the inputs
 		$rules = array(
@@ -57,7 +57,7 @@ class HomeController extends BaseController {
 
 		// if the validator fails, redirect back to the form
 		if ($validator->fails()) {
-			return Redirect::to('login')
+			return Redirect::to('users/login')
 				->withErrors($validator) // send back all errors to the login form
 				->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
 		} else {
@@ -85,13 +85,13 @@ class HomeController extends BaseController {
 			} else {	 	
 
 				// validation not successful, send back to form	
-				return Redirect::to('login');
+				return Redirect::to('users/login');
 
 			}
 
 		}
 	}
-	
+		
 	public function doLogout()
 	{
 		Session::flush();

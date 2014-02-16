@@ -21,10 +21,10 @@
 	Route::any('contact', array('uses' => 'HomeController@showContact'));
 	
 	// Route to show the login form
-	Route::get('login', array('uses' => 'HomeController@showLogin'));
+	Route::get('users/login', array('uses' => 'HomeController@showLogin'));
 
 	// Route to process the form
-	Route::post('login', array('uses' => 'HomeController@doLogin'));
+	Route::post('users/login', array('uses' => 'HomeController@doLogin'));
 	
 	// Route to the home page, after login
 	Route::any('home', array('uses' => 'UsersController@getDashboard'));

@@ -11,10 +11,10 @@
     <title>iHealthPal</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/jumbotron.css" rel="stylesheet">
+    <link href="/css/jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -69,9 +69,9 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <img src="img/logo.png" alt="logo" height="200">
+        <img src="/img/logo.png" alt="logo" height="200">
 	<p>Health and Fitness Tracking System.</p>
-      {{ Form::open(array('url' => 'login')) }}
+      {{ Form::open(array('url' => 'users/login')) }}
 	<h2>Login</h2>
 
 	<!-- if there are login errors, show them here -->
@@ -106,7 +106,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
 
