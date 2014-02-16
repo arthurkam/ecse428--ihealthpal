@@ -51,7 +51,7 @@
           <a class="navbar-brand" href="/contact">Contact</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form action="users/login" class="navbar-form navbar-right" role="form" method="post">
+          <form action="/users/login" class="navbar-form navbar-right" role="form" method="post">
             <div class="form-group">
               <input name="email" type="text" placeholder="Email" class="form-control">
             </div>
