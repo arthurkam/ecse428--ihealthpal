@@ -74,6 +74,7 @@
 	 
 	    return Redirect::to('/')->with('message', 'Logged in with Facebook');
 });	
+
 	// Route to the home page, after login
 	Route::any('home', array('uses' => 'UsersController@getDashboard'));
 	

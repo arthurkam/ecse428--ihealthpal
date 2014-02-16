@@ -17,8 +17,9 @@ class HomeController extends BaseController {
 	
 	public function showIndex()
 	{
-		Session::regenerate();
-		if(Session::has('loggedIn')){
+		//Session::regenerate();
+		//if(Session::has('loggedIn')){
+		if (Auth::check()){
 			return Redirect::to('home');
 		}
 		return View::make('index');
