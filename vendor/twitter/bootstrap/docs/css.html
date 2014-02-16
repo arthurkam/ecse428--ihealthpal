@@ -33,12 +33,6 @@ lead: "Global CSS settings, fundamental HTML elements styled and enhanced with e
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 {% endhighlight %}
 
-  <h3 id="overview-responsive-images">Responsive images</h3>
-  <p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p>
-{% highlight html %}
-<img src="..." class="img-responsive" alt="Responsive image">
-{% endhighlight %}
-
   <h3 id="overview-type-links">Typography and links</h3>
   <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
   <ul>
@@ -81,11 +75,6 @@ lead: "Global CSS settings, fundamental HTML elements styled and enhanced with e
     <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
   </ul>
   <p>Look to the examples for applying these principles to your code.</p>
-
-  <div class="bs-callout bs-callout-info">
-    <h4>Grids and full-width layouts</h4>
-    <p>Folks looking to create fully fluid layouts (meaning your site stretches the entire width of the viewport) must wrap their grid content in a containing element with <code>padding: 0 15px;</code> to offset the <code>margin: 0 -15px;</code> used on <code>.row</code>s.</p>
-  </div>
 
   <h3 id="grid-media-queries">Media queries</h3>
   <p>We use the following media queries in our Less files to create the key breakpoints in our grid system.</p>
@@ -1988,6 +1977,10 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
   <h3>With optional icons</h3>
   <p>You can also add optional feedback icons with the addition of an extra class and the right icon.</p>
+  <div class="bs-callout bs-callout-warning">
+    <h4>Icons and input groups</h4>
+    <p>When using the feedback icons, be aware that manual positioning may be required for <a href="../components#input-groups">input groups</a> with an add-on on the right. Adjust the <code>right: 0;</code> to an appropriate pixel value depending on the width of your addon.</p>
+  </div>
   <div class="bs-example">
     <form role="form">
       <div class="form-group has-success has-feedback">
@@ -2337,6 +2330,13 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <div class="bs-docs-section">
   <h1 id="images" class="page-header">Images</h1>
 
+  <h2 id="images-responsive">Responsive images</h2>
+  <p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p>
+{% highlight html %}
+<img src="..." class="img-responsive" alt="Responsive image">
+{% endhighlight %}
+
+  <h2 id="images-shapes">Image shapes</h2>
   <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
   <div class="bs-callout bs-callout-danger">
     <h4>Cross-browser compatibility</h4>
@@ -2352,11 +2352,6 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <img src="..." alt="..." class="img-circle">
 <img src="..." alt="..." class="img-thumbnail">
 {% endhighlight %}
-
-  <div class="bs-callout bs-callout-info">
-    <h4>Responsive images</h4>
-    <p>Looking for how to make images more responsive? <a href="#overview-responsive-images">Check out the responsive images section</a> up top.</p>
-  </div>
 </div>
 
 
@@ -3249,7 +3244,7 @@ a {
   <p>Easily truncate text with an ellipsis with a single mixin. <strong>Requires element to be <code>block</code> or <code>inline-block</code> level.</strong></p>
 {% highlight scss %}
 // Mixin
-.text-truncate() {
+.text-overflow() {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3259,7 +3254,7 @@ a {
 .branch-name {
   display: inline-block;
   max-width: 200px;
-  .text-truncate();
+  .text-overflow();
 }
 {% endhighlight %}
 

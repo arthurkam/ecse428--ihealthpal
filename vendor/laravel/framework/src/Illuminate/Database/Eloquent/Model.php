@@ -752,7 +752,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 		// title of this relation since that is a great convention to apply.
 		if (is_null($relation))
 		{
-			$caller = $this->getBelongsToManyCaller();
+			$relation = $this->getBelongsToManyCaller();
 		}
 
 		// First, we'll need to determine the foreign key and "other key" for the
@@ -813,7 +813,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 
 		return new MorphToMany(
 			$query, $this, $name, $table, $foreignKey,
-			$otherKey, $caller['function'], $inverse
+			$otherKey, $caller, $inverse
 		);
 	}
 
@@ -848,12 +848,14 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	{
 		$self = __FUNCTION__;
 
-		return array_first(debug_backtrace(false), function($trace) use ($self)
+		$caller = array_first(debug_backtrace(false), function($key, $trace) use ($self)
 		{
 			$caller = $trace['function'];
 
 			return ( ! in_array($caller, Model::$manyMethods) && $caller != $self);
 		});
+
+		return ! is_null($caller) ? $caller['function'] : null;
 	}
 
 	/**
