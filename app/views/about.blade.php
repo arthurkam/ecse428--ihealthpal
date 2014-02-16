@@ -51,14 +51,16 @@
           <a class="navbar-brand" href="contact">Contact</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form" method="post">
+          <form action="users/login" class="navbar-form navbar-right" role="form" method="post">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+              <input name="email" type="text" placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input name="password" type="password" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="submit" class="btn btn-success">
+              <span class="glyphicon glyphicon-log-in"></span> &nbsp;Login
+            </button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
