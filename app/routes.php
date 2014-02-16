@@ -87,7 +87,7 @@
 	Route::any('settings', array('uses' => 'UsersController@showSettings'));
 	
 		// Route to the Diary page, after login
-	Route::any('diary', array('uses' => 'UsersController@showSettings'));
+	Route::any('diary', array('uses' => 'UsersController@showDiary'));
 	
 	Route::controller('users', 'UsersController');
 
