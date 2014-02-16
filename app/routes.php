@@ -26,6 +26,7 @@
 	// Route to process the form
 	Route::post('users/login', array('uses' => 'HomeController@doLogin'));
 	
+<<<<<<< HEAD
 	// Route to facebook login
 	Route::get('login/fb', function(){
 		$facebook = new Facebook(Config::get('facebook'));	
@@ -84,6 +85,8 @@
 >>>>>>> parent of 7549228... The firstname, lastname, email address are able to wrtie to the usrs table.
 =======
 >>>>>>> parent of 7549228... The firstname, lastname, email address are able to wrtie to the usrs table.
+=======
+>>>>>>> parent of 3d73fd4... An attempt of facebook in on localhost, the facebook does not accept ihealthpal's url.
 	// Route to the home page, after login
 	Route::any('home', array('uses' => 'UsersController@getDashboard'));
 	

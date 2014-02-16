@@ -45,8 +45,7 @@ class HomeController extends BaseController {
 		// show the form
 		return View::make('users/login');
 	}
-	
-	public function doLogin()
+		public function doLogin()
 	{
 		// validate the info, create rules for the inputs
 		$rules = array(
