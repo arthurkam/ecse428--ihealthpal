@@ -61,8 +61,4 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		'weight'=>'num'
    );
 
-   public function profiles()
-	{	
-		return $this->hasMany('Profile');
-	}
 }
