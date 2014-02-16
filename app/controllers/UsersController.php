@@ -94,6 +94,18 @@ class UsersController extends BaseController
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
+	
+	public function showDiary()
+	{
+		Session::regenerate();
+		
+		if(Auth::check())
+		{
+			$this->layout->content = View::make('diary');	
+			return;
+		}
+			return Redirect::to('/')->with('message', 'Please log in first!');
+	}
 }
 
 

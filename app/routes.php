@@ -86,6 +86,9 @@
 	// Route to the account settings, after login
 	Route::any('settings', array('uses' => 'UsersController@showSettings'));
 	
+		// Route to the Diary page, after login
+	Route::any('diary', array('uses' => 'UsersController@showSettings'));
+	
 	Route::controller('users', 'UsersController');
 
 	// Route::post('deploy',array('uses' => 'HomeController@deploy'));
