@@ -51,8 +51,17 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+    <div class="jumbotron">
+      <div class="container">
+        <img src="img/logo.png" alt="logo" height="100">
+      </div>
+    </div>
+	<div class="container">
+      	<div class="row">
 
-  
+		  		
+		          
+		</div>
 
       <footer>
         <p>&copy; iHealthPal 2014</p>
