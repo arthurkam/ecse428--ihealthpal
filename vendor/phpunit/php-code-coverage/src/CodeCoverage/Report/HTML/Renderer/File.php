@@ -57,33 +57,23 @@
 class PHP_CodeCoverage_Report_HTML_Renderer_File extends PHP_CodeCoverage_Report_HTML_Renderer
 {
     /**
-     * @var boolean
-     */
-    protected $highlight;
-
-    /**
      * Constructor.
      *
      * @param string  $templatePath
-     * @param string  $charset
      * @param string  $generator
      * @param string  $date
      * @param integer $lowUpperBound
      * @param integer $highLowerBound
-     * @param boolean $highlight
      */
-    public function __construct($templatePath, $charset, $generator, $date, $lowUpperBound, $highLowerBound, $highlight)
+    public function __construct($templatePath, $generator, $date, $lowUpperBound, $highLowerBound)
     {
         parent::__construct(
             $templatePath,
-            $charset,
             $generator,
             $date,
             $lowUpperBound,
             $highLowerBound
         );
-
-        $this->highlight = $highlight;
     }
 
     /**
@@ -396,7 +386,7 @@ class PHP_CodeCoverage_Report_HTML_Renderer_File extends PHP_CodeCoverage_Report
                 $i,
                 $i,
                 $i,
-                !$this->highlight ? htmlspecialchars($line) : $line
+                $line
             );
 
             $i++;
@@ -411,26 +401,10 @@ class PHP_CodeCoverage_Report_HTML_Renderer_File extends PHP_CodeCoverage_Report
      */
     protected function loadFile($file)
     {
-        $buffer = file_get_contents($file);
-        $lines  = explode("\n", str_replace("\t", '    ', $buffer));
-        $result = array();
-
-        if (count($lines) == 0) {
-            return $result;
-        }
-
-        $lines = array_map('rtrim', $lines);
-
-        if (!$this->highlight) {
-            unset($lines[count($lines)-1]);
-
-            return $lines;
-        }
-
-        $tokens     = token_get_all($buffer);
-        $stringFlag = false;
+        $tokens     = token_get_all(file_get_contents($file));
+        $result     = array('');
         $i          = 0;
-        $result[$i] = '';
+        $stringFlag = false;
 
         foreach ($tokens as $j => $token) {
             if (is_string($token)) {
