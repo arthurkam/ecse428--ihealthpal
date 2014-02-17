@@ -26,76 +26,12 @@
 	// Route to process the form
 	Route::post('users/login', array('uses' => 'HomeController@doLogin'));
 	
-<<<<<<< HEAD
 	// Route to facebook login
-<<<<<<< HEAD
-	Route::get('login/fb', function(){
-		$facebook = new Facebook(Config::get('facebook'));	
-		$params = array(
-			'redirect_uri'=>url('/login/fb/callback'),
-			'scope'=>'email',
-		);
-		return Redirect::to($facebook->getLoginUrl($params));
-	});
-=======
 	Route::get('login/facebook', array('uses' => 'HomeController@loginFacebook'));
->>>>>>> 4cceab14106b7bfae83df2f90a80d91dfe468a10
-	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	// Route for facebook callback
-<<<<<<< HEAD
-	Route::get('login/facebook/callback', function() {
-	    $code = Input::get('code');
-	    if (strlen($code) == 0) return Redirect::to('/')->with('message', 'There was an error communicating with Facebook');
-	 
-	    $facebook = new Facebook(Config::get('facebook'));
-	    $uid = $facebook->getUser();
-	 
-	    if ($uid == 0) return Redirect::to('/')->with('message', 'There was an error');
-	 
-	    $me = $facebook->api('/me');
-	 
-	    $profile = Profile::whereUid($uid)->first();
-	    if (empty($profile)) {
-	 
-	        $user = new User;
-	        $user->firstname = $me['first_name'];
-	        $user->lastname = $me['last_name'];
-	        $user->email = $me['email'];
-	        //$user->photo = 'https://graph.facebook.com/'.$me['username'].'/picture?type=large';
-	 
-	        $user->save();
-	 
-	        $profile = new Profile();
-	        $profile->uid = $uid;
-	        $profile->username = $me['username'];
-	        $profile = $user->profiles()->save($profile);
-	    }
-	 
-	    $profile->access_token = $facebook->getAccessToken();
-	    $profile->save();
-	 
-	    $user = $profile->user;
-	 
-	    Auth::login($user);
-	 
-	    return Redirect::to('/')->with('message', 'Logged in with Facebook');
-});	
 
-=======
->>>>>>> parent of 7549228... The firstname, lastname, email address are able to wrtie to the usrs table.
-=======
->>>>>>> parent of 7549228... The firstname, lastname, email address are able to wrtie to the usrs table.
-=======
->>>>>>> parent of 7549228... The firstname, lastname, email address are able to wrtie to the usrs table.
-=======
->>>>>>> parent of 3d73fd4... An attempt of facebook in on localhost, the facebook does not accept ihealthpal's url.
-=======
+	// Route for facebook callback
 	Route::get('login/facebook/callback', array('uses' => 'HomeController@callbackFacebook'));
-		
->>>>>>> 4cceab14106b7bfae83df2f90a80d91dfe468a10
+
 	// Route to the home page, after login
 	Route::any('home', array('uses' => 'UsersController@getDashboard'));
 	
