@@ -28,6 +28,7 @@
 	
 <<<<<<< HEAD
 	// Route to facebook login
+<<<<<<< HEAD
 	Route::get('login/fb', function(){
 		$facebook = new Facebook(Config::get('facebook'));	
 		$params = array(
@@ -36,11 +37,15 @@
 		);
 		return Redirect::to($facebook->getLoginUrl($params));
 	});
+=======
+	Route::get('login/facebook', array('uses' => 'HomeController@loginFacebook'));
+>>>>>>> 4cceab14106b7bfae83df2f90a80d91dfe468a10
 	
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	// Route for facebook callback
+<<<<<<< HEAD
 	Route::get('login/facebook/callback', function() {
 	    $code = Input::get('code');
 	    if (strlen($code) == 0) return Redirect::to('/')->with('message', 'There was an error communicating with Facebook');
@@ -87,6 +92,10 @@
 >>>>>>> parent of 7549228... The firstname, lastname, email address are able to wrtie to the usrs table.
 =======
 >>>>>>> parent of 3d73fd4... An attempt of facebook in on localhost, the facebook does not accept ihealthpal's url.
+=======
+	Route::get('login/facebook/callback', array('uses' => 'HomeController@callbackFacebook'));
+		
+>>>>>>> 4cceab14106b7bfae83df2f90a80d91dfe468a10
 	// Route to the home page, after login
 	Route::any('home', array('uses' => 'UsersController@getDashboard'));
 	
