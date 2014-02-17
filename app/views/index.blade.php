@@ -49,7 +49,6 @@
           <a class="navbar-brand" href="/">iHealthPal</a>
           <a class="navbar-brand" href="about">About</a>
           <a class="navbar-brand" href="contact">Contact</a>
-          <a class="navbar-brand" href="login/facebook">Login with Facebook</a>
         </div>
         <div class="navbar-collapse collapse">
           <form action="users/login" class="navbar-form navbar-right" role="form" method="post">

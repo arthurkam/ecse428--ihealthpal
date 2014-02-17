@@ -17,9 +17,8 @@ class HomeController extends BaseController {
 	
 	public function showIndex()
 	{
-		//Session::regenerate();
-		//if(Session::has('loggedIn')){
-		if (Auth::check()){
+		Session::regenerate();
+		if(Session::has('loggedIn')){
 			return Redirect::to('home');
 		}
 		return View::make('index');
@@ -94,6 +93,55 @@ class HomeController extends BaseController {
 		}
 	}
 		
+	public function loginFacebook()
+	{
+		$facebook = new Facebook(Config::get('facebook'));	
+		$params = array(
+			'redirect_uri'=>url('/login/facebook/callback'),
+			'scope'=>'email',
+		);
+		return Redirect::to($facebook->getLoginUrl($params));
+	}
+	
+	public function callbackFacebook(){
+	    $code = Input::get('code');
+	    if (strlen($code) == 0) 
+	    	return Redirect::to('/')->with('message', 'There was an error communicating with Facebook');
+	 
+	    $facebook = new Facebook(Config::get('facebook'));
+	    $uid = $facebook->getUser();
+	 
+	    if ($uid == 0) 
+	    	return Redirect::to('/')->with('message', 'There was an error');
+	 
+	    $me = $facebook->api('/me');
+	 
+	    $profile = Profile::whereUid($uid)->first();
+	    if (empty($profile)) {
+	 
+	        $user = new User;
+	        $user->firstname = $me['first_name'];
+	        $user->lastname = $me['last_name'];
+	        $user->email = $me['email'];
+	        //$user->photo = 'https://graph.facebook.com/'.$me['username'].'/picture?type=large';
+	 
+	        $user->save();
+	 
+	        $profile = new Profile();
+	        $profile->uid = $uid;
+	        $profile->username = $me['username'];
+	        $profile = $user->profiles()->save($profile);
+	    }
+	 
+	    $profile->access_token = $facebook->getAccessToken();
+	    $profile->save();
+	 
+	    $user = $profile->user;
+	 
+	    Auth::login($user);
+	 
+	    return Redirect::to('/')->with('message', 'Logged in with Facebook');
+}
 	public function doLogout()
 	{
 		Session::flush();
