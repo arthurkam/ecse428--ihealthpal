@@ -17,8 +17,9 @@ class HomeController extends BaseController {
 	
 	public function showIndex()
 	{
-		Session::regenerate();
-		if(Session::has('loggedIn')){
+
+		if(Auth::check()){
+		
 			return Redirect::to('home');
 		}
 		return View::make('index');
@@ -70,7 +71,7 @@ class HomeController extends BaseController {
 			);
 
 			// attempt to do the login
-			if (Auth::attempt($userdata)) {
+			if (Auth::attempt($userdata) || Auth::check()) {
 
 				// validation successful!
 				// now lets create session
@@ -81,7 +82,7 @@ class HomeController extends BaseController {
 				// redirect them to the secure section or whatever
 				// return Redirect::to('secure');
 				// for now we'll just echo success (even though echoing in a controller is bad)
-				return Redirect::to('home');
+				return Redirect::to('home')->with('Success', 'You are already logged in!');
 				
 			} else {	 	
 
