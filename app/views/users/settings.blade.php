@@ -67,10 +67,10 @@
               <div class="tab-content">
                 <div class="tab-pane fade in active" id="overview">
                   <br />
-                  <p>First Name: </p>
-                  <p>Last Name: </p>
-                  <p>Email: </p>
-                  <p>Member since </p>
+                  <p>First Name: {{$firstname = Auth::user()->firstname}}</p>
+                  <p>Last Name: {{$lastname = Auth::user()->lastname}}</p>
+                  <p>Email: {{$email = Auth::user()->email}}</p>
+                  <p>Member since {{{$timestamp = Auth::user()->created_at}}}</p>
                 </div>
                 <div class="tab-pane fade" id="edit">
                   <br />
