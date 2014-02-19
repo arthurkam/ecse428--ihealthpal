@@ -27,14 +27,7 @@
 	Route::post('users/login', array('uses' => 'HomeController@doLogin'));
 	
 	// Route to facebook login
-	Route::get('login/facebook', function(){
-		$facebook = new Facebook(Config::get('facebook'));	
-		$params = array(
-			'redirect_uri'=>url('/login/facebook/callback'),
-			'scope'=>'email',
-		);
-		return Redirect::to($facebook->getLoginUrl($params));
-	});
+	Route::get('login/facebook', array('uses' => 'HomeController@loginFacebook'));
 	
 	// Route for facebook callback
 	Route::get('login/facebook/callback', function() {
