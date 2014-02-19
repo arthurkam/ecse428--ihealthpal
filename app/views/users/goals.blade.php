@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>iHealthPal | Goals</title>
+    <title>iHealthPal | Goals </title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
   </head>
 
   <body>
-
+  
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -37,20 +37,55 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">iHealthPal</a>
+          <a class="navbar-brand" href="">Account Settings</a>
           <a class="navbar-brand" href="about">About</a>
           <a class="navbar-brand" href="contact">Contact</a>
+          <a class="navbar-brand" href="contact">Help</a>         
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form" method="post">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+          <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
+            <button type="submit" class="btn btn-danger">
+              Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
+            </button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+    <div class="jumbotron">
+      <div class="container">
+        <img src="img/logo.png" alt="logo" height="100">
+      </div>
+    </div>
+    <div class="container">
+        <div class="col-md-3">
+          <h3>Goals</h3>
+          <a href="goals"><input type="image" name="goals" value="goals" src="img/goals_icon.png" width="70" style="margin-bottom:15px"; /></a>
+       </div>
+    </div> <!-- /container -->
+
+	<br>
+	{{ Form::open(array('url' => 'goals')) }}
+    	{{Form::label('Goals', 'Choose your goals: ')}}   
+    	{{Form::select('target', array('L' => 'Lose weight', 'G' => 'Gain weight'));}}
+    	{{Form::text('weight', '10');}}
+    	{{Form::label('unit', 'kg');}}
+    	{{Form::label('over', 'over');}}
+    	{{Form::text('time interval', '12');}}
+    	{{Form::select('time', array('D' => 'Day', 'M' => 'Month', 'Y' => 'Year'));}}
+    	</br>
+    	{{Form::submit('Set the Goal!');}} 	
+	{{ Form::close() }}
+	</br>
+      <footer>
+        <p>&copy; iHealthPal 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

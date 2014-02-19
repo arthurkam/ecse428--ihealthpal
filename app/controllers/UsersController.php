@@ -77,7 +77,7 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			$this->layout->content = View::make('goals');	
+			$this->layout->content = View::make('users.goals');	
 			return;
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
