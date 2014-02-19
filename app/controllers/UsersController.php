@@ -89,7 +89,7 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			$this->layout->content = View::make('settings');	
+			$this->layout->content = View::make('users.settings');	
 			return;
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
