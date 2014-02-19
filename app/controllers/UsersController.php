@@ -2,11 +2,11 @@
  
 class UsersController extends BaseController 
 {
-
+	//protected $layout = "layouts.main";
  	
  	public function getRegister() 
  	{
-    	$this->layout->content = View::make('users.register');
+    	return View::make('users.register');
 	}
 	
 	public function postCreate(){
@@ -40,7 +40,7 @@ class UsersController extends BaseController
 	public function getDashboard()
 	{
 		Session::regenerate();
-		    $this->layout->content = View::make('home', array('name' => Session::get('name')));	
+		    return View::make('home', array('name' => Session::get('name')));	
 	}
 
 	public function BMICalculator()
@@ -77,8 +77,8 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			$this->layout->content = View::make('users.goals');	
-			return;
+			return View::make('users.goals');	
+			
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
@@ -89,8 +89,7 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			$this->layout->content = View::make('users.settings');	
-			return;
+			return View::make('users.settings');	
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
