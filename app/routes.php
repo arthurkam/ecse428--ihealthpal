@@ -26,6 +26,9 @@
 	// Route to process the form
 	Route::post('users/login', array('uses' => 'HomeController@doLogin'));
 	
+	// Route of reminding password
+	Route::controller('password', 'RemindersController');
+	
 	// Route to facebook login
 	Route::get('login/facebook', array('uses' => 'HomeController@loginFacebook'));
 	
@@ -43,7 +46,7 @@
 	// Route to the account settings, after login
 	Route::any('settings', array('uses' => 'UsersController@showSettings'));
 	
-		// Route to the Diary page, after login
+	// Route to the Diary page, after login
 	Route::any('diary', array('uses' => 'UsersController@showDiary'));
 	
 	Route::controller('users', 'UsersController');
