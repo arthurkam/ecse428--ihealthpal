@@ -1,7 +1,10 @@
 <?php
 
-class RemindersController extends Controller {
+class RemindersController extends BaseController {
 
+	protected $layout = "layouts.main";
+
+	
 	/**
 	 * Display the password reminder view.
 	 *
@@ -9,7 +12,7 @@ class RemindersController extends Controller {
 	 */
 	public function getRemind()
 	{
-		return View::make('password.remind');
+		$this->layout->content = View::make('password.remind');
 	}
 
 	/**
