@@ -92,7 +92,16 @@ class HomeController extends BaseController {
 
 		}
 	}
-		
+	
+	public function loginFacebook()
+	{
+		$facebook = new Facebook(Config::get('facebook'));	
+		$params = array(
+			'redirect_uri'=>url('/login/facebook/callback'),
+			'scope'=>'email',
+		);
+		return Redirect::to($facebook->getLoginUrl($params));
+	}
 	public function doLogout()
 	{
 		Session::flush();
