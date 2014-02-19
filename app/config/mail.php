@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'ihealthpal.service@gmail.com',
+	'username' => 'ihealthpal.service',
 
 	/*
 	|--------------------------------------------------------------------------
