@@ -49,6 +49,9 @@
 	// Route to the Diary page, after login
 	Route::any('diary', array('uses' => 'UsersController@showDiary'));
 	
+	// Route to the Deleting account.
+	Route::any('delete',array('uses' => 'UsersController@deleteAccount'));
+	
 	Route::controller('users', 'UsersController');
 
 	// Route::post('deploy',array('uses' => 'HomeController@deploy'));
