@@ -94,9 +94,9 @@
                   <br />
                   <p>**This action is irreversible. Your profile and any related data will be removed from our servers the moment you submit your request.</p>
                   <br />
-                  <button type="submit" class="btn btn-danger btn-lg">
+                  <a href="/delete"><button type="submit" class="btn btn-danger btn-lg">
                     <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete Account
-                  </button>
+                  </button></a>
                 </div>
               </div>
         </div>

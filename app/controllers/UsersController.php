@@ -103,9 +103,16 @@ class UsersController extends BaseController
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 	
-	public function deleteAccoutn()
+	public function deleteAccount()
 	{
-		
+		if(Auth::check())
+		{
+			$id = Auth::user()->id;
+			$user = User::find($id);
+			$user->delete();
+			Auth::logout();
+			return Redirect::to('/');
+		}
 	}
 }
 
