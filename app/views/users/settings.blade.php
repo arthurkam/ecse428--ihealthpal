@@ -71,6 +71,8 @@
                   <p>Last Name: {{$lastname = Auth::user()->lastname}}</p>
                   <p>Email: {{$email = Auth::user()->email}}</p>
                   <p>Member since {{{$timestamp = Auth::user()->created_at}}}</p>
+                  <p>Weight: {{{Auth::user()->weight}}}, Height: {{{Auth::user()->height}}}</p>
+                  <p>ID: {{{$ID = Auth::user()->id}}}</p>
                 </div>
                 <div class="tab-pane fade" id="edit">
                   <br />
