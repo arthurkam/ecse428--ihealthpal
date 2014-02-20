@@ -79,6 +79,9 @@
                   <p>TO BE COMPLETED</p>
                   <p>This should be a form where placeholders correspond to data currently
                   stored in database.</p>
+                  <p>{{ Form::open(array('url' => 'foo/bar')) }}
+ 
+					 {{ Form::close() }}</p>
                   <br />
                   <button type="submit" class="btn btn-primary">
                     <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Save Changes
