@@ -71,7 +71,7 @@
                   <p>Last Name: {{$lastname = Auth::user()->lastname}}</p>
                   <p>Email: {{$email = Auth::user()->email}}</p>
                   <p>Member since {{{$timestamp = Auth::user()->created_at}}}</p>
-                  <p>Weight: {{{Auth::user()->weight}}}, Height: {{{Auth::user()->height}}}</p>
+                  <p>Weight: {{{$weight = Auth::user()->weight}}} kg, Height: {{{$height = Auth::user()->height}}} cm</p>
                   <p>ID: {{{$ID = Auth::user()->id}}}</p>
                 </div>
                 <div class="tab-pane fade" id="edit">
@@ -79,8 +79,22 @@
                   <p>TO BE COMPLETED</p>
                   <p>This should be a form where placeholders correspond to data currently
                   stored in database.</p>
-                  <p>{{ Form::open(array('url' => 'foo/bar')) }}
- 
+                  <p>{{ Form::open(array('url' => '/setting')) }}
+					 	   	{{Form::label('firstname', 'First Name : ')}}
+					 	   	{{Form::text('firstname', $firstname)}}
+					 	   	</br>
+					 	   	{{Form::label('lastname', 'Last Name : ')}}
+					 	   	{{Form::text('lastname', $lastname)}}
+					 	   	</br>
+					 	   	{{Form::label('email', 'Email : ')}}
+					 	   	{{Form::text('email', $email)}}
+					 	   	</br>
+					 	   	{{Form::label('weight', 'Weight : ')}}
+					 	   	{{Form::text('weight', $weight)}}
+					 	   	</br>
+					 	   	
+					 	   	{{Form::label('height', 'Height : ')}}
+					 	   	{{Form::text('height', $height)}}
 					 {{ Form::close() }}</p>
                   <br />
                   <button type="submit" class="btn btn-primary">
