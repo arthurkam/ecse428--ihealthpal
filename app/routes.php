@@ -46,6 +46,9 @@
 	// Route to the account settings, after login
 	Route::any('settings', array('uses' => 'UsersController@showSettings'));
 	
+	// Route to update the info
+	Route::any('users/update', array('uses' => 'UsersController@postUpdate'));
+	
 	// Route to the Diary page, after login
 	Route::any('diary', array('uses' => 'UsersController@showDiary'));
 	
