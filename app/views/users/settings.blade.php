@@ -79,7 +79,7 @@
                   <p>TO BE COMPLETED</p>
                   <p>This should be a form where placeholders correspond to data currently
                   stored in database.</p>
-                  <p>{{ Form::open(array('url' => '/setting')) }}
+                  <p>{{ Form::open(array('url' => '/users/update')) }}
 					 	   	{{Form::label('firstname', 'First Name : ')}}
 					 	   	{{Form::text('firstname', $firstname)}}
 					 	   	</br>
@@ -95,11 +95,14 @@
 					 	   	
 					 	   	{{Form::label('height', 'Height : ')}}
 					 	   	{{Form::text('height', $height)}}
+					 	   	</br>
+					 	   	{{Form::submit('Save Changes', array('class'=>'btn btn-primary'))}}
+					 	   	
 					 {{ Form::close() }}</p>
-                  <br />
-                  <button type="submit" class="btn btn-primary">
+                  <br/>
+                  <!--button type="submit" class="btn btn-primary">
                     <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Save Changes
-                  </button>
+                  </button-->
                 </div>
                 <div class="tab-pane fade" id="share">
                   <br />
