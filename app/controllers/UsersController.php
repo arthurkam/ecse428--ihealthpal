@@ -9,7 +9,6 @@ class UsersController extends BaseController
 	}
 	
 	public function postCreate(){
-		//$this->layout->content = View::make('users.create');
 
 		 $validator = Validator::make(Input::all(), User::$rules);
  
@@ -113,6 +112,14 @@ class UsersController extends BaseController
 			Auth::logout();
 			return Redirect::to('/');
 		}
+	}
+	
+	public function postUpdate()
+	{
+		if(Auth::check())
+		{
+			return Redirect::to('/settings');
+		}	
 	}
 }
 
