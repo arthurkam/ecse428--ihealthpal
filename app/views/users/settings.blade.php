@@ -80,24 +80,28 @@
                   <p>This should be a form where placeholders correspond to data currently
                   stored in database.</p>
                   <p>{{ Form::open(array('url' => '/users/update')) }}
-					 	   	{{Form::label('firstname', 'First Name : ')}}
-					 	   	{{Form::text('firstname', $firstname)}}
-					 	   	</br>
-					 	   	{{Form::label('lastname', 'Last Name : ')}}
-					 	   	{{Form::text('lastname', $lastname)}}
-					 	   	</br>
-					 	   	{{Form::label('email', 'Email : ')}}
-					 	   	{{Form::text('email', $email)}}
-					 	   	</br>
-					 	   	{{Form::label('weight', 'Weight : ')}}
-					 	   	{{Form::text('weight', $weight)}}
-					 	   	</br>
-					 	   	
-					 	   	{{Form::label('height', 'Height : ')}}
-					 	   	{{Form::text('height', $height)}}
-					 	   	</br>
-					 	   	{{Form::submit('Save Changes', array('class'=>'btn btn-primary'))}}
-					 	   	
+	              <ul>
+		              @foreach($errors->all() as $error)
+					  <li>{{ $error }}</li>
+					  @endforeach
+	              </ul>
+				 	   	{{Form::label('firstname', 'First Name : ')}}
+				 	   	{{Form::text('firstname', $firstname)}}
+				 	   	</br>
+				 	   	{{Form::label('lastname', 'Last Name : ')}}
+				 	   	{{Form::text('lastname', $lastname)}}
+				 	   	</br>
+				 	   	{{Form::label('email', 'Email : ')}}
+				 	   	{{Form::text('email', $email)}}
+				 	   	</br>
+				 	   	{{Form::label('weight', 'Weight : ')}}
+				 	   	{{Form::text('weight', $weight)}}
+				 	   	</br>
+				 	   	
+				 	   	{{Form::label('height', 'Height : ')}}
+				 	   	{{Form::text('height', $height)}}
+				 	   	</br>
+				 	   	{{Form::submit('Save Changes', array('class'=>'btn btn-primary'))}}
 					 {{ Form::close() }}</p>
                   <br/>
                   <!--button type="submit" class="btn btn-primary">

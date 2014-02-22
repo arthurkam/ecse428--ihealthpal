@@ -116,10 +116,7 @@ class UsersController extends BaseController
 	
 	public function postUpdate()
 	{
-		//$validator = Validator::make(Input::all(), User::$rules);
-
-		$validator = Validator::make(Input::all(), User::$rules);
- 
+		
 		 if (Auth::check()) 
 		 {			
 		 	$id = Auth::user()->id;
@@ -129,7 +126,28 @@ class UsersController extends BaseController
 			$user->email = Input::get('email');
 			$user->weight = Input::get('weight');
 			$user->height = Input::get('height');
-			$user->save();
+			
+			$validator = Validator::make(
+		 		array(	'firstname' => Input::get('firstname'),
+		 				'lastname'  => Input::get('lastname'),
+		 				'email'		=> Input::get('email')
+		 				
+		 		),
+		 		array( 	'firstname' => 'required|min:3',
+		 				'lastname'	=> 'required|min:3',
+		 				'email'		=> 'required|email|unique:users'
+		 		)	
+		 	);
+		 	
+		 	if($validator->passes())
+		 	{
+			 	$user->save();
+		 	}
+		 	
+		 	else
+			 	return Redirect::to('/');
+		 	
+		 	
 			return Redirect::to('/settings');
 		 }	
 	}
