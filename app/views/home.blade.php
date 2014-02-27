@@ -59,7 +59,7 @@
       <div class="row">
         <div class="col-md-3">
           <h3>Diary</h3>
-          <input type="image" name="diary" value="diary" src="img/food_diary.png" width="70" style="margin-bottom:15px"; />
+          <a href="diary"><input type="image" name="diary" value="diary" src="img/food_diary.png" width="70" style="margin-bottom:15px"; />
        </div>
         <div class="col-md-3">
           <h3>Goals</h3>
