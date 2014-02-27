@@ -39,6 +39,16 @@ class HomeController extends BaseController {
 	{		
 		return View::make('contact');
 	}
+
+	public function showResource()
+	{		
+		return View::make('resource');
+	}
+
+	public function showHelp()
+	{		
+		return View::make('help');
+	}
 	
 	public function showLogin()
 	{
