@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>iHealthPal | {{{ $name }}}</title>
+    <title>iHealthPal | Help</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +38,9 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="home"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
-          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
+          <a class="navbar-brand" href="about">About</a>
+          <a class="navbar-brand" href="contact">Contact</a>
+          <a class="navbar-brand" href="">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>
         </div>
         <div class="navbar-collapse collapse">
           <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
@@ -49,47 +51,10 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-    <div class="jumbotron">
-      <div class="container">
-        <img src="img/logo.png" alt="logo" height="100">
-        <p>Welcome, {{{ $name }}}!</p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <h3>Diary</h3>
-          <a href="diary"><input type="image" name="diary" value="diary" src="img/food_diary.png" width="70" style="margin-bottom:15px"; />
-       </div>
-        <div class="col-md-3">
-          <h3>Goals</h3>
-          <a href="goals"><input type="image" name="goals" value="goals" src="img/goals_icon.png" width="70" style="margin-bottom:15px"; /></a>
-       </div>
-        <div class="col-md-3">
-          <h3>Personal stats</h3>
-          <input type="image" name="stats" value="stats" src="img/personal_stats.png" width="70" style="margin-bottom:15px"; />
-        </div>
-       <div class="col-md-3">
-          <h3>Progress</h3>
-            <input type="image" name="progress" value="progress" src="img/line_chart_icon.png" width="90" style="margin-bottom:15px"; />
-        </div>
 
-      </div>   
-      </div> 
-      <div class="row">
-        <div class="col-md-3">
-          <h3>BMI Calculator</h3>
-            <a href="BMI"><input type="image" name="BMI" value="BMI" src="img/BMI_icon.png" width="90" style="margin-bottom:15px"; /></a>
-        </div>
-          <div class="col-md-3">
-            <h3>Settings</h3>
-            <a href="settings"><input type="image" name="settings" value="settings" src="img/settings_icon.png" width="60" style="margin-bottom:15px"; /></a>
-        </div>
-      </div> 
-      
-      <footer>
-        <p>&copy; iHealthPal 2014</p>
-      </footer>
+      </div>
+      </div>
+
     </div> <!-- /container -->
 
 
