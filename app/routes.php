@@ -21,7 +21,7 @@
 	Route::any('contact', array('uses' => 'HomeController@showContact'));
 	
 	// Route for the Help page
-	Route::any('contact', array('uses' => 'HomeController@showHelp'));
+	Route::any('help', array('uses' => 'HomeController@showHelp'));
 	
 	// Route to show the login form
 	Route::get('users/login', array('uses' => 'HomeController@showLogin'));
