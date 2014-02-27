@@ -8,13 +8,13 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>iHealthPal | Help</title>
+    <title>iHealthPal | Help </title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/css/jumbotron.css" rel="stylesheet">
+    <link href="css/jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -34,9 +34,9 @@
       ga('send', 'pageview');
     </script>
   </head>
-  
+
   <body>
-  
+
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -46,10 +46,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="home"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+          <a class="navbar-brand" href="/">iHealthPal</a>
           <a class="navbar-brand" href="about">About</a>
           <a class="navbar-brand" href="contact">Contact</a>
-          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>
+          <a class="navbar-brand" href="resource">Resource</a>
+          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
         </div>
         <div class="navbar-collapse collapse">
           <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
@@ -60,20 +61,13 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-    
-    <h3>User Diary</h3>
-		
     <div class="jumbotron">
       <div class="container">
         <img src="img/logo.png" alt="logo" height="100">
       </div>
     </div>
-	<div class="container">
-      	<div class="row">
 
-		  		
-		          
-		</div>
+  
 
       <footer>
         <p>&copy; iHealthPal 2014</p>
@@ -84,7 +78,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

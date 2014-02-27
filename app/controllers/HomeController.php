@@ -17,8 +17,9 @@ class HomeController extends BaseController {
 	
 	public function showIndex()
 	{
-		Session::regenerate();
-		if(Session::has('loggedIn')){
+
+		if(Auth::check()){
+		
 			return Redirect::to('home');
 		}
 		return View::make('index');
@@ -37,6 +38,16 @@ class HomeController extends BaseController {
 	public function showContact()
 	{		
 		return View::make('contact');
+	}
+
+	public function showResource()
+	{		
+		return View::make('resource');
+	}
+
+	public function showHelp()
+	{		
+		return View::make('help');
 	}
 	
 	public function showHelp()
@@ -74,7 +85,7 @@ class HomeController extends BaseController {
 			);
 
 			// attempt to do the login
-			if (Auth::attempt($userdata)) {
+			if (Auth::attempt($userdata) || Auth::check()) {
 
 				// validation successful!
 				// now lets create session
@@ -85,7 +96,7 @@ class HomeController extends BaseController {
 				// redirect them to the secure section or whatever
 				// return Redirect::to('secure');
 				// for now we'll just echo success (even though echoing in a controller is bad)
-				return Redirect::to('home');
+				return Redirect::to('home')->with('Success', 'You are already logged in!');
 				
 			} else {	 	
 
@@ -96,7 +107,11 @@ class HomeController extends BaseController {
 
 		}
 	}
+<<<<<<< HEAD
 		
+=======
+	
+>>>>>>> blank_page_fix
 	public function loginFacebook()
 	{
 		$facebook = new Facebook(Config::get('facebook'));	
@@ -107,16 +122,27 @@ class HomeController extends BaseController {
 		return Redirect::to($facebook->getLoginUrl($params));
 	}
 	
+<<<<<<< HEAD
 	public function callbackFacebook(){
 	    $code = Input::get('code');
 	    if (strlen($code) == 0) 
 	    	return Redirect::to('/')->with('message', 'There was an error communicating with Facebook');
+=======
+	public function callbackFacebook()
+	{
+	    $code = Input::get('code');
+	    if (strlen($code) == 0) return Redirect::to('/')->with('message', 'There was an error communicating with Facebook');
+>>>>>>> blank_page_fix
 	 
 	    $facebook = new Facebook(Config::get('facebook'));
 	    $uid = $facebook->getUser();
 	 
+<<<<<<< HEAD
 	    if ($uid == 0) 
 	    	return Redirect::to('/')->with('message', 'There was an error');
+=======
+	    if ($uid == 0) return Redirect::to('/')->with('message', 'There was an error');
+>>>>>>> blank_page_fix
 	 
 	    $me = $facebook->api('/me');
 	 
@@ -145,7 +171,12 @@ class HomeController extends BaseController {
 	    Auth::login($user);
 	 
 	    return Redirect::to('/')->with('message', 'Logged in with Facebook');
+<<<<<<< HEAD
 }
+=======
+		}
+	
+>>>>>>> blank_page_fix
 	public function doLogout()
 	{
 		Session::flush();

@@ -67,20 +67,46 @@
               <div class="tab-content">
                 <div class="tab-pane fade in active" id="overview">
                   <br />
-                  <p>First Name: </p>
-                  <p>Last Name: </p>
-                  <p>Email: </p>
-                  <p>Member since </p>
+                  <p>First Name: {{$firstname = Auth::user()->firstname}}</p>
+                  <p>Last Name: {{$lastname = Auth::user()->lastname}}</p>
+                  <p>Email: {{$email = Auth::user()->email}}</p>
+                  <p>Member since {{{$timestamp = Auth::user()->created_at}}}</p>
+                  <p>Weight: {{{$weight = Auth::user()->weight}}} kg, Height: {{{$height = Auth::user()->height}}} cm</p>
+                  <p>ID: {{{$ID = Auth::user()->id}}}</p>
                 </div>
                 <div class="tab-pane fade" id="edit">
                   <br />
                   <p>TO BE COMPLETED</p>
                   <p>This should be a form where placeholders correspond to data currently
                   stored in database.</p>
-                  <br />
-                  <button type="submit" class="btn btn-primary">
+                  <p>{{ Form::open(array('url' => '/users/update')) }}
+	              <ul>
+		              @foreach($errors->all() as $error)
+					  <li>{{ $error }}</li>
+					  @endforeach
+	              </ul>
+				 	   	{{Form::label('firstname', 'First Name : ')}}
+				 	   	{{Form::text('firstname', $firstname)}}
+				 	   	</br>
+				 	   	{{Form::label('lastname', 'Last Name : ')}}
+				 	   	{{Form::text('lastname', $lastname)}}
+				 	   	</br>
+				 	   	{{Form::label('email', 'Email : ')}}
+				 	   	{{Form::text('email', $email)}}
+				 	   	</br>
+				 	   	{{Form::label('weight', 'Weight : ')}}
+				 	   	{{Form::text('weight', $weight)}}
+				 	   	</br>
+				 	   	
+				 	   	{{Form::label('height', 'Height : ')}}
+				 	   	{{Form::text('height', $height)}}
+				 	   	</br>
+				 	   	{{Form::submit('Save Changes', array('class'=>'btn btn-primary'))}}
+					 {{ Form::close() }}</p>
+                  <br/>
+                  <!--button type="submit" class="btn btn-primary">
                     <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Save Changes
-                  </button>
+                  </button-->
                 </div>
                 <div class="tab-pane fade" id="share">
                   <br />
@@ -92,9 +118,9 @@
                   <br />
                   <p>**This action is irreversible. Your profile and any related data will be removed from our servers the moment you submit your request.</p>
                   <br />
-                  <button type="submit" class="btn btn-danger btn-lg">
+                  <a href="/delete"><button type="submit" class="btn btn-danger btn-lg">
                     <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete Account
-                  </button>
+                  </button></a>
                 </div>
               </div>
         </div>

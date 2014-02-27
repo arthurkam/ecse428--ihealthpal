@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>UserName</title>
+    <title>iHealthPal | Resource </title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
+	<script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -36,7 +36,7 @@
   </head>
 
   <body>
-  
+
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -46,15 +46,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="">Account Settings</a>
-          <a class="navbar-brand" href="about.html">About</a>
-          <a class="navbar-brand" href="contact.html">Contact</a>
-          <a class="navbar-brand" href="contact.html">Help</a>          
+          <a class="navbar-brand" href="/">iHealthPal</a>
+          <a class="navbar-brand" href="about">About</a>
+          <a class="navbar-brand" href="contact">Contact</a>
+          <a class="navbar-brand" href="resource">Resource</a>
+          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
         </div>
         <div class="navbar-collapse collapse">
           <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
             <button type="submit" class="btn btn-danger">
-               Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
+              Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
             </button>
           </form>
         </div><!--/.navbar-collapse -->
@@ -63,35 +64,10 @@
     <div class="jumbotron">
       <div class="container">
         <img src="img/logo.png" alt="logo" height="100">
-        <p>Welcome, user!</p>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <h3>Diary</h3>
-          <input type="image" name="diary" value="diary" src="img/food_diary.png" width="70" style="margin-bottom:15px"; />
-       </div>
-        <div class="col-md-3">
-          <h3>Goals</h3>
-          <input type="image" name="goals" value="goals" src="img/goals_icon.png" width="70" style="margin-bottom:15px"; />
-       </div>
-        <div class="col-md-3">
-          <h3>Personal stats</h3>
-          <input type="image" name="stats" value="stats" src="img/personal_stats.png" width="70" style="margin-bottom:15px"; />
-        </div>
-       <div class="col-md-3">
-          <h3>Progress</h3>
-            <input type="image" name="progress" value="progress" src="img/line_chart_icon.png" width="90" style="margin-bottom:15px"; />
-        </div>
- 
-      </div> 
-      <div class="row">
-        <div class="col-md-3">
-          <h3>BMI Calculator</h3>
-            <input type="image" name="BMI" value="BMI" src="img/BMI_icon.png" width="90" style="margin-bottom:15px"; />
-        </div>
-      </div> 
+
+  
 
       <footer>
         <p>&copy; iHealthPal 2014</p>

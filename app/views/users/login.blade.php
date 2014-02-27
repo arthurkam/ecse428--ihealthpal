@@ -91,7 +91,7 @@
 	</p>
 
 	<p>{{ Form::submit('Submit!') }}</p>
-{{ Form::close() }}
+	{{ Form::close() }}
 
 
       </div>
