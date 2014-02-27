@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>iHealthPal</title>
+    <title>iHealthPal | Resource </title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
+	<script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -53,51 +53,21 @@
           <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
         </div>
         <div class="navbar-collapse collapse">
-          <form action="users/login" class="navbar-form navbar-right" role="form" method="post">
-            <div class="form-group">
-              <input name="email" type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input name="password" type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">
-              <span class="glyphicon glyphicon-log-in"></span> &nbsp;Login
+          <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
+            <button type="submit" class="btn btn-danger">
+              Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
             </button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <img src="img/logo.png" alt="logo" height="200">
-	<p>Health and Fitness Tracking System.</p>
-        <p><a class="btn btn-primary btn-lg" href="users/register" role="button">Sign up &raquo;</a></p>
+        <img src="img/logo.png" alt="logo" height="100">
       </div>
     </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Monitor</h2>
-          <img src="img/monitor_icon.jpg" alt"monitor" width="100" style="margin-bottom:15px;">
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Manage</h2>
-          <img src="img/manage_icon.png" alt"manage" width="100" style="margin-bottom:15px;">
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Share</h2>
-          <img src="img/share_icon.png" alt"share" width="100" style="margin-bottom:15px;">
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
-
-      <hr>
+  
 
       <footer>
         <p>&copy; iHealthPal 2014</p>
@@ -112,4 +82,3 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
-

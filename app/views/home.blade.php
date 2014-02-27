@@ -38,7 +38,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="home"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
-          <a class="navbar-brand" href="">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
+          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
         </div>
         <div class="navbar-collapse collapse">
           <form action="/logout" class="navbar-form navbar-right" role="form" method="get">

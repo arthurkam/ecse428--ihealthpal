@@ -20,6 +20,12 @@
 	// Route for the Contact page
 	Route::any('contact', array('uses' => 'HomeController@showContact'));
 	
+	// Route for the Resource page
+	Route::any('resource', array('uses' => 'HomeController@showResource'));
+	
+	// Route for the Help page
+	Route::any('help', array('uses' => 'HomeController@showHelp'));
+	
 	// Route to show the login form
 	Route::get('users/login', array('uses' => 'HomeController@showLogin'));
 
