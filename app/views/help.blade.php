@@ -11,10 +11,10 @@
     <title>iHealthPal | Help</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/jumbotron.css" rel="stylesheet">
+    <link href="/css/jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -34,6 +34,7 @@
       ga('send', 'pageview');
     </script>
   </head>
+  
   <body>
   
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -59,6 +60,9 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+    
+    <h3>User Diary</h3>
+		
     <div class="jumbotron">
       <div class="container">
         <img src="img/logo.png" alt="logo" height="100">
