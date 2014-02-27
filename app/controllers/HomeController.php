@@ -39,6 +39,11 @@ class HomeController extends BaseController {
 		return View::make('contact');
 	}
 	
+	public function showHelp()
+	{		
+		return View::make('help');
+	}
+	
 	public function showLogin()
 	{
 		// show the form
