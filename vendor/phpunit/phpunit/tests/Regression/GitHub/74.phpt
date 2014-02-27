@@ -9,7 +9,7 @@ $_SERVER['argv'][2] = '--process-isolation';
 $_SERVER['argv'][3] = 'Issue74Test';
 $_SERVER['argv'][4] = dirname(__FILE__).'/74/Issue74Test.php';
 
-require __DIR__ . '/../../bootstrap.php';
+require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/PHPUnit/Autoload.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
@@ -24,7 +24,7 @@ There was 1 error:
 1) Issue74Test::testCreateAndThrowNewExceptionInProcessIsolation
 NewException: Testing GH-74
 
-%s/tests/Regression/GitHub/74/Issue74Test.php:7
+%s/Tests/Regression/GitHub/74/Issue74Test.php:7
 %s
 
 FAILURES!

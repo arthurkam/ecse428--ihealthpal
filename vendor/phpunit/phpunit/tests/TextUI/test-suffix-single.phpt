@@ -9,7 +9,7 @@ $_SERVER['argv'][2] = '--test-suffix';
 $_SERVER['argv'][3] = '.test.php';
 $_SERVER['argv'][4] = dirname(__FILE__).'/../_files/';
 
-require __DIR__ . '/../bootstrap.php';
+require_once dirname(dirname(dirname(__FILE__))) . '/PHPUnit/Autoload.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
