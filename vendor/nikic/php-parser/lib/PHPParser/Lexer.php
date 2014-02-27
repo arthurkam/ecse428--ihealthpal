@@ -40,13 +40,9 @@ class PHPParser_Lexer
     }
 
     protected function resetErrors() {
-        // set error_get_last() to defined state by forcing an undefined variable error
-        set_error_handler(array($this, 'dummyErrorHandler'), 0);
+        // clear error_get_last() by forcing an undefined variable error
         @$undefinedVariable;
-        restore_error_handler();
     }
-
-    private function dummyErrorHandler() { return false; }
 
     protected function handleErrors() {
         $error = error_get_last();
@@ -148,7 +144,7 @@ class PHPParser_Lexer
         // this simplifies the situation, by not allowing any comments
         // in between of the tokens.
         if (!preg_match('~\s*\(\s*\)\s*(?:;|\?>\r?\n?)~', $textAfter, $matches)) {
-            throw new PHPParser_Error('__HALT_COMPILER must be followed by "();"');
+            throw new PHPParser_Error('__halt_compiler must be followed by "();"');
         }
 
         // prevent the lexer from returning any further tokens

@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.1.*",
 		"twitter/bootstrap": "*",
-		"facebook/php-sdk": "dev-master"
+		"facebook/php-sdk": "dev-master",
+		"phpunit/phpunit": "3.7.*"
 },
 
 	"autoload": {
@@ -34,9 +35,5 @@
 	},
 	"config": {
 		"preferred-install": "dist"
-	},
-	"minimum-stability": "dev",
-	 "require-dev": {
-		"phpunit/phpunit": "3.8.*@dev"
-   	 }
+	}
 }

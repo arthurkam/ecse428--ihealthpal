@@ -10,15 +10,15 @@ $_SERVER['argv'][3] = '--process-isolation';
 $_SERVER['argv'][4] = 'NothingTest';
 $_SERVER['argv'][5] = dirname(dirname(__FILE__)) . '/_files/NothingTest.php';
 
-require __DIR__ . '/../bootstrap.php';
+require_once dirname(dirname(dirname(__FILE__))) . '/PHPUnit/Autoload.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
 PHPUnit %s by Sebastian Bergmann.
 
-R
+I
 
 Time: %s, Memory: %sMb
 
-OK, but incomplete, skipped, or risky tests!
-Tests: 1, Assertions: 0, Risky: 1.
+OK, but incomplete or skipped tests!
+Tests: 1, Assertions: 0, Incomplete: 1.
