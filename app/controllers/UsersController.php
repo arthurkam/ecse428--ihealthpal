@@ -2,15 +2,13 @@
  
 class UsersController extends BaseController 
 {
- 	protected $layout = "layouts.main";
- 	
+	 	
  	public function getRegister() 
  	{
-    	$this->layout->content = View::make('users.register');
+    	return View::make('users.register');
 	}
 	
 	public function postCreate(){
-		//$this->layout->content = View::make('users.create');
 
 		 $validator = Validator::make(Input::all(), User::$rules);
  
@@ -40,15 +38,14 @@ class UsersController extends BaseController
 	public function getDashboard()
 	{
 		Session::regenerate();
-		    $this->layout->content = View::make('home', array('name' => Session::get('name')));	
+		    return View::make('home', array('name' => Session::get('name')));	
 	}
 
 	public function BMICalculator()
 	{
 		Session::regenerate();
 		if(Session::has('loggedIn')){
-			$this->layout->content = 	View::make('BMI',array('height'=>Session::get("height"),'weight'=>Session::get('weight'),'name' => Session::get('name')));
-			return;
+			return View::make('BMI',array('height'=>Session::get("height"),'weight'=>Session::get('weight'),'name' => Session::get('name')));
 			}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
@@ -77,8 +74,8 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			$this->layout->content = View::make('goals');	
-			return;
+			return View::make('users.goals');	
+			
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
@@ -89,8 +86,7 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			$this->layout->content = View::make('settings');	
-			return;
+			return View::make('users.settings');	
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
@@ -101,10 +97,59 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			$this->layout->content = View::make('diary');	
-			return;
+			return View::make('diary');	
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
+	}
+	
+	public function deleteAccount()
+	{
+		if(Auth::check())
+		{
+			$id = Auth::user()->id;
+			$user = User::find($id);
+			$user->delete();
+			Auth::logout();
+			return Redirect::to('/');
+		}
+	}
+	
+	public function postUpdate()
+	{
+		
+		 if (Auth::check()) 
+		 {			
+		 	$id = Auth::user()->id;
+			$user = User::find($id);
+			$user->firstname = Input::get('firstname');
+			$user->lastname = Input::get('lastname');
+			$user->email = Input::get('email');
+			$user->weight = Input::get('weight');
+			$user->height = Input::get('height');
+			
+			$validator = Validator::make(
+		 		array(	'firstname' => Input::get('firstname'),
+		 				'lastname'  => Input::get('lastname'),
+		 				'email'		=> Input::get('email')
+		 				
+		 		),
+		 		array( 	'firstname' => 'required|min:3',
+		 				'lastname'	=> 'required|min:3',
+		 				'email'		=> 'required|email|unique:users'
+		 		)	
+		 	);
+		 	
+		 	if($validator->passes())
+		 	{
+			 	$user->save();
+		 	}
+		 	
+		 	else
+			 	return Redirect::to('/');
+		 	
+		 	
+			return Redirect::to('/settings');
+		 }	
 	}
 }
 
