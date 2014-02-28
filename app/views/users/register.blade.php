@@ -97,6 +97,16 @@
 		   {{Form::label('password_confirmation', 'Confirm Password :')}}
 		   {{ Form::password('password_confirmation', array('class'=>'input-block-level', 'placeholder'=>'Confirm Password')) }}
 		   </br>
+		   {{Form::label('security_question', 'Security Question :')}}
+		   {{ Form::select('question', array('1' => 'What is your mother\'s maiden name?', 
+		   						'2' => 'Who is your best friend from childhood?',
+		   						'3' => 'What is the name of your first pet?',
+		   						'4' => 'What is the name of your spouse?',
+		   						'5' => 'Who is your favourite athlete?')) }}
+		   </br>
+		   {{Form::label('security_answer', 'Security Answer :')}}
+		   {{ Form::text('security_answer', null, array('class'=>'input-block-level', 'placeholder'=>'Security Answer')) }}
+		   </br>		   
 		   {{ Form::submit('Register', array('class'=>'btn btn-large btn-primary'))}}
 	   
 	{{ Form::close() }}
