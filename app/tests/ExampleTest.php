@@ -14,4 +14,21 @@ class ExampleTest extends TestCase {
 		$this->assertTrue($this->client->getResponse()->isOk());
 	}
 
+	public function testIndexPage()
+	{
+        $this->call('Get', '/');
+        $this->assertResponseOk();
+    }
+    
+    public function testAboutPage()
+    {
+	    $this->call('Get', '/about');
+	    $this->assertResponseOk();
+    }
+    
+    public function testContactPage()
+    {
+	    $this->call('Get', '/contact');
+	    $this->assertResponseOk();
+    }
 }
