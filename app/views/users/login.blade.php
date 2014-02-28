@@ -61,6 +61,7 @@
             <button type="submit" class="btn btn-success">
               <span class="glyphicon glyphicon-log-in"></span> &nbsp;Login
             </button>
+            <a class="btn btn-warning" href="password/remind" role="button">Forgot Password?</a>            
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -91,8 +92,8 @@
 	</p>
 
 	<p>{{ Form::submit('Submit!') }}</p>
+	<p>{{ Form::button('Forgot Password?', array('href' => "password/remind", 'role' => 'button'))}}</p>
 	{{ Form::close() }}
-
 
       </div>
     </div>
