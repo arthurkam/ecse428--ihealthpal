@@ -1,19 +1,14 @@
 <?php
 
-class ExampleTest extends TestCase {
-
-	/**
-	 * A basic functional test example.
-	 *
-	 * @return void
-	 */
+class UnitTest extends TestCase {
+/*
 	public function testBasicExample()
 	{
 		$crawler = $this->client->request('GET', '/');
 
 		$this->assertTrue($this->client->getResponse()->isOk());
 	}
-
+*/
 	public function testIndexPage()
 	{
         $this->call('Get', '/');
@@ -31,4 +26,17 @@ class ExampleTest extends TestCase {
 	    $this->call('Get', '/contact');
 	    $this->assertResponseOk();
     }
+    
+    public function testResoursePage()
+    {
+	    $this->call('Get', '/resource');
+	    $this->assertResponseOk();
+    }
+    
+    public function testHelpPage()
+    {
+		$this->call('Get','/help');
+		$this->assertResponseOk();
+    }
+    
 }
