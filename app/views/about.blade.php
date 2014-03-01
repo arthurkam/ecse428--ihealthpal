@@ -5,9 +5,9 @@
       <div class="row">
         <h2>About Us</h2>
          <div style="height: 500px;">
-            <p><b>Current Scrum Master:</b> Bryan Gingras</p>
+            <p><b>Current Scrum Master:</b> Anita Szilagyi</p>
             <p><b>ECSE 428:</b> Software Engineering Practice </p>
-            <p><b>Programmer:</b> Anita Szilagyi, Arthur Kam, Bruno Boivin, Bryan Gingras, ChanWoo Yang, Gavin Zhou</p>
+            <p><b>Programmers:</b> Anita Szilagyi, Arthur Kam, Bruno Boivin, Bryan Gingras, ChanWoo Yang, Gavin Zhou</p>
             <p><b>Our Goal:</b></p>
             <p>Our project will be an online platform that will allow people to track everything health-related.Personal and customizable</p> 
             <p>accounts will enable individual users to track things such as calories, nutritional information, water consumption, </p> 
