@@ -2,6 +2,8 @@
 
 class HomeController extends BaseController {
 	  
+	protected $layout = "layouts.main";
+
 	/*
 	|--------------------------------------------------------------------------
 	| Default Home Controller
@@ -22,7 +24,7 @@ class HomeController extends BaseController {
 		
 			return Redirect::to('home');
 		}
-		return View::make('index');
+		$this->layout->content = View::make('index');
 	}
 	
 	public function deploy()
