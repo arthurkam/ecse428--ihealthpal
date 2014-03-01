@@ -50,11 +50,6 @@ class HomeController extends BaseController {
 		return View::make('help');
 	}
 	
-	public function showHelp()
-	{		
-		return View::make('help');
-	}
-	
 	public function showLogin()
 	{
 		// show the form
@@ -107,11 +102,7 @@ class HomeController extends BaseController {
 
 		}
 	}
-<<<<<<< HEAD
-		
-=======
-	
->>>>>>> blank_page_fix
+
 	public function loginFacebook()
 	{
 		$facebook = new Facebook(Config::get('facebook'));	
@@ -121,28 +112,16 @@ class HomeController extends BaseController {
 		);
 		return Redirect::to($facebook->getLoginUrl($params));
 	}
-	
-<<<<<<< HEAD
-	public function callbackFacebook(){
-	    $code = Input::get('code');
-	    if (strlen($code) == 0) 
-	    	return Redirect::to('/')->with('message', 'There was an error communicating with Facebook');
-=======
+
 	public function callbackFacebook()
 	{
 	    $code = Input::get('code');
 	    if (strlen($code) == 0) return Redirect::to('/')->with('message', 'There was an error communicating with Facebook');
->>>>>>> blank_page_fix
 	 
 	    $facebook = new Facebook(Config::get('facebook'));
 	    $uid = $facebook->getUser();
 	 
-<<<<<<< HEAD
-	    if ($uid == 0) 
-	    	return Redirect::to('/')->with('message', 'There was an error');
-=======
 	    if ($uid == 0) return Redirect::to('/')->with('message', 'There was an error');
->>>>>>> blank_page_fix
 	 
 	    $me = $facebook->api('/me');
 	 
@@ -171,12 +150,10 @@ class HomeController extends BaseController {
 	    Auth::login($user);
 	 
 	    return Redirect::to('/')->with('message', 'Logged in with Facebook');
-<<<<<<< HEAD
-}
-=======
-		}
+
+	}
 	
->>>>>>> blank_page_fix
+
 	public function doLogout()
 	{
 		Session::flush();
