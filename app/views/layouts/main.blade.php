@@ -74,7 +74,7 @@
       <div class="container">
         <img src="/img/logo.png" alt="logo" height="200">
 	<p>Health and Fitness Tracking System.</p>
-
+	
 	@yield('content')
 	</div>
 	</div>
