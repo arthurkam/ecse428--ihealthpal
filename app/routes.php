@@ -20,12 +20,9 @@
 	// Route for the Contact page
 	Route::any('contact', array('uses' => 'HomeController@showContact'));
 	
-<<<<<<< HEAD
-=======
 	// Route for the Resource page
 	Route::any('resource', array('uses' => 'HomeController@showResource'));
 	
->>>>>>> blank_page_fix
 	// Route for the Help page
 	Route::any('help', array('uses' => 'HomeController@showHelp'));
 	
@@ -40,16 +37,10 @@
 	
 	// Route to facebook login
 	Route::get('login/facebook', array('uses' => 'HomeController@loginFacebook'));
-<<<<<<< HEAD
 
-	// Route for facebook callback
-	Route::get('login/facebook/callback', array('uses' => 'HomeController@callbackFacebook'));
-
-=======
-	
 	// Route for facebook callback
 	Route::get('login/facebook/callback', array('uses' => 'HomeController@callbackFacebook'));	
->>>>>>> blank_page_fix
+
 	// Route to the home page, after login
 	Route::any('home', array('uses' => 'UsersController@getDashboard'));
 	
