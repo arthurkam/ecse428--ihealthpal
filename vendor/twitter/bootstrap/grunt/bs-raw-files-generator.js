@@ -6,9 +6,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 'use strict';
-var fs = require('fs');
 var btoa = require('btoa');
-var grunt = require('grunt');
+var fs = require('fs');
 
 function getFiles(type) {
   var files = {};
@@ -28,12 +27,5 @@ module.exports = function generateRawFilesJs(banner) {
     banner = '';
   }
   var files = banner + getFiles('js') + getFiles('less') + getFiles('fonts');
-  var rawFilesJs = 'docs/assets/js/raw-files.min.js';
-  try {
-    fs.writeFileSync(rawFilesJs, files);
-  }
-  catch (err) {
-    grunt.fail.warn(err);
-  }
-  grunt.log.writeln('File ' + rawFilesJs.cyan + ' created.');
+  fs.writeFileSync('docs/assets/js/raw-files.min.js', files);
 };

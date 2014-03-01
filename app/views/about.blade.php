@@ -47,8 +47,16 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/">iHealthPal</a>
+<<<<<<< HEAD
           <a class="navbar-brand" href="/about">About</a>
           <a class="navbar-brand" href="/contact">Contact</a>
+          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>
+=======
+          <a class="navbar-brand" href="about">About</a>
+          <a class="navbar-brand" href="contact">Contact</a>
+          <a class="navbar-brand" href="resource">Resource</a>
+          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
+>>>>>>> blank_page_fix
         </div>
         <div class="navbar-collapse collapse">
           <form action="users/login" class="navbar-form navbar-right" role="form" method="post">

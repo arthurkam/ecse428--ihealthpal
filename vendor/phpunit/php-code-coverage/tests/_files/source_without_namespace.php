@@ -11,8 +11,8 @@ class Foo
  */
 function &foo($bar)
 {
-    $baz = function () {};
-    $a   = true ? true : false;
+    $baz = function() {};
+    $a   = TRUE ? TRUE : FALSE;
     $b = "{$a}";
     $c = "${b}";
 }
