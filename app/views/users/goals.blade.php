@@ -61,10 +61,8 @@
           <h3>Goals</h3>
           <a href="goals"><input type="image" name="goals" value="goals" src="img/goals_icon.png" width="70" style="margin-bottom:15px"; /></a>
        </div>
-    </div> <!-- /container -->
-
-	<br>
-	{{ Form::open(array('url' => 'goals')) }}
+       <br>
+	{{ Form::open(array('url' => 'goals/set')) }}
     	{{Form::label('Goals', 'Choose your goals: ')}}   
     	{{Form::select('goal_type', array('L' => 'Lose weight', 'G' => 'Gain weight'));}}
     	{{Form::text('weight', '10');}}
@@ -76,6 +74,7 @@
     	{{Form::submit('Set the Goal!');}} 	
 	{{ Form::close() }}
 	</br>
+    </div> <!-- /container -->
       <footer>
         <p>&copy; iHealthPal 2014</p>
       </footer>
