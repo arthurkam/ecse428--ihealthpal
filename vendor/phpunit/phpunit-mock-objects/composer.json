@@ -19,36 +19,19 @@
         "issues": "https://github.com/sebastianbergmann/phpunit-mock-objects/issues",
         "irc": "irc://irc.freenode.net/phpunit"
     },
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
-        "phpunit/php-text-template": ">=1.1.1"
+        "phpunit/php-text-template": ">=1.1.1@stable"
     },
-    "require-dev": {
-        "phpunit/phpunit": "3.8.*@dev",
-        "pear-pear/pear": "1.9.4"
-    },
-    "repositories": [
-        {
-            "type": "pear",
-            "url": "http://pear.php.net"
-        }
-    ],
     "suggest": {
         "ext-soap": "*"
     },
     "autoload": {
         "classmap": [
-            "src/"
+            "PHPUnit/"
         ]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.3.x-dev"
-        }
     },
     "include-path": [
         ""
     ]
 }
-

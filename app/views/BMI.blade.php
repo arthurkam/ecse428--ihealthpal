@@ -71,11 +71,11 @@
       			<form role="form">
       			  <div class="form-group">
       			    <label for="height">Height(cm)</label>
-      			    <input type="number" class="form-control" id="height" placeholder="Height" value="{{{$height or 0}}}">
+      			    <input type="number" class="form-control" id="height" placeholder="Height" value={{{Auth::user()->height}}}>
       			  </div>
       			  <div class="form-group">
       			    <label for="weight">weight(kg)</label>
-      			    <input type="number" class="form-control" id="weight" placeholder="Weight" value="{{{$weight or 0}}}">
+      			    <input type="number" class="form-control" id="weight" placeholder="Weight" value={{{Auth::user()->weight}}}>
       			  </div>
       			  <div class="form-group">
       			  	<label for='updateCheckbox'>Update my information on the profile</label>

@@ -9,7 +9,7 @@ $_SERVER['argv'][2] = '--verbose';
 $_SERVER['argv'][3] = 'DependencyTestSuite';
 $_SERVER['argv'][4] = dirname(dirname(__FILE__)) . '/_files/DependencyTestSuite.php';
 
-require __DIR__ . '/../bootstrap.php';
+require_once dirname(dirname(dirname(__FILE__))) . '/PHPUnit/Autoload.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
@@ -25,8 +25,6 @@ There was 1 failure:
 
 %s:%i
 %s:%i
-
---
 
 There were 2 skipped tests:
 
