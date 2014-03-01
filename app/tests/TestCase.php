@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 class TestCase extends Illuminate\Foundation\Testing\TestCase {
 	
@@ -13,6 +14,11 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 	    $this->prepareForTests();
 	  }
   	
+=======
+
+class TestCase extends Illuminate\Foundation\Testing\TestCase {
+
+>>>>>>> blank_page_fix
 	/**
 	 * Creates the application.
 	 *
@@ -23,6 +29,12 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 		$unitTesting = true;
 
 		$testEnvironment = 'testing';
+<<<<<<< HEAD
+=======
+
+		return require __DIR__.'/../../bootstrap/start.php';
+	}
+>>>>>>> blank_page_fix
 
 		return require __DIR__.'/../../bootstrap/start.php';
 	}
