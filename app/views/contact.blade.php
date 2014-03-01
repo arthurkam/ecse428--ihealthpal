@@ -33,7 +33,7 @@
 				    <tr height="30">
 				      <td>Bryan Gingras</td>
 				      <td><a href="mailto:bryan.gingras@mail.mcgill.ca">bryan.gingras@mail.mcgill.ca</a></td>
-				      <td></td>
+				      <td>514-233-3177</td>
 				    </tr>
 				    <tr height="30">
 				      <td>Anita Szilagyi </td>
