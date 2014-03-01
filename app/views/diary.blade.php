@@ -80,6 +80,11 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+    <ul class="nav nav-tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
     <div class="jumbotron">
       <div class="container">
         <img src="img/logo.png" alt="logo" height="100">
