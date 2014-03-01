@@ -107,10 +107,17 @@ class UsersController extends BaseController
 		if(Auth::check())
 		{
 			$id = Auth::user()->id;
+			$password=Input::get("password");
 			$user = User::find($id);
-			$user->delete();
-			Auth::logout();
-			return Redirect::to('/');
+			$email = $user->email;
+			if (Auth::attempt(array('email' => $email, 'password' => $password)))
+			{
+				$user->delete();
+				Auth::logout();
+				return Redirect::to('/');
+			}
+			
+			
 		}
 	}
 	
