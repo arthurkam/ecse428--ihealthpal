@@ -118,19 +118,58 @@
                   <br />
                   <p>This action is irreversible. Your profile and any related data will be removed from our servers the moment you submit your request.</p>
                   <br />
-                   <a href="/delete" onclick="if(!confirm('Are you sure to delete this item?')){return false;};"><i class="glyphicon glyphicon-trash"></i> Delete Account</a>
+                   <!-- <a href="/delete" onclick="if(!confirm('Are you sure to delete this item?')){return false;};"><i class="glyphicon glyphicon-trash"></i> Delete Account</a> -->
+                    <a href="#" id="deleteConfirm"><i class="glyphicon glyphicon-trash"></i> Delete Account</a>
                 </div>
               </div>
         </div>
       </div>
 
     </div> <!-- /container -->
-
+    <div id="deleteModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Confirmation for account deletion.</h2>
+          </div>
+          <div class="modal-body" id="deleteBody">
+            Are you sure you want to delete your account?
+          </div>
+          <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                  <button id="confirmAccountDelete" type="button" class="btn btn-danger">Continue</button>
+                </div>
+        </div>
+      
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#deleteConfirm").on("click",function(e){
+
+            e.preventDefault();
+            $("#deleteModal").modal({backdrop:"static"});
+        });
+        $("#confirmAccountDelete").on("click",function(e){
+          e.preventDefault();
+          $("#deleteBody").html("Please enter your password: <br><form METHOD='POST' action='/delete'><input name='password' type='password' /> <input type='submit' value='Delete Account'></form>");
+          $("#confirmAccountDelete").remove();''
+
+        });
+        // $("#confirmedAccountDelete").on("click",function(e){
+        //   $.ajax({
+        //     url:"",
+        //     method:"POST",
+        //     data:
+        //   }); 
+        // });
+      });
+    </script>
   </body>
 </html>
