@@ -8,11 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-<<<<<<< HEAD
     <title>iHealthPal | Diary </title>
-=======
-    <title>iHealthPal | Diary</title>
->>>>>>> blank_page_fix
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -33,15 +29,6 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-<<<<<<< HEAD
-=======
-
-      ga('create', 'UA-47850364-1', 'inc.gs');
-      ga('send', 'pageview');
-    </script>
-  </head>
->>>>>>> blank_page_fix
-
       ga('create', 'UA-47850364-1', 'inc.gs');
       ga('send', 'pageview');
     </script>
@@ -58,18 +45,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-<<<<<<< HEAD
           <a class="navbar-brand" href="home"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
-          <a class="navbar-brand" href="about">About</a>
-          <a class="navbar-brand" href="contact">Contact</a>
-          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>
-=======
-          <a class="navbar-brand" href="/">iHealthPal</a>
           <a class="navbar-brand" href="about">About</a>
           <a class="navbar-brand" href="contact">Contact</a>
           <a class="navbar-brand" href="resource">Resource</a>
           <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
->>>>>>> blank_page_fix
         </div>
         <div class="navbar-collapse collapse">
           <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
@@ -90,14 +70,14 @@
         <img src="img/logo.png" alt="logo" height="100">
       </div>
     </div>
-<<<<<<< HEAD
 	<div class="container">
       	<div class="row">
-=======
->>>>>>> blank_page_fix
-
-		  		
-		          
+		  	{{ Form::open(array('url' => 'foo/bar')) }}
+		  	{{ Form::label('food', 'Search for food entry ') }}
+      	    </br>
+		  	{{ Form::text('food', null, array('class'=>'input-block-level', 'placeholder'=>'Foods & Drinks')) }}
+		  	{{ Form::submit('Search!', array('class'=>'btn btn-large btn-primary'))}}
+		  	{{ Form::close() }}
 		</div>
 
       <footer>
