@@ -77,7 +77,7 @@
         {{ Form::hidden( 'to_food_id', Input::old( 'to_food_id' ), array( 'id' => 'to_food_id' ) ) }}
 
         {{ Form::text( 'food', Input::old( 'food' ), array ('class' => 'input-lg', 'placeholder'=>'Search for a food' ) ) }}
-      
+
         {{ Form::submit('Add', array('class'=>'btn btn-lg btn-primary'))}}
         {{ Form::close() }}
     </div>
