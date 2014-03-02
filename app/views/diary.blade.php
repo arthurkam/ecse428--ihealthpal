@@ -71,14 +71,17 @@
       </div>
     </div>
 	<div class="container">
-      	<div class="row">
-		  	{{ Form::open(array('url' => 'foo/bar')) }}
-		  	{{ Form::label('food', 'Search for food entry ') }}
-      	    </br>
-		  	{{ Form::text('food', null, array('class'=>'input-block-level', 'placeholder'=>'Foods & Drinks')) }}
-		  	{{ Form::submit('Search!', array('class'=>'btn btn-large btn-primary'))}}
-		  	{{ Form::close() }}
-		</div>
+
+    <div class="row">
+        {{ Form::open( array('url' => '/diary/add') ) }}
+        {{ Form::hidden( 'to_food_id', Input::old( 'to_food_id' ), array( 'id' => 'to_food_id' ) ) }}
+
+        {{ Form::text( 'food', Input::old( 'food' ), array ('class' => 'input-lg', 'placeholder'=>'Search for a food' ) ) }}
+      
+        {{ Form::submit('Add', array('class'=>'btn btn-lg btn-primary'))}}
+        {{ Form::close() }}
+    </div>
+    <br /><br />
 
       <footer>
         <p>&copy; iHealthPal 2014</p>
@@ -91,5 +94,15 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        $( "#food" ).autocomplete({
+          source: "/diary/search",
+          select: function( event, ui ) {
+            $( '#to_food_id' ).val( ui.item.id );
+          }
+        });
+      });
+    </script>
   </body>
 </html>
