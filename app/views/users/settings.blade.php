@@ -130,7 +130,7 @@
 
 				 	   	</br><br />
 				 	   	{{Form::submit('Save Changes', array('class'=>'btn btn-primary'))}}
-					 {{ Form::close() }}</p>
+					   {{ Form::close() }}</p>
                   <br/>
                   <!--button type="submit" class="btn btn-primary">
                     <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Save Changes
@@ -147,7 +147,11 @@
                   <p>This action is irreversible. Your profile and any related data will be removed from our servers the moment you submit your request.</p>
                   <br />
                    <!-- <a href="/delete" onclick="if(!confirm('Are you sure to delete this item?')){return false;};"><i class="glyphicon glyphicon-trash"></i> Delete Account</a> -->
-                    <a href="#" id="deleteConfirm"><i class="glyphicon glyphicon-trash"></i> Delete Account</a>
+                    <a href="#" id="deleteConfirm">
+                      <button type="submit" class="btn btn-danger btn-lg">
+                        <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete Account
+                      </button>
+                    </a>
                 </div>
               </div>
         </div>
