@@ -128,9 +128,9 @@
                   </tr>                                    
                 </table>
 
-				 	   	</br><br />
+				 	   	</br>
 				 	   	{{Form::submit('Save Changes', array('class'=>'btn btn-primary'))}}
-					   {{ Form::close() }}</p>
+					    {{ Form::close() }}</p>
                   <br/>
                   <!--button type="submit" class="btn btn-primary">
                     <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Save Changes
