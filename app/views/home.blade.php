@@ -78,7 +78,7 @@
         </div>
 
       </div>   
-      </div> 
+
       <div class="row">
         <div class="col-md-3">
           <h3>BMI Calculator</h3>
