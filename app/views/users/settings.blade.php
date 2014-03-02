@@ -76,14 +76,11 @@
                 </div>
                 <div class="tab-pane fade" id="edit">
                   <br />
-                  <p>TO BE COMPLETED</p>
-                  <p>This should be a form where placeholders correspond to data currently
-                  stored in database.</p>
                   <p>{{ Form::open(array('url' => '/users/update')) }}
 	              <ul>
 		              @foreach($errors->all() as $error)
-					  <li>{{ $error }}</li>
-					  @endforeach
+					           <li>{{ $error }}</li>
+					        @endforeach
 	              </ul>
 				 	   	{{Form::label('firstname', 'First Name : ')}}
 				 	   	{{Form::text('firstname', $firstname)}}
