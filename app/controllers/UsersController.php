@@ -102,6 +102,17 @@ class UsersController extends BaseController
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 	
+	public function showProgress()
+	{
+		Session::regenerate();
+		
+		if(Auth::check())
+		{
+			return View::make('progress');	
+		}
+			return Redirect::to('/')->with('message', 'Please log in first!');
+	}
+	
 	public function deleteAccount()
 	{
 		if(Auth::check())
@@ -123,17 +134,9 @@ class UsersController extends BaseController
 	
 	public function postUpdate()
 	{
-		
-		 if (Auth::check()) 
-		 {			
-		 	$id = Auth::user()->id;
-			$user = User::find($id);
-			$user->firstname = Input::get('firstname');
-			$user->lastname = Input::get('lastname');
-			$user->email = Input::get('email');
-			$user->weight = Input::get('weight');
-			$user->height = Input::get('height');
-			
+		if(Session::has('loggedIn')){
+			$user = Auth::user();
+
 			$validator = Validator::make(
 		 		array(	'firstname' => Input::get('firstname'),
 		 				'lastname'  => Input::get('lastname'),
@@ -142,22 +145,43 @@ class UsersController extends BaseController
 		 		),
 		 		array( 	'firstname' => 'required|min:3',
 		 				'lastname'	=> 'required|min:3',
-		 				'email'		=> 'required|email|unique:users'
+		 				'email'		=> 'required|email'
 		 		)	
 		 	);
-		 	
-		 	if($validator->passes())
-		 	{
-			 	$user->save();
+
+			if($user->email != Input::get('email')){
+				$validator2 = Validator::make(
+				    array('email' => Input::get('email')),
+				    array('email' => 'unique:users,email')
+				);
+
+				if($validator2->fails()){
+					return Redirect::to('/settings')->with('message', 'The following errors occurred')->withErrors($validator2)->withInput();
+				}
+			}
+
+
+		 	if($validator->passes()){
+				$user->firstname = Input::get('firstname');
+				$user->lastname = Input::get('lastname');
+				$user->email = Input::get('email');
+				$user->height = Input::get('height');
+				$user->weight = Input::get("weight");
+		 		$user->save();
+
+				Session::put('firstname',Auth::user()->firstname);
+				Session::put('lastname',Auth::user()->lastname);
+				Session::put('email',Auth::user()->email);
+				Session::put('weight',Auth::user()->weight);
+				Session::put('height',Auth::user()->height);
+
+				return Redirect::to('/settings');
 		 	}
-		 	
-		 	else
-			 	return Redirect::to('/');
-		 	
-		 	
-			return Redirect::to('/settings');
-		 }	
+		}
+		
+		return Redirect::to('/settings')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
 	}
+
 }
 
 

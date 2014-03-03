@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>iHealthPal | Diary </title>
+    <title>iHealthPal | Progress </title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -60,6 +60,7 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+   
     <div class="jumbotron">
       <div class="container">
         <img src="img/logo.png" alt="logo" height="100">
@@ -67,15 +68,7 @@
     </div>
 	<div class="container">
 
-    <div class="row">
-        {{ Form::open( array('url' => '/diary/add') ) }}
-        {{ Form::hidden( 'to_food_id', Input::old( 'to_food_id' ), array( 'id' => 'to_food_id' ) ) }}
-
-        {{ Form::text( 'food', Input::old( 'food' ), array ('class' => 'input-lg', 'placeholder'=>'Search for a food' ) ) }}
-
-        {{ Form::submit('Add', array('class'=>'btn btn-lg btn-primary'))}}
-        {{ Form::close() }}
-    </div>
+    
     <br /><br />
 
       <footer>

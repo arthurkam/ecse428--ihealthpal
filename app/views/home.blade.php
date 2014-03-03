@@ -74,11 +74,11 @@
         </div>
        <div class="col-md-3">
           <h3>Progress</h3>
-            <input type="image" name="progress" value="progress" src="img/line_chart_icon.png" width="90" style="margin-bottom:15px"; />
+            <a href="progress"><input type="image" name="progress" value="progress" src="img/line_chart_icon.png" width="90" style="margin-bottom:15px"; />
         </div>
 
       </div>   
-      </div> 
+
       <div class="row">
         <div class="col-md-3">
           <h3>BMI Calculator</h3>
