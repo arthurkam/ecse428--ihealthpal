@@ -45,7 +45,7 @@ class UsersController extends BaseController
 	{
 		Session::regenerate();
 		if(Session::has('loggedIn')){
-			return View::make('BMI',array('height'=>Session::get("height"),'weight'=>Session::get('weight'),'name' => Session::get('name')));
+			return View::make('users.BMI',array('height'=>Session::get("height"),'weight'=>Session::get('weight'),'name' => Session::get('name')));
 			}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
@@ -97,7 +97,7 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			return View::make('diary');	
+			return View::make('users.diary');	
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
@@ -108,7 +108,7 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			return View::make('progress');	
+			return View::make('users.progress');	
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
