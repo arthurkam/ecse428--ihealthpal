@@ -21,7 +21,7 @@ class HomeController extends BaseController {
 
 		if(Auth::check()){
 		
-			return Redirect::to('users.home');
+			return Redirect::to('home');
 		}
 		$this->layout->content = View::make('index');
 	}
