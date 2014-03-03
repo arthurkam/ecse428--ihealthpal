@@ -7,9 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-
-    <title>iHealthPal</title>
-
+	@unless (Auth::check())
+    	<title>iHealthPal</title>
+	@endunless
+	@if (Auth::check())
+		<title>iHealthPal | {{{Auth::user()->firstname}}}</title>
+	@endif	
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
@@ -68,7 +71,8 @@
             </form>
         </div>
           @endunless
-            @if (Auth::check())
+          
+          @if (Auth::check())
             <div class="navbar-collapse collapse">
 				<form action="/logout" class="navbar-form navbar-right" role="form" method="get">
 					<button type="submit" class="btn btn-danger">
@@ -76,7 +80,7 @@
 					</button>
 				</form>
 			</div>
-            @endif
+          @endif
           
         </div><!--/.navbar-collapse -->
       </div>
