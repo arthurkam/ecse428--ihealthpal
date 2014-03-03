@@ -60,7 +60,7 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-    
+   
     <div class="jumbotron">
       <div class="container">
         <img src="img/logo.png" alt="logo" height="100">
@@ -68,6 +68,7 @@
     </div>
 	<div class="container">
 
+    
     <br /><br />
 
       <footer>
