@@ -52,6 +52,7 @@
           <a class="navbar-brand" href="/resource">Resource</a>
           <a class="navbar-brand" href="/help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
         </div>
+        @unless (Auth::check())
         <div class="navbar-collapse collapse">
           <form action="users/login" class="navbar-form navbar-right" role="form" method="post">
             <div class="form-group">
@@ -64,7 +65,19 @@
               <span class="glyphicon glyphicon-log-in"></span> &nbsp;Login
             </button>
             <a class="btn btn-warning" href="password/remind" role="button">Forgot Password?</a>
-          </form>
+            </form>
+        </div>
+          @endunless
+            @if (Auth::check())
+            <div class="navbar-collapse collapse">
+				<form action="/logout" class="navbar-form navbar-right" role="form" method="get">
+					<button type="submit" class="btn btn-danger">
+					Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
+					</button>
+				</form>
+			</div>
+            @endif
+          
         </div><!--/.navbar-collapse -->
       </div>
     </div>
