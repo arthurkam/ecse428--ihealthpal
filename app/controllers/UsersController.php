@@ -5,7 +5,7 @@ class UsersController extends BaseController
 	 	
  	public function getRegister() 
  	{
-    	return View::make('users.register');
+    	return View::make('auth.register');
 	}
 	
 	public function postCreate(){
@@ -26,7 +26,7 @@ class UsersController extends BaseController
 		  return Redirect::to('/')->with('message', 'Thanks for registering!');
 	   
 	   } else {
-		   return Redirect::to('users/register')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
+		   return Redirect::to('auth/register')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
 		   }
 	 }
 	
