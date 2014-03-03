@@ -57,23 +57,23 @@
                 <table style="width:400px">
                   <tr>
                     <td>{{Form::label('firstname', 'First Name : ')}}</td>
-                    <td>{{Form::text('firstname', $firstname)}}</td>    
+                    <td>{{Form::text('firstname', $firstname, $attributes = array('class' => 'form-control'))}}</td>    
                     </tr>
                   <tr>
                     <td>{{Form::label('lastname', 'Last Name : ')}}</td>
-                    <td>{{Form::text('lastname', $lastname)}}</td>    
+                    <td>{{Form::text('lastname', $lastname, $attributes = array('class' => 'form-control'))}}</td>    
                   </tr>
                   <tr>
                     <td>{{Form::label('email', 'Email : ')}}</td>
-                    <td>{{Form::text('email', $email)}}</td>    
+                    <td>{{Form::text('email', $email, $attributes = array('class' => 'form-control'))}}</td>    
                   </tr>
                   <tr>
                     <td>{{Form::label('weight', 'Weight : ')}}</td>
-                    <td>{{Form::text('weight', $weight)}}</td>    
+                    <td>{{Form::text('weight', $weight, $attributes = array('class' => 'form-control'))}}</td>    
                   </tr>
                   <tr>
                     <td>{{Form::label('height', 'Height : ')}}</td>
-                    <td>{{Form::text('height', $height)}}</td>    
+                    <td>{{Form::text('height', $height, $attributes = array('class' => 'form-control'))}}</td>    
                   </tr>                                    
                 </table>
 
