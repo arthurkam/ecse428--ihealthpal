@@ -68,6 +68,9 @@
 	//Route to add entry to diary
 	Route::any('diary/add', array('uses' => 'DiaryController@addToDiary'));
 	
+	//Route to view matching foods
+	Route::any('diary/found_foods', array('uses' => 'DiaryController@showMatchingFoods'));
+	
 	// Route to the Progress page, after login
 	Route::any('progress', array('uses' => 'UsersController@showProgress'));
 	

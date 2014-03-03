@@ -2,6 +2,10 @@
 
 class DiaryController extends BaseController {
 
+	public function showMatchingFoods() {
+		return View::make('found_foods');	
+	}
+
 	public function getMatchingFood(){
 		$term = Input::get( 'term' );
 		$foods = array();
