@@ -49,5 +49,6 @@
             <p>For technical issues, please contact Arthur Kam</p>
 		</div>
 	</div>
+    </div>
   
 @stop
