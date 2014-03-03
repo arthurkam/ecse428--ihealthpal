@@ -54,7 +54,7 @@ class HomeController extends BaseController {
 	public function showLogin()
 	{
 		// show the form
-		return View::make('users/login');
+		return View::make('auth/login');
 	}
 		public function doLogin()
 	{
@@ -69,7 +69,7 @@ class HomeController extends BaseController {
 
 		// if the validator fails, redirect back to the form
 		if ($validator->fails()) {
-			return Redirect::to('users/login')
+			return Redirect::to('auth/login')
 				->withErrors($validator) // send back all errors to the login form
 				->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
 		} else {
@@ -97,64 +97,13 @@ class HomeController extends BaseController {
 			} else {	 	
 
 				// validation not successful, send back to form	
-				return Redirect::to('users/login');
+				return Redirect::to('auth/login');
 
 			}
 
 		}
 	}
-
-	public function loginFacebook()
-	{
-		$facebook = new Facebook(Config::get('facebook'));	
-		$params = array(
-			'redirect_uri'=>url('/login/facebook/callback'),
-			'scope'=>'email',
-		);
-		return Redirect::to($facebook->getLoginUrl($params));
-	}
-
-	public function callbackFacebook()
-	{
-	    $code = Input::get('code');
-	    if (strlen($code) == 0) return Redirect::to('/')->with('message', 'There was an error communicating with Facebook');
-	 
-	    $facebook = new Facebook(Config::get('facebook'));
-	    $uid = $facebook->getUser();
-	 
-	    if ($uid == 0) return Redirect::to('/')->with('message', 'There was an error');
-	 
-	    $me = $facebook->api('/me');
-	 
-	    $profile = Profile::whereUid($uid)->first();
-	    if (empty($profile)) {
-	 
-	        $user = new User;
-	        $user->firstname = $me['first_name'];
-	        $user->lastname = $me['last_name'];
-	        $user->email = $me['email'];
-	        //$user->photo = 'https://graph.facebook.com/'.$me['username'].'/picture?type=large';
-	 
-	        $user->save();
-	 
-	        $profile = new Profile();
-	        $profile->uid = $uid;
-	        $profile->username = $me['username'];
-	        $profile = $user->profiles()->save($profile);
-	    }
-	 
-	    $profile->access_token = $facebook->getAccessToken();
-	    $profile->save();
-	 
-	    $user = $profile->user;
-	 
-	    Auth::login($user);
-	 
-	    return Redirect::to('/')->with('message', 'Logged in with Facebook');
-
-	}
 	
-
 	public function doLogout()
 	{
 		Session::flush();
