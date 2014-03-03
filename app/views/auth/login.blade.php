@@ -12,16 +12,16 @@
 
 	<p>
 		{{ Form::label('email', 'Email Address') }}
-		{{ Form::text('email', Input::old('email'), array('placeholder' => 'example@example.com')) }}
+		{{ Form::text('email', Input::old('email'), array('class'=>'form-control','placeholder' => 'example@example.com')) }}
 	</p>
 
 	<p>
 		{{ Form::label('password', 'Password') }}
-		{{ Form::password('password') }}
+		{{ Form::password('password', array('class' => 'form-control', 'placeholder' =>'password')) }}
 	</p>
 
-	<p>{{ Form::submit('Submit!') }}</p>
-	<p>{{ Form::button('Forgot Password?', array('href' => "password/remind", 'role' => 'button'))}}</p>
+	<p>{{ Form::submit('Submit!', array('class' => 'btn btn-success')) }}</p>
+	<p>{{ Form::button('Forgot Password?', array('href' => "password/remind", 'role' => 'button', 'class' => 'btn btn-warning'))}}</p>
 	{{ Form::close() }}
 
 @stop
