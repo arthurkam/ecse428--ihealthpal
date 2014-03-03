@@ -38,7 +38,7 @@ class UsersController extends BaseController
 	public function getDashboard()
 	{
 		Session::regenerate();
-		    return View::make('home', array('name' => Session::get('name')));	
+		    return View::make('users.home', array('name' => Session::get('name')));	
 	}
 
 	public function BMICalculator()

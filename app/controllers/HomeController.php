@@ -21,7 +21,7 @@ class HomeController extends BaseController {
 
 		if(Auth::check()){
 		
-			return Redirect::to('home');
+			return Redirect::to('users.home');
 		}
 		$this->layout->content = View::make('index');
 	}
@@ -33,22 +33,22 @@ class HomeController extends BaseController {
 	
 	public function showAbout()
 	{
-		return View::make('about');	
+		return View::make('common.about');	
 	}
 	
 	public function showContact()
 	{		
-		return View::make('contact');
+		return View::make('common.contact');
 	}
 
 	public function showResource()
 	{		
-		return View::make('resource');
+		return View::make('common.resource');
 	}
 
 	public function showHelp()
 	{		
-		return View::make('help');
+		return View::make('common.help');
 	}
 	
 	public function showLogin()
