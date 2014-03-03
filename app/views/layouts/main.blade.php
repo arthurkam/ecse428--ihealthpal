@@ -88,7 +88,12 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
+      @unless (Auth::check())
         <img src="/img/logo.png" alt="logo" height="200">
+	  @endunless
+	  @if (Auth::check())
+	  	<img src="/img/logo.png" alt="logo" height="100">
+	  @endif
 	<p>Health and Fitness Tracking System.</p>
 	
 	@yield('content')
