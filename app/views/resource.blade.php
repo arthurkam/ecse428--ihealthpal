@@ -18,5 +18,5 @@
 			<p><a href="http://www.heartandstroke.com/site/c.ikIQLcMWJtE/b.3484019/k.6437/HeartHealthy_Recipes.htm">Hearty receipes</a></p>			
          </div>
       </div>
-
+    </div>
 @stop

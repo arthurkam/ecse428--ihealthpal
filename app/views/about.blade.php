@@ -17,4 +17,5 @@
             <p>personal information will be available as well.</p>
          </div>
       </div>
+    </div>
 @stop
