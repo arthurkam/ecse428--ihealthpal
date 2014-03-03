@@ -16,7 +16,7 @@
        </div>
         <div class="col-md-3">
           <h3>Personal stats</h3>
-          <input type="image" name="stats" value="stats" src="img/personal_stats.png" width="70" style="margin-bottom:15px"; />
+          <a href="status"><input type="image" name="stats" value="stats" src="img/personal_stats.png" width="70" style="margin-bottom:15px"; /></a>
         </div>
        <div class="col-md-3">
           <h3>Progress</h3>
