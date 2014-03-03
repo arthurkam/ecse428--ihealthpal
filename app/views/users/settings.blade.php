@@ -40,7 +40,8 @@
           <a class="navbar-brand" href="home"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
           <a class="navbar-brand" href="about">About</a>
           <a class="navbar-brand" href="contact">Contact</a>
-          <a class="navbar-brand" href="">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>
+          <a class="navbar-brand" href="resource">Resource</a>
+          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>  
         </div>
         <div class="navbar-collapse collapse">
           <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
@@ -52,9 +53,16 @@
       </div>
     </div>
 
-      <h3>Account Settings</h3>
+	<div class="jumbotron">
+      <div class="container">
+        <img src="img/logo.png" alt="logo" height="100">
+      </div>
+    </div>
+
       <div class="container">
         <div class="row">
+          <h3>Account Settings</h3>
+          <br />
               <!-- Nav tabs -->
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
@@ -67,42 +75,69 @@
               <div class="tab-content">
                 <div class="tab-pane fade in active" id="overview">
                   <br />
-                  <p>First Name: {{$firstname = Auth::user()->firstname}}</p>
-                  <p>Last Name: {{$lastname = Auth::user()->lastname}}</p>
-                  <p>Email: {{$email = Auth::user()->email}}</p>
-                  <p>Member since {{{$timestamp = Auth::user()->created_at}}}</p>
-                  <p>Weight: {{{$weight = Auth::user()->weight}}} kg, Height: {{{$height = Auth::user()->height}}} cm</p>
-                  <p>ID: {{{$ID = Auth::user()->id}}}</p>
+                  <table style="width:400px">
+                  <tr>
+                    <td>{{Form::label('firstname', 'First Name : ')}}</td>
+                    <td>{{$firstname = Auth::user()->firstname}}</td>    
+                    </tr>
+                  <tr>
+                    <td>{{Form::label('lastname', 'Last Name : ')}}</td>
+                    <td>{{$lastname = Auth::user()->lastname}}</td>    
+                  </tr>
+                  <tr>
+                    <td>{{Form::label('email', 'Email : ')}}</td>
+                    <td>{{$email = Auth::user()->email}}</td>    
+                  </tr>
+                  <tr>
+                    <td>{{Form::label('weight', 'Weight : ')}}</td>
+                    <td>{{{$weight = Auth::user()->weight}}} kg</td>    
+                  </tr>
+                  <tr>
+                    <td>{{Form::label('height', 'Height : ')}}</td>
+                    <td>{{{$height = Auth::user()->height}}} cm</td>    
+                  </tr>
+                  <tr>
+                    <td>{{Form::label('created_at', 'Member since')}}</td>
+                    <td>{{{$timestamp = Auth::user()->created_at}}}</td>    
+                  </tr>                                      
+                </table>
+          
                 </div>
                 <div class="tab-pane fade" id="edit">
                   <br />
-                  <p>TO BE COMPLETED</p>
-                  <p>This should be a form where placeholders correspond to data currently
-                  stored in database.</p>
                   <p>{{ Form::open(array('url' => '/users/update')) }}
 	              <ul>
 		              @foreach($errors->all() as $error)
-					  <li>{{ $error }}</li>
-					  @endforeach
+					           <li>{{ $error }}</li>
+					        @endforeach
 	              </ul>
-				 	   	{{Form::label('firstname', 'First Name : ')}}
-				 	   	{{Form::text('firstname', $firstname)}}
-				 	   	</br>
-				 	   	{{Form::label('lastname', 'Last Name : ')}}
-				 	   	{{Form::text('lastname', $lastname)}}
-				 	   	</br>
-				 	   	{{Form::label('email', 'Email : ')}}
-				 	   	{{Form::text('email', $email)}}
-				 	   	</br>
-				 	   	{{Form::label('weight', 'Weight : ')}}
-				 	   	{{Form::text('weight', $weight)}}
-				 	   	</br>
-				 	   	
-				 	   	{{Form::label('height', 'Height : ')}}
-				 	   	{{Form::text('height', $height)}}
+
+                <table style="width:400px">
+                  <tr>
+                    <td>{{Form::label('firstname', 'First Name : ')}}</td>
+                    <td>{{Form::text('firstname', $firstname)}}</td>    
+                    </tr>
+                  <tr>
+                    <td>{{Form::label('lastname', 'Last Name : ')}}</td>
+                    <td>{{Form::text('lastname', $lastname)}}</td>    
+                  </tr>
+                  <tr>
+                    <td>{{Form::label('email', 'Email : ')}}</td>
+                    <td>{{Form::text('email', $email)}}</td>    
+                  </tr>
+                  <tr>
+                    <td>{{Form::label('weight', 'Weight : ')}}</td>
+                    <td>{{Form::text('weight', $weight)}}</td>    
+                  </tr>
+                  <tr>
+                    <td>{{Form::label('height', 'Height : ')}}</td>
+                    <td>{{Form::text('height', $height)}}</td>    
+                  </tr>                                    
+                </table>
+
 				 	   	</br>
 				 	   	{{Form::submit('Save Changes', array('class'=>'btn btn-primary'))}}
-					 {{ Form::close() }}</p>
+					    {{ Form::close() }}</p>
                   <br/>
                   <!--button type="submit" class="btn btn-primary">
                     <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Save Changes
@@ -119,7 +154,11 @@
                   <p>This action is irreversible. Your profile and any related data will be removed from our servers the moment you submit your request.</p>
                   <br />
                    <!-- <a href="/delete" onclick="if(!confirm('Are you sure to delete this item?')){return false;};"><i class="glyphicon glyphicon-trash"></i> Delete Account</a> -->
-                    <a href="#" id="deleteConfirm"><i class="glyphicon glyphicon-trash"></i> Delete Account</a>
+                    <a href="#" id="deleteConfirm">
+                      <button type="submit" class="btn btn-danger btn-lg">
+                        <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete Account
+                      </button>
+                    </a>
                 </div>
               </div>
         </div>
