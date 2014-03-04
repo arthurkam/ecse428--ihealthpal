@@ -70,9 +70,7 @@
     <div class="row">
         {{ Form::open( array('url' => '/diary/search') ) }}
         {{ Form::hidden( 'to_food_id', Input::old( 'to_food_id' ), array( 'id' => 'to_food_id' ) ) }}
-
         {{ Form::text( 'food', Input::old( 'food' ), array ('class' => 'input-lg', 'placeholder'=>'Search for a food' ) ) }}
-
 		<br/> <br/>
         {{ Form::submit('Search', array('class'=>'btn btn-lg btn-primary'))}}
         {{ Form::close() }}
