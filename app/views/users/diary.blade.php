@@ -49,7 +49,6 @@
         $( "#food" ).autocomplete({
           source: "/diary/search",
           select: function( event, ui ) {
-            console.log(e);
             $( '#to_food_id' ).val( ui.item.id );
           }
         });
