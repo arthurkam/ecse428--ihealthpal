@@ -79,7 +79,16 @@ class UsersController extends BaseController
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
-
+	
+	public function setGoals()
+	{
+		if(Auth::check())
+		{
+			$goal = Auth::goal();
+			$goal->goal_type = Input::get('goal_type');
+		}	
+	}
+	
 	public function showSettings()
 	{
 		Session::regenerate();
@@ -143,7 +152,7 @@ class UsersController extends BaseController
 	
 	public function postUpdate()
 	{
-		if(Session::has('loggedIn')){
+		if(Auth::check()){
 			$user = Auth::user();
 
 			$validator = Validator::make(
