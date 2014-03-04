@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>iHealthPal | Progress </title>
+    <title>iHealthPal</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -24,16 +24,17 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<script>
+    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
       ga('create', 'UA-47850364-1', 'inc.gs');
       ga('send', 'pageview');
     </script>
   </head>
-  
+
   <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -45,31 +46,34 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="home"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
-          <a class="navbar-brand" href="about">About</a>
-          <a class="navbar-brand" href="contact">Contact</a>
-          <a class="navbar-brand" href="resource">Resource</a>
-          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
+          <a class="navbar-brand" href="/">iHealthPal</a>
+          <a class="navbar-brand" href="/about">About</a>
+          <a class="navbar-brand" href="/contact">Contact</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form action="/logout" class="navbar-form navbar-right" role="form" method="get">
-            <button type="submit" class="btn btn-danger">
-              Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
+          <form action="/users/login" class="navbar-form navbar-right" role="form" method="post">
+            <div class="form-group">
+              <input name="email" type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input name="password" type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">
+              <span class="glyphicon glyphicon-log-in"></span> &nbsp;Login
             </button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-   
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <img src="img/logo.png" alt="logo" height="100">
-      </div>
-    </div>
-	<div class="container">
+        <img src="/img/logo.png" alt="logo" height="200">
+	<p>Health and Fitness Tracking System.</p>
 
     
-    <br /><br />
+     
 
       <footer>
         <p>&copy; iHealthPal 2014</p>
@@ -82,15 +86,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-      $(function() {
-        $( "#food" ).autocomplete({
-          source: "/diary/search",
-          select: function( event, ui ) {
-            $( '#to_food_id' ).val( ui.item.id );
-          }
-        });
-      });
-    </script>
   </body>
 </html>

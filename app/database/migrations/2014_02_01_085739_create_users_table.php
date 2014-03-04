@@ -20,8 +20,8 @@ class CreateUsersTable extends Migration {
 			$table->string('email', 320);
 			$table->string('password', 64);
 			$table->timestamps();
-		});
-		
+		});	
+			
 		Schema::table('users', function(Blueprint $table)
 		{
 		    $table->string('firstname', 32);

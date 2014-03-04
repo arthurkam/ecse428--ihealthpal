@@ -5,7 +5,7 @@ class UsersController extends BaseController
 	 	
  	public function getRegister() 
  	{
-    	return View::make('users.register');
+    	return View::make('auth.register');
 	}
 	
 	public function postCreate(){
@@ -40,14 +40,14 @@ class UsersController extends BaseController
 	public function getDashboard()
 	{
 		Session::regenerate();
-		    return View::make('home', array('name' => Session::get('name')));	
+		    return View::make('users.home', array('name' => Session::get('name')));	
 	}
 
 	public function BMICalculator()
 	{
 		Session::regenerate();
 		if(Session::has('loggedIn')){
-			return View::make('BMI',array('height'=>Session::get("height"),'weight'=>Session::get('weight'),'name' => Session::get('name')));
+			return View::make('users.BMI',array('height'=>Session::get("height"),'weight'=>Session::get('weight'),'name' => Session::get('name')));
 			}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
@@ -70,18 +70,6 @@ class UsersController extends BaseController
 		return "404";
 	}
 	
-	public function showGoals()
-	{
-		Session::regenerate();
-		
-		if(Auth::check())
-		{
-			return View::make('users.goals');	
-			
-		}
-			return Redirect::to('/')->with('message', 'Please log in first!');
-	}
-
 	public function showSettings()
 	{
 		Session::regenerate();
@@ -99,9 +87,18 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			return View::make('diary');	
+			return View::make('users.diary');	
 		}
-			return Redirect::to('/')->with('message', 'Please log in first!');
+		return Redirect::to('/')->with('message', 'Please log in first!');
+	}
+	
+	public function showStatus()
+	{
+		if(Auth::check())
+		{
+			return View::make('users.status');
+		}
+		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 	
 	public function showProgress()
@@ -110,7 +107,7 @@ class UsersController extends BaseController
 		
 		if(Auth::check())
 		{
-			return View::make('progress');	
+			return View::make('users.progress');	
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
@@ -136,7 +133,7 @@ class UsersController extends BaseController
 	
 	public function postUpdate()
 	{
-		if(Session::has('loggedIn')){
+		if(Auth::check()){
 			$user = Auth::user();
 
 			$validator = Validator::make(
@@ -147,7 +144,7 @@ class UsersController extends BaseController
 		 		),
 		 		array( 	'firstname' => 'required|min:3',
 		 				'lastname'	=> 'required|min:3',
-		 				'email'		=> 'required|email'
+		 				'email'		=> 'required|email|unique:users'
 		 		)	
 		 	);
 

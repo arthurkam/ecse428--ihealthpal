@@ -7,9 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-
-    <title>iHealthPal</title>
-
+	@unless (Auth::check())
+    	<title>iHealthPal</title>
+	@endunless
+	@if (Auth::check())
+		<title>iHealthPal | {{{Auth::user()->firstname}}}</title>
+	@endif	
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
@@ -33,6 +36,8 @@
       ga('create', 'UA-47850364-1', 'inc.gs');
       ga('send', 'pageview');
     </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
   </head>
 
   <body>
@@ -47,11 +52,12 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/">iHealthPal</a>
-          <a class="navbar-brand" href="about">About</a>
-          <a class="navbar-brand" href="contact">Contact</a>
-          <a class="navbar-brand" href="resource">Resource</a>
-          <a class="navbar-brand" href="help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
+          <a class="navbar-brand" href="/about">About</a>
+          <a class="navbar-brand" href="/contact">Contact</a>
+          <a class="navbar-brand" href="/resource">Resource</a>
+          <a class="navbar-brand" href="/help">Help&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a>         
         </div>
+        @unless (Auth::check())
         <div class="navbar-collapse collapse">
           <form action="users/login" class="navbar-form navbar-right" role="form" method="post">
             <div class="form-group">
@@ -64,15 +70,32 @@
               <span class="glyphicon glyphicon-log-in"></span> &nbsp;Login
             </button>
             <a class="btn btn-warning" href="password/remind" role="button">Forgot Password?</a>
-          </form>
+            </form>
+        </div>
+          @endunless
+          
+          @if (Auth::check())
+            <div class="navbar-collapse collapse">
+				<form action="/logout" class="navbar-form navbar-right" role="form" method="get">
+					<button type="submit" class="btn btn-danger">
+					Logout &nbsp;<span class="glyphicon glyphicon-log-out"></span>
+					</button>
+				</form>
+			</div>
+          @endif
+          
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
+      @unless (Auth::check())
         <img src="/img/logo.png" alt="logo" height="200">
+	  @endunless
+	  @if (Auth::check())
+	  	<img src="/img/logo.png" alt="logo" height="100">
+	  @endif
 	<p>Health and Fitness Tracking System.</p>
 	
 	@yield('content')
@@ -87,7 +110,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
