@@ -68,27 +68,6 @@ class UsersController extends BaseController
 		return "404";
 	}
 	
-	public function showGoals()
-	{
-		Session::regenerate();
-		
-		if(Auth::check())
-		{
-			return View::make('users.goals');	
-			
-		}
-			return Redirect::to('/')->with('message', 'Please log in first!');
-	}
-	
-	public function setGoals()
-	{
-		if(Auth::check())
-		{
-			$goal = Auth::goal();
-			$goal->goal_type = Input::get('goal_type');
-		}	
-	}
-	
 	public function showSettings()
 	{
 		Session::regenerate();
@@ -163,7 +142,7 @@ class UsersController extends BaseController
 		 		),
 		 		array( 	'firstname' => 'required|min:3',
 		 				'lastname'	=> 'required|min:3',
-		 				'email'		=> 'required|email'
+		 				'email'		=> 'required|email|unique:users'
 		 		)	
 		 	);
 

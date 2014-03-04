@@ -1,7 +1,5 @@
 <?php
 
-//use Illuminate\Auth\UserInterface;
-
 class Goal extends Eloquent{
 	
 	/**

@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('content')	
+@section('content')
 
       <div class="container">
         <div class="row">
@@ -20,30 +20,30 @@
                   <table style="width:400px">
                   <tr>
                     <td>{{Form::label('firstname', 'First Name : ')}}</td>
-                    <td>{{$firstname = Auth::user()->firstname}}</td>    
+                    <td>{{$firstname = Auth::user()->firstname}}</td>
                     </tr>
                   <tr>
                     <td>{{Form::label('lastname', 'Last Name : ')}}</td>
-                    <td>{{$lastname = Auth::user()->lastname}}</td>    
+                    <td>{{$lastname = Auth::user()->lastname}}</td>
                   </tr>
                   <tr>
                     <td>{{Form::label('email', 'Email : ')}}</td>
-                    <td>{{$email = Auth::user()->email}}</td>    
+                    <td>{{$email = Auth::user()->email}}</td>
                   </tr>
                   <tr>
                     <td>{{Form::label('weight', 'Weight : ')}}</td>
-                    <td>{{{$weight = Auth::user()->weight}}} kg</td>    
+                    <td>{{{$weight = Auth::user()->weight}}} kg</td>
                   </tr>
                   <tr>
                     <td>{{Form::label('height', 'Height : ')}}</td>
-                    <td>{{{$height = Auth::user()->height}}} cm</td>    
+                    <td>{{{$height = Auth::user()->height}}} cm</td>
                   </tr>
                   <tr>
                     <td>{{Form::label('created_at', 'Member since')}}</td>
-                    <td>{{{$timestamp = Auth::user()->created_at}}}</td>    
-                  </tr>                                      
+					<td>{{{$timestamp = Auth::user()->created_at}}}</td>
+                  </tr>
                 </table>
-          
+
                 </div>
                 <div class="tab-pane fade" id="edit">
                   <br />
@@ -57,24 +57,24 @@
                 <table style="width:400px">
                   <tr>
                     <td>{{Form::label('firstname', 'First Name : ')}}</td>
-                    <td>{{Form::text('firstname', $firstname, $attributes = array('class' => 'form-control'))}}</td>    
+                    <td>{{Form::text('firstname', $firstname, $attributes = array('class' => 'form-control'))}}</td>
                     </tr>
                   <tr>
                     <td>{{Form::label('lastname', 'Last Name : ')}}</td>
-                    <td>{{Form::text('lastname', $lastname, $attributes = array('class' => 'form-control'))}}</td>    
+                    <td>{{Form::text('lastname', $lastname, $attributes = array('class' => 'form-control'))}}</td>
                   </tr>
                   <tr>
                     <td>{{Form::label('email', 'Email : ')}}</td>
-                    <td>{{Form::text('email', $email, $attributes = array('class' => 'form-control'))}}</td>    
+                    <td>{{Form::text('email', $email, $attributes = array('class' => 'form-control'))}}</td>
                   </tr>
                   <tr>
                     <td>{{Form::label('weight', 'Weight : ')}}</td>
-                    <td>{{Form::text('weight', $weight, $attributes = array('class' => 'form-control'))}}</td>    
+                    <td>{{Form::text('weight', $weight, $attributes = array('class' => 'form-control'))}}</td>
                   </tr>
                   <tr>
                     <td>{{Form::label('height', 'Height : ')}}</td>
-                    <td>{{Form::text('height', $height, $attributes = array('class' => 'form-control'))}}</td>    
-                  </tr>                                    
+                    <td>{{Form::text('height', $height, $attributes = array('class' => 'form-control'))}}</td>
+                  </tr>
                 </table>
 
 				 	   	</br>
@@ -121,7 +121,7 @@
                   <button id="confirmAccountDelete" type="button" class="btn btn-danger">Continue</button>
                 </div>
         </div>
-      
+
       </div>
     </div>
 @stop
@@ -148,7 +148,7 @@
         //     url:"",
         //     method:"POST",
         //     data:
-        //   }); 
+        //   });
         // });
       });
     </script>
