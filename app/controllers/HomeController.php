@@ -54,7 +54,7 @@ class HomeController extends BaseController {
 	public function showLogin()
 	{
 		// show the form
-		return View::make('auth/login');
+		return View::make('auth.login');
 	}
 		public function doLogin()
 	{
@@ -69,7 +69,7 @@ class HomeController extends BaseController {
 
 		// if the validator fails, redirect back to the form
 		if ($validator->fails()) {
-			return Redirect::to('auth/login')
+			return Redirect::to('users/login')
 				->withErrors($validator) // send back all errors to the login form
 				->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
 		} else {
