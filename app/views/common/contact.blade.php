@@ -1,5 +1,4 @@
 @extends('layouts.main')
-
 @section('content')	
 
     <div class="container" id="body">
@@ -50,5 +49,6 @@
             <p>For technical issues, please contact Arthur Kam</p>
 		</div>
 	</div>
+    </div>
   
 @stop

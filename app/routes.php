@@ -34,12 +34,6 @@
 	
 	// Route of reminding password
 	Route::controller('password', 'RemindersController');
-	
-	// Route to facebook login
-	Route::get('login/facebook', array('uses' => 'HomeController@loginFacebook'));
-
-	// Route for facebook callback
-	Route::get('login/facebook/callback', array('uses' => 'HomeController@callbackFacebook'));	
 
 	// Route to the home page, after login
 	Route::any('home', array('uses' => 'UsersController@getDashboard'));
@@ -48,10 +42,10 @@
 	Route::get('logout', array('uses' => 'HomeController@doLogout'));
 	
 	// Route to Goals page
-	Route::any('goals', array('uses' => 'UsersController@showGoals'));
+	Route::any('goals', array('uses' => 'GoalsController@showGoals'));
 	
 	// Route to set Goal
-	Route::any('goals/set',array('uses' => 'UserController@setGoals'));
+	Route::any('goals/set',array('uses' => 'GoalsController@setGoals'));
 
 	// Route to the account settings, after login
 	Route::any('settings', array('uses' => 'UsersController@showSettings'));
@@ -62,14 +56,17 @@
 	// Route to the Diary page, after login
 	Route::any('diary', array('uses' => 'UsersController@showDiary'));
 
-	//Route to search the foods table for autocomplete
-	Route::any('diary/search', array('uses' => 'DiaryController@getMatchingFood'));
+	// Route to search the foods table for autocomplete
+	Route::get('diary/search', array('uses' => 'DiaryController@getMatchingFood'));
 
-	//Route to add entry to diary
+	// Route to add entry to diary
 	Route::any('diary/add', array('uses' => 'DiaryController@addToDiary'));
 	
-	//Route to view matching foods
+	// Route to view matching foods
 	Route::any('diary/found_foods', array('uses' => 'DiaryController@showMatchingFoods'));
+	
+	// Route to Personal status page
+	Route::any('status', array('uses' => 'UsersController@showStatus'));
 	
 	// Route to the Progress page, after login
 	Route::any('progress', array('uses' => 'UsersController@showProgress'));

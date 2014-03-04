@@ -2,7 +2,8 @@
 @section('content')	
         
     <p><a class="btn btn-primary btn-lg" href="users/register" role="button">Sign up &raquo;</a></p>
-
+	</div>
+    </div>
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">

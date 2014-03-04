@@ -51,17 +51,6 @@ App::error(function(Exception $exception, $code)
 	Log::error($exception);
 });
 
-App::error(function(InvalidUserException $exception)
-{
-	Log::error($exception);
-	
-	return 'Sorry! Something is wrong with this account!';	
-});
-
-App::missing(function($exception)
-{
-    return Response::view('errors.missing', array(), 404);
-});
 /*
 |--------------------------------------------------------------------------
 | Maintenance Mode Handler

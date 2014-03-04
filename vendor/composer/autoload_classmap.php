@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddTimestampToGoals' => $baseDir . '/app/database/migrations/2014_03_04_061712_add_timestamp_to_goals.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'BaseFacebook' => $vendorDir . '/facebook/php-sdk/src/base_facebook.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
@@ -45,6 +46,7 @@ return array(
     'Crypt_TripleDES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php',
     'Crypt_Twofish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
+    'DiaryController' => $baseDir . '/app/controllers/DiaryController.php',
     'Facebook' => $vendorDir . '/facebook/php-sdk/src/facebook.php',
     'FacebookApiException' => $vendorDir . '/facebook/php-sdk/src/base_facebook.php',
     'File_ANSI' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
@@ -54,6 +56,8 @@ return array(
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator/Factory.php',
     'File_X509' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/X509.php',
+    'Goal' => $baseDir . '/app/models/Goal.php',
+    'GoalsController' => $baseDir . '/app/controllers/GoalsController.php',
     'HomeController' => $baseDir . '/app/controllers/HomeController.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
     'Illuminate\\Auth\\AuthManager' => $vendorDir . '/laravel/framework/src/Illuminate/Auth/AuthManager.php',

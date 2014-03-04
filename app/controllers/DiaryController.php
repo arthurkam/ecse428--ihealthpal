@@ -8,9 +8,10 @@ class DiaryController extends BaseController {
 
 	public function getMatchingFood(){
 		$term = Input::get( 'term' );
+
 		$foods = array();
 
-		$search = DB::query("
+		$search = DB::select("
 			select *
 			from foods
 			where match (name) 
@@ -18,13 +19,14 @@ class DiaryController extends BaseController {
 		");
 
 		foreach ($search as $results => $food ){
-			$foods[] = array(
-				'id' => $food->id,
-				'value' => $food->name,
-			);
+			// $foods[$food->id] = $food->name;
+			$name = $food->name;
+			$val  =$food->id;
+			array_push($foods,array("label"=>$name,"value"=>$val));
 		}
-
-		return json_encode ( $foods );
+		// print_r($search);
+		// $res = array("result"=>$foods);
+		return json_encode($foods);
 	}
 
 
@@ -33,3 +35,4 @@ class DiaryController extends BaseController {
 	}
 
 }
+?>
