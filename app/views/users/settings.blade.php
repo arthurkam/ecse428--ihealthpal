@@ -54,7 +54,7 @@
 					        @endforeach
 	              </ul>
 
-                <table style="width:400px">
+                <table class="table" style="width:400px">
                   <tr>
                     <td>{{Form::label('firstname', 'First Name : ')}}</td>
                     <td>{{Form::text('firstname', $firstname, $attributes = array('class' => 'form-control'))}}</td>
