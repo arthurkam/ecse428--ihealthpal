@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
- <br>
 
+<div class="tab-content">
   <ul class="nav nav-tabs">
 		<li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
 		<li><a href="#Add" data-toggle="tab">Add new Goals</a></li>
@@ -48,7 +48,7 @@
     	{{Form::submit('Set the Goal!', array('class' => 'btn btn-success'));}}
 	
 	{{ Form::close() }}
-  	
+  </div>
     </div> <!-- /container -->
 
 @stop
