@@ -27,16 +27,15 @@
 		   {{ Form::password('password_confirmation', array('class'=>'form-control', 'placeholder'=>'Confirm Password')) }}
 		   </br>
 		   {{Form::label('security_question', 'Security Question :')}}
-		   <select class="form-control">
-		   		<option id='1'>What is your mother's maiden name?</option>
-		   		<option id='2'>Who is your best friend from childhood?</option>
-		   		<option id='3'>What is the name of your first pet?</option>
-		   		<option id='4'>What is the name of your spouse?</option>
-		   		<option id='5'>Who is your favourite athlete?</option>
-		   </select>
 		   </br>
-		   {{Form::label('secret_answer', 'Security Answer :')}}
-		   {{ Form::text('secret_answer', null, array('class'=>'form-control', 'placeholder'=>'Security Answer')) }}
+		   {{ Form::select('security_question', array('1' => 'What is your mother\'s maiden name?', '2' => 'Who is your best friend from childhood?',
+		   							'3' => 'What is the name of your first pet?', '4' => 'What is the name of your spouse?',
+		   							'5' => 'Who is your favourite athlete?')) }}
+
+		   </br>
+		   </br>
+		   {{Form::label('security_answer', 'Security Answer :')}}
+		   {{ Form::text('security_answer', null, array('class'=>'form-control', 'placeholder'=>'Security Answer')) }}
 		   </br>		   
 		   {{ Form::submit('Register', array('class'=>'btn btn-large btn-primary'))}}
 		   </div>

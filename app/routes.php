@@ -57,7 +57,7 @@
 	Route::any('diary', array('uses' => 'UsersController@showDiary'));
 
 	// Route to search the foods table for autocomplete
-	Route::any('diary/search', array('uses' => 'DiaryController@getMatchingFood'));
+	Route::get('diary/search', array('uses' => 'DiaryController@getMatchingFood'));
 
 	// Route to add entry to diary
 	Route::any('diary/add', array('uses' => 'DiaryController@addToDiary'));
