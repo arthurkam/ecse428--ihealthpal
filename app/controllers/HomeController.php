@@ -54,9 +54,10 @@ class HomeController extends BaseController {
 	public function showLogin()
 	{
 		// show the form
-		return View::make('auth.login');
+		return View::make('auth/login');
 	}
-		public function doLogin()
+	
+	public function doLogin()
 	{
 		// validate the info, create rules for the inputs
 		$rules = array(
@@ -97,7 +98,7 @@ class HomeController extends BaseController {
 			} else {	 	
 
 				// validation not successful, send back to form	
-				return Redirect::to('auth/login');
+				return Redirect::to('/users/login');
 
 			}
 

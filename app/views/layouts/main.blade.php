@@ -57,7 +57,7 @@
         </div>
         @unless (Auth::check())
         <div class="navbar-collapse collapse">
-          <form action="users/login" class="navbar-form navbar-right" role="form" method="post">
+          <form action="/users/dologin" class="navbar-form navbar-right" role="form" method="post">
             <div class="form-group">
               <input name="email" type="text" placeholder="Email" class="form-control">
             </div>

@@ -9,7 +9,8 @@
 
   <div class="tab-pane fade in active" id="overview">
   <br>
-  	{{{$id = Auth::user()->id}}}
+  	{{{$user_id = Auth::user()->id}}}
+  	{{{$goal = DB::table('goals')->where('user_id', '=', 1)->only('weight')}}}
   	<br>
   	{{Form::label('Goals:')}}
 
