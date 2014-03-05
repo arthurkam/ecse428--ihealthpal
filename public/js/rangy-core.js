@@ -1,11 +1,5 @@
 /**
- * @license Rangy, a cross-browser JavaScript range and selection library
- * http://code.google.com/p/rangy/
- *
- * Copyright 2011, Tim Down
- * Licensed under the MIT license.
- * Version: 1.1.2
- * Build date: 30 May 2011
+ * cross-browser JavaScript range and selection library
  */
 var rangy = (function() {
 
