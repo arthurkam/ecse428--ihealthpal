@@ -36,7 +36,6 @@
 	{{ Form::open(array('url' => 'goals/set')) }}
     	{{Form::label('Goals', 'Choose your goals: ')}}
     	{{Form::select('goal_type', array('Lose' => 'Lose weight', 'Gain' => 'Gain weight'));}}
-    	
     	{{Form::text('weight', '10', array('class' => 'form-control'));}}
     	{{Form::select('weight_unit', array('Kg' => 'Kg', 'Lb' =>'Lb'));}}
     	{{Form::label('over', 'over');}}

@@ -37,6 +37,7 @@ return array(
     'CreateGoalsTable' => $baseDir . '/app/database/migrations/2014_02_28_233305_create_goals_table.php',
     'CreatePasswordRemindersTable' => $baseDir . '/app/database/migrations/2014_02_19_052325_create_password_reminders_table.php',
     'CreateProfilesTable' => $baseDir . '/app/database/migrations/2014_02_16_032657_create_profiles_table.php',
+    'CreateStatusTable' => $baseDir . '/app/database/migrations/2014_03_05_170030_create_status_table.php',
     'CreateUsersTable' => $baseDir . '/app/database/migrations/2014_02_01_085739_create_users_table.php',
     'Crypt_AES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
     'Crypt_Base' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Base.php',
