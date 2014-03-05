@@ -3,6 +3,7 @@
 
 <h2>Help</h2>
 
+@unless (Auth::check())
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -36,6 +37,9 @@
       </div>
     </div>
   </div>
+@endunless
+
+@if (Auth::check())
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
@@ -51,4 +55,5 @@
     </div>
   </div>
 </div>
+@endif
 @stop
