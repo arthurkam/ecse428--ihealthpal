@@ -14,11 +14,12 @@
 		<title>iHealthPal | {{{Auth::user()->firstname}}}</title>
 	@endif	
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/css/jumbotron.css" rel="stylesheet">
+
+    @yield('scripts')
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
