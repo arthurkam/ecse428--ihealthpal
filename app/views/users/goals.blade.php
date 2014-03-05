@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
- <br>
 
+<div class="tab-content">
   <ul class="nav nav-tabs">
 		<li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
 		<li><a href="#Add" data-toggle="tab">Add new Goals</a></li>
@@ -39,7 +39,6 @@
     	
     	{{Form::text('weight', '10', array('class' => 'form-control'));}}
     	{{Form::select('weight_unit', array('Kg' => 'Kg', 'Lb' =>'Lb'));}}
-    	
     	{{Form::label('over', 'over');}}
     	{{Form::text('time_interval', '12',array('class' => 'form-control'));}}
     	{{Form::select('time_unit', array('Days' => 'Day', 'Months' => 'Month', 'Years' => 'Year'));}}
@@ -48,7 +47,7 @@
     	{{Form::submit('Set the Goal!', array('class' => 'btn btn-success'));}}
 	
 	{{ Form::close() }}
-  	
+  </div>
     </div> <!-- /container -->
 
 @stop
