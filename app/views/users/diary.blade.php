@@ -1,13 +1,13 @@
 @extends('layouts.main')
 
 @section('scripts') 
-    <link href="bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
 
-      <script src="jquery.js"></script>
-      <script src="rangy-core.js"></script>
-      <script src="caret-position.js"></script>
-      <script src="bootstrap-typeahead.js"></script>
-      <script src="bootstrap-tagautocomplete.js"></script>
+      <script src="/js/jquery.js"></script>
+      <script src="/js/rangy-core.js"></script>
+      <script src="/js/caret-position.js"></script>
+      <script src="/js/bootstrap-typeahead.js"></script>
+      <script src="/js/bootstrap-tagautocomplete.js"></script>
 
     <style type="text/css">
         .ui-helper-hidden-accessible { display:none; }
@@ -38,13 +38,13 @@
 
     <script>
       $(function() {
-        $( "div#food" ).autocomplete({
+        $( "#food" ).autocomplete({
           source: "/diary/search",
           select: function( event, ui ) {
             $( '#to_food_id' ).val( ui.item.id );
           }
         });
-        $('div#food').first().focus();
+        $('#food').first().focus();
       });
     </script>
 @stop
