@@ -9,7 +9,10 @@ class GoalsController extends BaseController
 		
 		if(Auth::check())
 		{
-			return View::make('users.goals');	
+			$id = Auth::user()->id;
+			$goals = Goal::where('id', $id)->get();
+  			
+  			return View::make('users.goals')->with('goals',$goals);	
 			
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
@@ -21,14 +24,14 @@ class GoalsController extends BaseController
 		if(Auth::check())
 		{
 			$goal = new Goal;
-			$goal->user_id = Auth::user()->id;
+			$goal->id = Auth::user()->id;
 			$goal->goal_type = Input::get('goal_type');
 			$goal->weight = Input::get('weight');
 			$goal->time_interval = Input::get('time_interval');
 			$goal->time_unit = Input::get('time_unit');
 			$goal->save();
 			
-			return Redirect::to('users.goals');
+			return Redirect::to('goals');
 		}	
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
