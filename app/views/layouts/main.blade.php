@@ -14,6 +14,7 @@
 		<title>iHealthPal | {{{Auth::user()->firstname}}}</title>
 	@endif	
     <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
