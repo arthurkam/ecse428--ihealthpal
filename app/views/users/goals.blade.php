@@ -39,7 +39,6 @@
     	
     	{{Form::text('weight', '10', array('class' => 'form-control'));}}
     	{{Form::select('weight_unit', array('Kg' => 'Kg', 'Lb' =>'Lb'));}}
-    	
     	{{Form::label('over', 'over');}}
     	{{Form::text('time_interval', '12',array('class' => 'form-control'));}}
     	{{Form::select('time_unit', array('Days' => 'Day', 'Months' => 'Month', 'Years' => 'Year'));}}
