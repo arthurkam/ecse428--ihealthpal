@@ -23,7 +23,7 @@
         $( "#food" ).autocomplete({
           source: "/diary/search",
           select: function( event, ui ) {
-            $( '#food' ).val( ui.item.label );
+            $( '#to_food_id' ).val( ui.item.id );
           }
         });
       });
