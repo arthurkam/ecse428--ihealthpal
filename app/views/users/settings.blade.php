@@ -17,28 +17,28 @@
               <div class="tab-content">
                 <div class="tab-pane fade in active" id="overview">
                   <br />
-                  <table style="width:400px">
-                  <tr>
+                  <table class="table" style="width:400px">
+                  <tr class="info">
                     <td>{{Form::label('firstname', 'First Name : ')}}</td>
                     <td>{{$firstname = Auth::user()->firstname}}</td>
                     </tr>
-                  <tr>
+                  <tr class="success">
                     <td>{{Form::label('lastname', 'Last Name : ')}}</td>
                     <td>{{$lastname = Auth::user()->lastname}}</td>
                   </tr>
-                  <tr>
+                  <tr class="info">
                     <td>{{Form::label('email', 'Email : ')}}</td>
                     <td>{{$email = Auth::user()->email}}</td>
                   </tr>
-                  <tr>
+                  <tr class="success">
                     <td>{{Form::label('weight', 'Weight : ')}}</td>
                     <td>{{{$weight = Auth::user()->weight}}} kg</td>
                   </tr>
-                  <tr>
+                  <tr class="info">
                     <td>{{Form::label('height', 'Height : ')}}</td>
                     <td>{{{$height = Auth::user()->height}}} cm</td>
                   </tr>
-                  <tr>
+                  <tr class="success">
                     <td>{{Form::label('created_at', 'Member since')}}</td>
 					<td>{{{$timestamp = Auth::user()->created_at}}}</td>
                   </tr>
