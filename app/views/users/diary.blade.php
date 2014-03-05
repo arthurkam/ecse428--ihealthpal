@@ -49,7 +49,7 @@
         $( "#food" ).autocomplete({
           source: "/diary/search",
           select: function( event, ui ) {
-            $( '#to_food_id' ).val( ui.item.name );
+            $( '#to_food_id' ).name( ui.item.id );
           }
         });
       });
