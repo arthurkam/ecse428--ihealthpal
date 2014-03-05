@@ -22,7 +22,7 @@ class DiaryController extends BaseController {
 			// $foods[$food->id] = $food->name;
 			$name = $food->name;
 			$val  =$food->id;
-			array_push($foods,array("label"=>$name,"value"=>$val));
+			array_push($foods,array("label"=>$name,"value"=>$name));
 		}
 		// print_r($search);
 		// $res = array("result"=>$foods);
