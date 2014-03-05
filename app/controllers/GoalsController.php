@@ -27,7 +27,10 @@ class GoalsController extends BaseController
 			$goal->time_interval = Input::get('time_interval');
 			$goal->time_unit = Input::get('time_unit');
 			$goal->save();
+			
+			return Redirect::to('users.goals');
 		}	
+		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 	
 }

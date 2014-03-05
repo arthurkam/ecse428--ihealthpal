@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')	
 
-      {{ Form::open(array('url' => 'users/login')) }}
+      {{ Form::open(array('url' => 'users/dologin')) }}
 	<h2>Login</h2>
 
 	<!-- if there are login errors, show them here -->

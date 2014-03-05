@@ -30,7 +30,7 @@
 	Route::get('users/login', array('uses' => 'HomeController@showLogin'));
 
 	// Route to process the form
-	Route::post('users/login', array('uses' => 'HomeController@doLogin'));
+	Route::post('users/dologin', array('uses' => 'HomeController@doLogin'));
 	
 	// Route of reminding password
 	Route::controller('password', 'RemindersController');
