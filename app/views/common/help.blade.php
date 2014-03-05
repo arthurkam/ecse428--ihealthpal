@@ -3,12 +3,12 @@
 	<div class="container" id="body">
 		<div class="row">
 			<h2>Help</h2>
-
-			<center><img src="/img/instruction1.png" alt="instruction image" height="500"></center>
 		</div>
 	</div>
-		
+	
 			@unless (Auth::check())
+			<center><img src="/img/instruction1.png" alt="instruction image" height="500"></center>
+			
 			<div class="panel-group" id="accordion">
 			  <div class="panel panel-default">
 			    <div class="panel-heading">
