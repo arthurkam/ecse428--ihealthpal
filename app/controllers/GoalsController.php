@@ -27,6 +27,7 @@ class GoalsController extends BaseController
 			$goal->id = Auth::user()->id;
 			$goal->goal_type = Input::get('goal_type');
 			$goal->weight = Input::get('weight');
+			$goal->weight_unit = Input::get('weight_unit');
 			$goal->time_interval = Input::get('time_interval');
 			$goal->time_unit = Input::get('time_unit');
 			$goal->save();
