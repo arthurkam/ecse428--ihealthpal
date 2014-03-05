@@ -5,7 +5,7 @@
 	<h2>Login</h2>
 
 	<!-- if there are login errors, show them here -->
-	<p>
+	<p class="text-danger">
 		{{ $errors->first('email') }}
 		{{ $errors->first('password') }}
 	</p>
