@@ -28,12 +28,8 @@
     <br /><br />
 @stop
 @section('code')
-    <!-- // <script src="/js/jquery.js"></script> -->
-    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-     <script src="/js/rangy-core.js"></script>
-     <script src="/js/caret-position.js"></script>
-     <script src="/js/bootstrap-typeahead.js"></script>
-     <script src="/js/bootstrap-tagautocomplete.js"></script>
+  <script src="/js/jquery.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
     <script>
       $(function() {
@@ -41,6 +37,11 @@
           source: "/diary/search",
           select: function( event, ui ) {
             $( '#to_food_id' ).val( ui.item.id );
+          },
+          // appendTo:"#dropdownHere"
+          create: function(e, ui){
+            // console.log(ui);
+            $(".ui-front").addClass("dropdown-menu");
           }
         });
         $('#food').first().focus();
