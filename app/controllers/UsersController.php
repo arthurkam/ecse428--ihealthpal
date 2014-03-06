@@ -146,7 +146,7 @@ class UsersController extends BaseController
 		 		),
 		 		array( 	'firstname' => 'required|min:3',
 		 				'lastname'	=> 'required|min:3',
-		 				'email'		=> 'required|email|unique:users',
+		 				// 'email'		=> 'required|email|unique:users',
 		 				'weight'	=> 'required|numeric|min:0',
 		 				'height'	=> 'required|numeric|min:0'
 		 		)	
@@ -159,7 +159,7 @@ class UsersController extends BaseController
 				);
 
 				if($validator2->fails()){
-					return Redirect::to('/settings')->with('message', 'The following errors occurred')->withErrors($validator2)->withInput();
+					return Redirect::to('/settings')->with('message', 'The following errors occurred :')->withErrors($validator2)->withInput();
 				}
 			}
 
