@@ -125,11 +125,7 @@
       </div>
     </div>
 @stop
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+@section('code')
     <script>
       $(document).ready(function(){
         $("#deleteConfirm").on("click",function(e){
@@ -143,14 +139,6 @@
           $("#confirmAccountDelete").remove();
 
         });
-        // $("#confirmedAccountDelete").on("click",function(e){
-        //   $.ajax({
-        //     url:"",
-        //     method:"POST",
-        //     data:
-        //   });
-        // });
       });
-    </script>
-  </body>
-</html>
+      </script>
+@stop
