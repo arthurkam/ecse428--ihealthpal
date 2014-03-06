@@ -90,15 +90,14 @@ class HomeController extends BaseController {
 				Session::put('loggedIn',true);
 				Session::put('weight',Auth::user()->weight);
 				Session::put('height',Auth::user()->height);
-				// redirect them to the secure section or whatever
-				// return Redirect::to('secure');
-				// for now we'll just echo success (even though echoing in a controller is bad)
-				return Redirect::to('home')->with('Success', 'You are already logged in!');
+				// return Redirect::to('home')->with('message', 'You are already logged in!');
+				// message is not needed
+				return Redirect::to('home');
 				
 			} else {	 	
 
 				// validation not successful, send back to form	
-				return Redirect::to('/users/login');
+				return Redirect::to('/users/login')->with("message","The email and password combination doesn't anything anything in our database. Please try again");
 
 			}
 

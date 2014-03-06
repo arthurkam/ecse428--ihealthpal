@@ -124,32 +124,6 @@
 
       </div>
     </div>
-    @if (Session::has('message'))
-    <div id="messageModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-              <!-- <div class="modal-header">
-                <h2>Co</h2>
-              </div> -->
-              <div class="modal-body" id="messageBody">
-                {{Session::get('message')}}
-                </br>
-                <?php
-                // echo("dfdf");
-                foreach ($errors->all('<li>:message</li>') as $error)
-                {
-                    echo $error;
-
-                }
-                ?>
-              </div>
-              <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
-            </div>
-
-          </div>
-        </div>
-    @endif
 @stop
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -158,9 +132,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function(){
-        @if (Session::has('message'))
-          $("#messageModal").modal('show');
-        @endif
         $("#deleteConfirm").on("click",function(e){
 
             e.preventDefault();
