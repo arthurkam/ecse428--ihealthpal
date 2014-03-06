@@ -107,11 +107,41 @@
         <p>&copy; iHealthPal 2014</p>
       </footer>
     </div> <!-- /container -->
+    @if (Session::has('message'))
+        <div id="messageModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <!-- <div class="modal-header">
+                    <h2>Co</h2>
+                  </div> -->
+                  <div class="modal-body" id="messageBody">
+                    {{Session::get('message')}}
+                    </br>
+                    <?php
+                    // echo("dfdf");
+                    foreach ($errors->all('<li>:message</li>') as $error)
+                    {
+                        echo $error;
 
+                    }
+                    ?>
+                  </div>
+                  <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                </div>
+
+              </div>
+            </div>
+        @endif
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/js/bootstrap.min.js"></script>
+    <script>
+    @if (Session::has('message'))
+             $(document).ready(function(){$("#messageModal").modal('show');});
+    @endif
+    </script>
   </body>
 </html>
