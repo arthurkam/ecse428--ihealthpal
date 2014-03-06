@@ -19,7 +19,7 @@
     <!-- Custom styles for this template -->
     <link href="/css/jumbotron.css" rel="stylesheet">
 
-    @yield('scripts')
+    @yield('css')
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -38,8 +38,6 @@
       ga('create', 'UA-47850364-1', 'inc.gs');
       ga('send', 'pageview');
     </script>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-
   </head>
 
   <body>
@@ -122,26 +120,26 @@
                     foreach ($errors->all('<li>:message</li>') as $error)
                     {
                         echo $error;
-
                     }
                     ?>
                   </div>
                   <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
                 </div>
 
               </div>
             </div>
         @endif
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script>
     @if (Session::has('message'))
+    <script>
              $(document).ready(function(){$("#messageModal").modal('show');});
-    @endif
     </script>
+    @endif
+    @yield('code')
   </body>
 </html>
