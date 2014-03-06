@@ -131,12 +131,16 @@ class UsersController extends BaseController
 			$validator = Validator::make(
 		 		array(	'firstname' => Input::get('firstname'),
 		 				'lastname'  => Input::get('lastname'),
-		 				'email'		=> Input::get('email')
+		 				'email'		=> Input::get('email'),
+		 				'weight'	=> Input::get('weight'),
+		 				'height'	=> Input::get('height')
 		 				
 		 		),
 		 		array( 	'firstname' => 'required|min:3',
 		 				'lastname'	=> 'required|min:3',
-		 				'email'		=> 'required|email|unique:users'
+		 				// 'email'		=> 'required|email|unique:users',
+		 				'weight'	=> 'required|numeric|min:0',
+		 				'height'	=> 'required|numeric|min:0'
 		 		)	
 		 	);
 
@@ -147,7 +151,7 @@ class UsersController extends BaseController
 				);
 
 				if($validator2->fails()){
-					return Redirect::to('/settings')->with('message', 'The following errors occurred')->withErrors($validator2)->withInput();
+					return Redirect::to('/settings')->with('message', 'The following errors occurred :')->withErrors($validator2)->withInput();
 				}
 			}
 
@@ -166,7 +170,7 @@ class UsersController extends BaseController
 				Session::put('weight',Auth::user()->weight);
 				Session::put('height',Auth::user()->height);
 
-				return Redirect::to('/settings');
+				return Redirect::to('/settings')->with('message',"Success! User information updated.");
 		 	}
 		}
 		
