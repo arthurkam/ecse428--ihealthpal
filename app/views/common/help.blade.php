@@ -9,7 +9,7 @@
 			@unless (Auth::check())
 			<center><img src="/img/instruction1.png" alt="instruction image" height="500"></center>
 			
-			<div class="panel-group" id="accordion">
+			<div class="panel-group" id="accordion" >
 			  <div class="panel panel-default">
 			    <div class="panel-heading">
 			      <h4 class="panel-title">
@@ -43,23 +43,99 @@
 			      </div>
 			    </div>
 			  </div>
+			</div>
 			@endunless
 			
 			@if (Auth::check())
+			<center><img src="/img/instruction2.png" alt="instruction image" height="500"></center>
+
+			<div class="panel-group" id="accordion" >
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+			         	Diary
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseOne" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <p>Coming Soon</p>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+			         	Goal
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseTwo" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <p>Coming Soon</p>
+			      </div>
+			    </div>
+			  </div>
 			  <div class="panel panel-default">
 			    <div class="panel-heading">
 			      <h4 class="panel-title">
 			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-			         	View Progress
+			         	Personal Stats
 			        </a>
 			      </h4>
 			    </div>
 			    <div id="collapseThree" class="panel-collapse collapse">
 			      <div class="panel-body">
-			        <p></p>
+			        <p>Coming Soon</p>
 			      </div>
 			    </div>
 			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+			         	Progress
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseFour" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <p>Coming Soon</p>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+			         	BMI Calculator
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseFive" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <p>Coming Soon</p>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+			         	Setting
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseSix" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <p>Coming Soon</p>
+			      </div>
+			    </div>
+			  </div>
+			  
+			  
 			</div>
 
 @endif
