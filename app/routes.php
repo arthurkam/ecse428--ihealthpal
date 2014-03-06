@@ -66,7 +66,10 @@
 	Route::any('diary/found_foods', array('uses' => 'DiaryController@showMatchingFoods'));
 	
 	// Route to Personal status page
-	Route::any('status', array('uses' => 'UsersController@showStatus'));
+	Route::any('status', array('uses' => 'StatusController@showStatus'));
+	
+	// Route to update status
+	Route::any('status/set', array('uses' => 'StatusController@setStatus'));
 	
 	// Route to the Progress page, after login
 	Route::any('progress', array('uses' => 'UsersController@showProgress'));

@@ -7,7 +7,7 @@
 		<li><a href="#Add" data-toggle="tab">Add new Goals</a></li>
   </ul>
 
-  <div class="tab-pane fade in active" id="overview">	
+  <div class="tab-pane fade in active" id="overview">
  	<br>
  	<table class="table">
 	 	<tr class="info">
@@ -30,7 +30,7 @@
   	@endforeach
 
  	</table>
-  	  </div>
+  </div>
 
   <div class="tab-pane fade" id="Add">
 	{{ Form::open(array('url' => 'goals/set')) }}
@@ -44,10 +44,9 @@
 		<br>
 		<br>
     	{{Form::submit('Set the Goal!', array('class' => 'btn btn-success'));}}
-	
+
 	{{ Form::close() }}
   </div>
     </div> <!-- /container -->
 
 @stop
-

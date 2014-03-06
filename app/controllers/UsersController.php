@@ -92,15 +92,7 @@ class UsersController extends BaseController
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 	
-	public function showStatus()
-	{
-		if(Auth::check())
-		{
-			return View::make('users.status');
-		}
-		return Redirect::to('/')->with('message', 'Please log in first!');
-	}
-	
+		
 	public function showProgress()
 	{
 		Session::regenerate();
