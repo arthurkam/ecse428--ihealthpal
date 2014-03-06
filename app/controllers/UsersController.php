@@ -178,7 +178,7 @@ class UsersController extends BaseController
 				Session::put('weight',Auth::user()->weight);
 				Session::put('height',Auth::user()->height);
 
-				return Redirect::to('/settings'->with('message',"Success! User information updated."));
+				return Redirect::to('/settings')->with('message',"Success! User information updated.");
 		 	}
 		}
 		
