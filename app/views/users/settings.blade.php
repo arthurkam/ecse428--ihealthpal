@@ -124,6 +124,23 @@
 
       </div>
     </div>
+    @if (Session::has('message'))
+    <div id="messageModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <!-- <div class="modal-header">
+                <h2>Co</h2>
+              </div> -->
+              <div class="modal-body" id="messageBody">
+                {{Session::get('message')}}
+              </div>
+              <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+            </div>
+
+          </div>
+        </div>
+    @endif
 @stop
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -132,6 +149,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function(){
+        @if (Session::has('message'))
+          $("#messageModal").modal('show');
+        @endif
         $("#deleteConfirm").on("click",function(e){
 
             e.preventDefault();
@@ -140,7 +160,7 @@
         $("#confirmAccountDelete").on("click",function(e){
           e.preventDefault();
           $("#deleteBody").html("Please enter your password: <br><form METHOD='POST' action='/delete'><input name='password' type='password' /> <input type='submit' value='Delete Account'></form>");
-          $("#confirmAccountDelete").remove();''
+          $("#confirmAccountDelete").remove();
 
         });
         // $("#confirmedAccountDelete").on("click",function(e){
