@@ -2,6 +2,6 @@
 
 class Status extends Eloquent{
 	
-	protected $table = 'goals';
+	protected $table = 'status';
 	
 }
