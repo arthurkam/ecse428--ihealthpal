@@ -23,6 +23,9 @@
 
 @stop
 
+<<<<<<< HEAD
 
   </body>
 </html>
+=======
+>>>>>>> 78e8c0f3feb3004a4e234c96423e6fbfb31c0450

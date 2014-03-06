@@ -1,14 +1,7 @@
 @extends('layouts.main')
 
-@section('scripts') 
+@section('css') 
     <link href="/css/bootstrap.css" rel="stylesheet">
-
-      <script src="/js/jquery.js"></script>
-      <script src="/js/rangy-core.js"></script>
-      <script src="/js/caret-position.js"></script>
-      <script src="/js/bootstrap-typeahead.js"></script>
-      <script src="/js/bootstrap-tagautocomplete.js"></script>
-
     <style type="text/css">
         .ui-helper-hidden-accessible { display:none; }
     </style>
@@ -33,8 +26,14 @@
 
 
     <br /><br />
-
+@stop
+@section('code')
+    <!-- // <script src="/js/jquery.js"></script> -->
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+     <script src="/js/rangy-core.js"></script>
+     <script src="/js/caret-position.js"></script>
+     <script src="/js/bootstrap-typeahead.js"></script>
+     <script src="/js/bootstrap-tagautocomplete.js"></script>
 
     <script>
       $(function() {
