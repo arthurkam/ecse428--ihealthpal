@@ -1,13 +1,12 @@
 @extends('layouts.main')
 @section('content')	
-    
       <h3>BMI Calculator</h3>
       <div class="container">
       	<div class="row">
           <div class="col-md-8 col-md-offset-2">
             <h2>Your BMI is :<span id="BMI">
             @if ($height>0)
-            {{{100*100*$weight/($height*$height)}}}
+            {{ number_format(100*100*$weight/($height*$height),2)}}
             @else
             0
             @endif
@@ -38,12 +37,7 @@
       </div>
 
 @stop
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+@section('code')
     <script>
       $(document).ready(function(){
         //event binder for the submit button
@@ -66,7 +60,7 @@
           }
           height/=100;
           var BMIVal = weight/(height*height);
-          $("#BMI").html(" "+BMIVal);
+          $("#BMI").html(" "+BMIVal.toFixed(2));
           console.log(height,weight);
           //if the user wants to update BMI as well, do ajax
           if($("#updateCheckbox").is(":checked")){
@@ -80,10 +74,7 @@
               }
             })
           }
-
-
         })
       })
     </script>
-  </body>
-</html>
+  @stop
