@@ -133,6 +133,15 @@
               </div> -->
               <div class="modal-body" id="messageBody">
                 {{Session::get('message')}}
+                </br>
+                <?php
+                // echo("dfdf");
+                foreach ($errors->all('<li>:message</li>') as $error)
+                {
+                    echo $error;
+
+                }
+                ?>
               </div>
               <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
