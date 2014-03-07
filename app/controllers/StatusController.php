@@ -5,7 +5,7 @@ class StatusController extends BaseController
 	public function showStatus()
 	{
 		if(Auth::check())
-		{
+		{	
 			return View::make('users.status');
 		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
