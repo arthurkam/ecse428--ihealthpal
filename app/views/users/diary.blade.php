@@ -34,6 +34,9 @@
           {{ Form::text( 'vitaminC', Input::old( 'vitaminC' ), array ('class' => 'input-lg', 'placeholder'=>'Vitamin C (daily %)' ) ) }}
           {{ Form::text( 'calcium', Input::old( 'calcium' ), array ('class' => 'input-lg', 'placeholder'=>'Calcium (daily %)' ) ) }}      
           {{ Form::text( 'iron', Input::old( 'iron' ), array ('class' => 'input-lg', 'placeholder'=>'Iron (daily %)' ) ) }}
+
+        <img class="" id="loading" src="img/ajax.gif" style="display: none;"/>
+
         <br/> <br/>
         {{ Form::submit('Add', array('class'=>'btn btn-lg btn-primary'))}}
         {{ Form::close() }}
@@ -48,6 +51,12 @@
 
     <script>
       $(function() {
+        $(document).bind("ajaxSend",function(){
+          $("#loading").show();
+          console.log("load")
+        }).bind("ajaxComplete",function(){
+          $("#loading").fadeOut(1000);
+        });
         $( "#food" ).autocomplete({
           source: "/diary/search",
           select: function( event, ui ) {
