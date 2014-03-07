@@ -8,6 +8,39 @@
   </ul>
 
   <div class="tab-pane fade in active" id="overview">
+  	{{Form::open()}}
+  	<br>
+	  	<div class="text-hide">
+	  	{{$id = Auth::user()->id}}
+	  	{{$status = Status::find($id);}}
+	  	{{$weight_max = $status->max('weight');}}
+	  	{{$weight_min = $status->min('weight');}}
+	  	{{$weight_avg = $status->avg('weight');}}
+	  	{{$height_max = $status->max('height');}}
+	  	{{$height_min = $status->min('height');}}
+	  	{{$height_avg = $status->avg('height');}}
+	  	</div>
+	  	<br>
+	
+	  	{{Form::label('Your max weight:')}}
+	  	{{$weight_max}}
+	  	<br>
+	  	{{Form::label('Your min weight:')}}
+	  	{{$weight_min}}
+	  	<br>
+	  	{{Form::label('Your avg weight:')}}
+	  	{{$weight_avg}}
+	  	<br>
+	  	{{Form::label('Your max height:')}}
+	  	{{$height_max}}
+	  	<br>
+	  	{{Form::label('Your min height:')}}
+	  	{{$height_min}}
+	  	<br>
+	  	{{Form::label('Your avg height:')}}
+	  	{{$height_avg}}
+	
+  	{{Form::close()}}
   </div>
   <div class="tab-pane fade" id="Add">
   		<br>
