@@ -16,6 +16,7 @@
         <!--{{ Form::hidden( 'to_food_id', Input::old( 'to_food_id' ), array( 'id' => 'to_food_id' ) ) }}-->
        
         {{ Form::text( 'food', Input::old( 'food' ), array ('id'=>'food','class' => 'input-lg', 'placeholder'=>'Search for a food') ) }}
+        <img class="" id="loading" src="img/ajax.gif" style="display: none;"/>
     </div>
     <div class="row">
           <br />
