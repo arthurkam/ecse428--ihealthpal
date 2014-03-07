@@ -16,7 +16,7 @@
         {{ Form::hidden( 'to_food_id', Input::old( 'to_food_id' ), array( 'id' => 'to_food_id' ) ) }}
         
         {{ Form::text( 'food', Input::old( 'food' ), array ('id'=>'food','class' => 'input-lg', 'placeholder'=>'Search for a food') ) }}
-        
+        <img class="" id="loading" src="img/ajax.gif" style="display: none;"/>
         <div id="food" contenteditable="true">TEST HERE<br/> </div>
 
         <br/> <br/>
@@ -33,6 +33,12 @@
 
     <script>
       $(function() {
+        $(document).bind("ajaxSend",function(){
+          $("#loading").show();
+          console.log("load")
+        }).bind("ajaxComplete",function(){
+          $("#loading").fadeOut(1000);
+        });
         $( "#food" ).autocomplete({
           source: "/diary/search",
           select: function( event, ui ) {
