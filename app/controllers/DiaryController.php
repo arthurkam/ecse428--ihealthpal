@@ -31,7 +31,16 @@ class DiaryController extends BaseController {
 
 
 	public function addToDiary(){
-		//TO BE COMPLETED
+		if(Auth::check())
+		{
+			$foodEntry = new FoodEntry;
+			$foodEntry->uid = Auth::user()->id;
+			$foodEntry->foodname = Input::get('food');
+			$foodEntry->save();
+			
+			return Redirect::to('diary');
+		}	
+		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 
 }
