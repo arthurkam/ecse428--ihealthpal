@@ -17,8 +17,6 @@
         
         {{ Form::text( 'food', Input::old( 'food' ), array ('id'=>'food','class' => 'input-lg', 'placeholder'=>'Search for a food') ) }}
         
-        <div id="food" contenteditable="true">TEST HERE<br/> </div>
-
         <br/> <br/>
         {{ Form::submit('Search', array('class'=>'btn btn-lg btn-primary'))}}
         {{ Form::close() }}
