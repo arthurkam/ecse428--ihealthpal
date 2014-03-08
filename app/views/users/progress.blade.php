@@ -19,10 +19,10 @@
       {{$query = Status::where('id', '1')->orderBy('created_at', 'desc')->first();}}
       {{Form::open();}}
           {{Form::label('Your current height:');}}
-          {{$recent_height = $query->select('height')->first()}}
+          {{$recent_height = $query->addSelect('height')->first()}}
           <br>
           {{Form::label('Your current weight')}}
-          {{$query->select('weight')->first()}}
+          {{$query->addSelect('weight')->first()}}
       {{Form::close();}}
   </div>
   <div class="tab-pane fade" id="Chart">
