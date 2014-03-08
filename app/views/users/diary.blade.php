@@ -13,9 +13,9 @@
       <br /><br />
     <div class="row">
         {{ Form::open( array('url' => '/diary/add') ) }}
-        <!--{{ Form::hidden( 'to_food_id', Input::old( 'to_food_id' ), array( 'id' => 'to_food_id' ) ) }}-->
+        {{ Form::hidden( 'id', Input::old( 'to_food_id' ), array( 'id' => 'to_food_id' ) ) }}
        
-        {{ Form::text( 'food', Input::old( 'food' ), array ('id'=>'food','class' => 'input-lg', 'placeholder'=>'Search for a food') ) }}
+        {{ Form::text( 'food', Input::old( 'food' ), array ('id'=>'food','class' => 'input-lg col-md-10', 'placeholder'=>'Search for a food') ) }}
         <img class="" id="loading" src="img/ajax.gif" style="display: none;"/>
     </div>
     <div class="row">
@@ -61,7 +61,14 @@
         $( "#food" ).autocomplete({
           source: "/diary/search",
           select: function( event, ui ) {
-            $( '#to_food_id' ).val( ui.item.id );
+            $( '#to_food_id' ).val( ui.item.id.id );
+            var food = ui.item.id;
+
+            for(var x in food){
+              console.log(x);
+              $("[name='"+x+"']").val(food[x]);
+            }
+
           },
           // appendTo:"#dropdownHere"
           create: function(e, ui){

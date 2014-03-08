@@ -21,8 +21,9 @@ class DiaryController extends BaseController {
 		foreach ($search as $results => $food ){
 			// $foods[$food->id] = $food->name;
 			$name = $food->name;
-			$val  =$food->id;
-			array_push($foods,array("label"=>$name,"value"=>$name));
+			// $val  =array('id'=>$food->id);
+			// print_r(get_object_vars);
+			array_push($foods,array("label"=>$name,"id"=>get_object_vars($food)));
 		}
 		// print_r($search);
 		// $res = array("result"=>$foods);
