@@ -116,7 +116,7 @@
               {{ Form::submit('Add', array('class'=>'btn btn-lg btn-primary'))}}
               {{ Form::close() }}
       </div>
-
+    </div>
     <br /><br />
 @stop
 @section('code')
