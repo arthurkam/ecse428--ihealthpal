@@ -4,16 +4,26 @@
 
 <div class="tab-content">
   <ul class="nav nav-tabs">
-		<li class="active"><a href="#Overview" data-toggle="tab">Overview</a></li>
-		<li><a href="#Edit Current Status" data-toggle="tab">Edit Current Status</a></li>
-		<li><a href="#Chart" data-toggle="tab">Chart</a></li>
-		<li><a href="#Table" data-toggle="tab">Table</a></li>
+    <li class="active"><a href="#Overview" data-toggle="tab">Overview</a></li>
+    <li><a href="#Chart" data-toggle="tab">Chart</a></li>
+    <li><a href="#Table" data-toggle="tab">Table</a></li>
   </ul>
-  
-  <div class="tab-pane fade in active" id="Overview">
+  <div class="text-hide">
+      {{$id = Auth::user()->id;}}
+      
+      
+     
   </div>
-  <div class="tab-pane fade" id="Edit Current Status">
-  {{Form::open(array('url' => ''))}}
+  <div class="tab-pane fade in active" id="Overview">
+      <br>
+      {{$query = Status::where('id', '1')->orderBy('created_at', 'desc')->first();}}
+      {{Form::open();}}
+          {{Form::label('Your current height:');}}
+          {{$recent_height = $query->select('height')->first()}}
+          <br>
+          {{Form::label('Your current weight')}}
+          {{$query->select('weight')->first()}}
+      {{Form::close();}}
   </div>
   <div class="tab-pane fade" id="Chart">
   </div>
@@ -22,10 +32,3 @@
 </div>
 
 @stop
-
-<<<<<<< HEAD
-
-  </body>
-</html>
-=======
->>>>>>> 78e8c0f3feb3004a4e234c96423e6fbfb31c0450
