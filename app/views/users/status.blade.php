@@ -12,33 +12,26 @@
   	<br>
 	  	<div class="text-hide">
 	  	{{$id = Auth::user()->id}}
-	  	{{$status = Status::find($id);}}
-	  	{{$weight_max = $status->max('weight');}}
-	  	{{$weight_min = $status->min('weight');}}
-	  	{{$weight_avg = $status->avg('weight');}}
-	  	{{$height_max = $status->max('height');}}
-	  	{{$height_min = $status->min('height');}}
-	  	{{$height_avg = $status->avg('height');}}
 	  	</div>
 	  	<br>
 	
 	  	{{Form::label('Your max weight:')}}
-	  	{{$weight_max}}
+	  	{{Status::where('id',$id)->max('weight');}}
 	  	<br>
 	  	{{Form::label('Your min weight:')}}
-	  	{{$weight_min}}
+	  	{{Status::where('id',$id)->min('weight');}}
 	  	<br>
 	  	{{Form::label('Your avg weight:')}}
-	  	{{$weight_avg}}
+	  	{{Status::where('id',$id)->avg('weight');}}
 	  	<br>
 	  	{{Form::label('Your max height:')}}
-	  	{{$height_max}}
+	  	{{Status::where('id',$id)->max('height');}}
 	  	<br>
 	  	{{Form::label('Your min height:')}}
-	  	{{$height_min}}
+	  	{{Status::where('id',$id)->min('height');}}
 	  	<br>
 	  	{{Form::label('Your avg height:')}}
-	  	{{$height_avg}}
+	  	{{Status::where('id',$id)->avg('height');}}
 	
   	{{Form::close()}}
   </div>

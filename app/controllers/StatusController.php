@@ -6,7 +6,9 @@ class StatusController extends BaseController
 	{
 		if(Auth::check())
 		{	
-			return View::make('users.status');
+			$id = Auth::user()->id;
+			$status = Status::find($id);
+			return View::make('users.status')->with('status', '$status');
 		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
