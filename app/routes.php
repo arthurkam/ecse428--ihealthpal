@@ -54,7 +54,7 @@
 	Route::any('users/update', array('uses' => 'UsersController@postUpdate'));
 	
 	// Route to the Diary page, after login
-	Route::any('diary', array('uses' => 'UsersController@showDiary'));
+	Route::any('diary', array('uses' => 'DiaryController@showDiary'));
 
 	// Route to search the foods table for autocomplete
 	Route::get('diary/search', array('uses' => 'DiaryController@getMatchingFood'));

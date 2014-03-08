@@ -36,7 +36,7 @@
             <td>Calcium</td>    
             <td>Iron</td>  
           </tr>
-          <!--@foreach($foods as $key => $value)
+          @foreach($food_entries as $key => $value)
           <tr>
             <td>{{{$value->created_at}}}</td>
             <td>{{{$value->name}}}</td>
@@ -53,7 +53,7 @@
             <td>{{{$value->calcium}}}</td>
             <td>{{{$value->iron}}}</td>
             </tr>
-          @endforeach-->
+          @endforeach
         </table>
       </div>
 

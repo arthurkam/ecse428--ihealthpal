@@ -36,11 +36,39 @@ class DiaryController extends BaseController {
 		{
 			$foodEntry = new FoodEntry;
 			$foodEntry->uid = Auth::user()->id;
-			$foodEntry->foodname = Input::get('food');
+			$foodEntry->name = Input::get('name');
+			$foodEntry->quantity = Input::get('quantity');
+			$foodEntry->calories = Input::get('calories');
+			$foodEntry->fat = Input::get('fat');
+			$foodEntry->sodium = Input::get('sodium');
+			$foodEntry->carbohydrates = Input::get('carbohydrates');
+			$foodEntry->fibre = Input::get('fibre');
+			$foodEntry->sugars = Input::get('sugars');
+			$foodEntry->protein = Input::get('protein');
+			$foodEntry->vitaminA = Input::get('vitaminA');
+			$foodEntry->vitaminC = Input::get('vitaminC');
+			$foodEntry->calcium = Input::get('calcium');
+			$foodEntry->iron = Input::get('iron');
+
 			$foodEntry->save();
 			
 			return Redirect::to('diary');
 		}	
+		return Redirect::to('/')->with('message', 'Please log in first!');
+	}
+
+
+	public function showDiary()
+	{
+		Session::regenerate();
+		
+		if(Auth::check())
+		{
+			$id = Auth::user()->id;
+			$food_entries = FoodEntry::where('uid', $id)->get();
+
+			return View::make('users.diary')->with('food_entries', $food_entries);	
+		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 
