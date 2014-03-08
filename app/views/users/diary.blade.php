@@ -9,43 +9,67 @@
 
 @section('content') 
 
-    <div class="container-fluid">
+    <!--<div class="container-fluid">-->
       <br /><br />
       {{ Form::open( array('url' => '/diary/add','role'=>'form') ) }}
 
+      <h2>Search our food database</h2><br />
+
       <div class="row">
         <div class="col-md-6">
-          {{ Form::text( 'food', Input::old( 'food' ), array ('id'=>'food','class' => 'input-lg col-md-12', 'placeholder'=>'Search for a food, or fill it in yourself!') ) }}
-                     <img class="" id="loading" src="img/ajax.gif" style="display: none;"/>
+          {{ Form::text( 'food', Input::old( 'food' ), array ('id'=>'food','class' => 'input-lg col-md-12', 'placeholder'=>'Search for a food') ) }}
         </div>
         <div class="col-md-6">
-          {{ Form::hidden( 'id', Input::old( 'to_food_id' ), array( 'id' => 'to_food_id' ) ) }}
-
-              {{ Form::text( 'name', Input::old( 'name' ), array ( 'class' => 'input-lg', 'placeholder'=>'Name' ) ) }}
-              <br>
-              {{ Form::text( 'quantity', Input::old( 'quantity' ), array ('class' => 'input-lg', 'placeholder'=>'Serving size' ) ) }}
-              {{ Form::text( 'calories', Input::old( 'calories' ), array ('class' => 'input-lg', 'placeholder'=>'Calories' ) ) }}
-               <br />
-              {{ Form::text( 'fat', Input::old( 'fat' ), array ('class' => 'input-lg', 'placeholder'=>'Fat (gr)' ) ) }}
-              {{ Form::text( 'sodium', Input::old( 'sodium' ), array ('class' => 'input-lg', 'placeholder'=>'Sodium (mg)' ) ) }}
-              {{ Form::text( 'carbohydrates', Input::old( 'carbohydrates' ), array ('class' => 'input-lg', 'placeholder'=>'Carbohydrates (gr)' ) ) }}
-              {{ Form::text( 'fibre', Input::old( 'fibre' ), array ('class' => 'input-lg', 'placeholder'=>'Fibre (gr)' ) ) }}
-              {{ Form::text( 'sugars', Input::old( 'sugars' ), array ('class' => 'input-lg', 'placeholder'=>'Sugars (gr)' ) ) }}
-              {{ Form::text( 'protein', Input::old( 'protein' ), array ('class' => 'input-lg', 'placeholder'=>'Protein (gr)' ) ) }}
-              <br/>
-              {{ Form::text( 'vitaminA', Input::old( 'vitaminA' ), array ('class' => 'input-lg', 'placeholder'=>'Vitamin A (daily %)' ) ) }}
-              {{ Form::text( 'vitaminC', Input::old( 'vitaminC' ), array ('class' => 'input-lg', 'placeholder'=>'Vitamin C (daily %)' ) ) }}
-              {{ Form::text( 'calcium', Input::old( 'calcium' ), array ('class' => 'input-lg', 'placeholder'=>'Calcium (daily %)' ) ) }}      
-              {{ Form::text( 'iron', Input::old( 'iron' ), array ('class' => 'input-lg', 'placeholder'=>'Iron (daily %)' ) ) }}
-
-            <img class="" id="loading" src="img/ajax.gif" style="display: none;"/>
-
-            <br/> <br/>
-            {{ Form::submit('Add', array('class'=>'btn btn-lg btn-primary'))}}
+         <img class="" id="loading" src="img/ajax.gif" style="display: none;"/>
+        </div>
       </div>
-      {{ Form::close() }}
 
-    </div>
+      <br />
+
+      <h3>Can't find your food? Enter its nutritional information manually.</h3><br />
+      <table class="table">
+        <tr>
+          <td>{{Form::label('name', 'Name ')}}</td>
+          <td>{{ Form::text( 'name', Input::old( 'name' ), array ( 'class' => 'input-lg', 'placeholder'=>'Name' ) ) }}</td>
+          <td>{{Form::label('quantity', 'Quantity ')}}</td>
+          <td>{{ Form::text( 'quantity', Input::old( 'quantity' ), array ('class' => 'input-lg', 'placeholder'=>'Serving size' ) ) }}</td>
+        </tr>
+        <tr>
+            <td>{{Form::label('calories', 'Calories ')}}</td>
+            <td>{{ Form::text( 'calories', Input::old( 'calories' ), array ('class' => 'input-lg', 'placeholder'=>'Calories' ) ) }}</td>
+            <td>{{Form::label('fat', 'Fat ')}}</td>
+            <td>{{ Form::text( 'fat', Input::old( 'fat' ), array ('class' => 'input-lg', 'placeholder'=>'Fat (gr)' ) ) }}</td>
+            <td>{{Form::label('sodium', 'Sodium ')}}</td>            
+            <td>{{ Form::text( 'sodium', Input::old( 'sodium' ), array ('class' => 'input-lg', 'placeholder'=>'Sodium (mg)' ) ) }}</td>
+        </tr>
+        <tr>
+            <td>{{Form::label('carbohydrates', 'Carbohydrates ')}}</td>
+            <td>{{ Form::text( 'carbohydrates', Input::old( 'carbohydrates' ), array ('class' => 'input-lg', 'placeholder'=>'Carbohydrates (gr)' ) ) }}</td>
+            <td>{{Form::label('fibre', 'Fibre ')}}</td>
+            <td>{{ Form::text( 'fibre', Input::old( 'fibre' ), array ('class' => 'input-lg', 'placeholder'=>'Fibre (gr)' ) ) }}</td>
+            <td>{{Form::label('sugars', 'Sugars ')}}</td>
+            <td>{{ Form::text( 'sugars', Input::old( 'sugars' ), array ('class' => 'input-lg', 'placeholder'=>'Sugars (gr)' ) ) }}</td>
+        </tr>
+        <tr>
+            <td>{{Form::label('protein', 'Protein ')}}</td>
+            <td>{{ Form::text( 'protein', Input::old( 'protein' ), array ('class' => 'input-lg', 'placeholder'=>'Protein (gr)' ) ) }}</td>
+            <td>{{Form::label('vitaminA', 'Vitamin A ')}}</td>
+            <td>{{ Form::text( 'vitaminA', Input::old( 'vitaminA' ), array ('class' => 'input-lg', 'placeholder'=>'Vitamin A (daily %)' ) ) }}</td>
+            <td>{{Form::label('vitaminC', 'Vitamin C')}}</td>
+            <td>{{ Form::text( 'vitaminC', Input::old( 'vitaminC' ), array ('class' => 'input-lg', 'placeholder'=>'Vitamin C (daily %)' ) ) }}</td>
+        </tr>
+        <tr>
+            <td>{{Form::label('calcium', 'Calcium ')}}</td>
+            <td>{{ Form::text( 'calcium', Input::old( 'calcium' ), array ('class' => 'input-lg', 'placeholder'=>'Calcium (daily %)' ) ) }}</td>
+            <td>{{Form::label('iron', 'Iron')}}     </td>
+            <td>{{ Form::text( 'iron', Input::old( 'iron' ), array ('class' => 'input-lg', 'placeholder'=>'Iron (daily %)' ) ) }}</td>
+        </tr>
+      </table>
+
+            {{ Form::submit('Add', array('class'=>'btn btn-lg btn-primary'))}}
+            {{ Form::close() }}
+
+
     <br /><br />
 @stop
 @section('code')
