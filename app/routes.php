@@ -72,7 +72,7 @@
 	Route::any('status/set', array('uses' => 'StatusController@setStatus'));
 	
 	// Route to the Progress page, after login
-	Route::any('progress', array('uses' => 'UsersController@showProgress'));
+	Route::any('progress', array('uses' => 'ProgressController@showProgress'));
 	
 	// Route to the Deleting account.
 	Route::any('delete',array('uses' => 'UsersController@deleteAccount'));
