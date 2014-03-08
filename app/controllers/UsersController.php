@@ -81,17 +81,6 @@ class UsersController extends BaseController
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 	
-	public function showDiary()
-	{
-		Session::regenerate();
-		
-		if(Auth::check())
-		{
-			return View::make('users.diary');	
-		}
-		return Redirect::to('/')->with('message', 'Please log in first!');
-	}
-	
 		
 	public function showProgress()
 	{

@@ -65,7 +65,7 @@ class DiaryController extends BaseController {
 		if(Auth::check())
 		{
 			$id = Auth::user()->id;
-			$food_entries = FoodEntry::where('uid', $id)->get();
+			$food_entries = FoodEntry::where('uid', $id)->orderBy('created_at', 'desc')->get();
 
 			return View::make('users.diary')->with('food_entries', $food_entries);	
 		}
