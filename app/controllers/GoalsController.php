@@ -38,3 +38,4 @@ class GoalsController extends BaseController
 	}
 	
 }
+

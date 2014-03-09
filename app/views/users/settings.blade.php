@@ -12,6 +12,9 @@
                 <li><a href="#share" data-toggle="tab">Share</a></li>
                 <li><a href="#delete" data-toggle="tab">Delete</a></li>
               </ul>
+              <div class="text-hide">
+                
+              </div>
 
               <!-- Tab panes -->
               <div class="tab-content">
