@@ -61,12 +61,13 @@ class UsersController extends BaseController
 			$user->height = Input::get('height');
 			$user->weight = Input::get("weight");
 			$user->save();
+			$mysqldate = date( 'Y-m-d H:i:s', time() );
 			// $status = Status::create(array("id"=>$user->id,"weight"=>($user->weight),"height"=>($user->height),"created_at"=>time()));
 			DB::table('status')->insert(
 				array("id"=>$user->id,
 					"weight"=>($user->weight),
 					"height"=>($user->height),
-					"created_at"=>time(),
+					"created_at"=>$mysqldate,
 					"weight_unit"=>"Kg",
 					"height_unit"=>"cm"
 					)
