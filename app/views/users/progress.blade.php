@@ -5,13 +5,13 @@
 <div class="tab-content">
   <ul class="nav nav-tabs">
 
-    <li class="active"><a href="#Chart" data-toggle="tab">Chart</a></li>
+    <li class="active"><a href="#chart" data-toggle="tab">Chart</a></li>
     <li><a href="#Table" data-toggle="tab">Table</a></li>
   </ul>
   <div class="text-hide">
 
   </div>
-  <div class="tab-pane active" id="Chart">
+  <div class="tab-pane active" id="chart">
     <h2>Height</h2>
     <div id="weightChart" style="width:800px;height:300px"></div>
   </br>
@@ -70,10 +70,15 @@ $(function() {
     heightList.data.push([currStat.created,currStat.height]);
 
   }
-  console.log(weightList);
-
-  $.plot("#weightChart",[weightList],options);
-  $.plot("#heightChart",[heightList],options);
+  // console.log(weightList);
+  if(weightList.data.length>1){
+    //cannot have a graph with too little information
+    $.plot("#weightChart",[weightList],options);
+    $.plot("#heightChart",[heightList],options);
+  }
+  else{
+    $("#chart").html("Too few data points availiable!<br>Please come back later when there is more data collected!");
+  }
 
 });
 </script>
