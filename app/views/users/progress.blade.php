@@ -13,11 +13,11 @@
   </div>
   <div class="tab-pane active" id="chart">
     <h2>Height</h2>
-    <div id="weightChart" style="width:800px;height:300px"></div>
+    <div id="weightChart" style="width:800px;height:400px"></div>
   </br>
   <h2>Weight</h2>
 
-    <div id="heightChart" style="width:800px;height:300px"></div>
+    <div id="heightChart" style="width:800px;height:400px"></div>
   </div>
   <div class="tab-pane fade" id="Table">
     <table class="table">
@@ -53,13 +53,24 @@
 $(function() {
   var options = {
       series: {
-          lines: { show: true },
+          lines: { show: true ,
+            // fillColor: {colors:["#dddd","#dfdfdf"]},
+            fill:true,
+          },
           points: { show: true }
+
       },
       xaxis:{
         mode:"time"
-      }
-  };
+      },
+  grid: {
+      backgroundColor: {
+       colors: ["#f5f5f5", "#91939f"]
+     },
+     hoverable:true,
+     autoHightlight :true
+  }
+};
   var statusList = {{$status}};
   var weightList={label:"Weight",data:[]};
   var heightList={label:"Height",data:[]};

@@ -24,7 +24,11 @@ class StatusController extends BaseController
 			$status->height = Input::get('height');
 			$status->height_unit = Input::get('height_unit');
 			$status->save();
-			
+
+			$user = Auth::user();
+			$user->height = Input::get('height');
+			$user->weight = Input::get("weight");
+			$user->save();
 			return Redirect::to('status');
 		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
