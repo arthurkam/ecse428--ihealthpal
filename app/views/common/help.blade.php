@@ -43,6 +43,81 @@
 			      </div>
 			    </div>
 			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+			          Forgot Password?
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseThree" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      
+			      	<!------------- Carousel ----------->
+					<div id="carousel-example-generic0" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic0" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic0" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic0" data-slide-to="2"></li>
+					    <li data-target="#carousel-example-generic0" data-slide-to="3"></li>
+					  </ol>
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+					    
+					    <div class="item active">
+					      <img src="/img/forgotpass1.png" alt="forgot password tutorial1">
+					      <div class="carousel-caption">
+							<p style="color:black">If you forgot the password, click 'Forgot Password?' button</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/forgotpass2.png" alt="forgot password tutorial2">
+					      <div class="carousel-caption">
+							<p style="color:black">1. Fill in the boxes with correct information</p>
+							<p style="color:black">2. Click 'Submit' button</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/forgotpass3.png" alt="forgot password tutorial3">
+					      <div class="carousel-caption">
+							<p style="color:black">1. Security question check window is displayed</p>
+							<p style="color:black">2. Type correct security answer in the box</p>
+							<p style="color:black">3. Click 'Continue' button</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/forgotpass4.png" alt="forgot password tutorial4">
+					      <div class="carousel-caption">
+							<p style="color:black">1. Type the correct registered email address</p>
+							<p style="color:black">2. Type new password to reset the account password</p>
+							<p style="color:black">3. Click 'Reset Password' button</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/forgotpass5.png" alt="forgot password tutorial5">
+					      <div class="carousel-caption">
+							<p style="color:black">Password is successfully reset</p>
+						  </div>
+					    </div>
+					    
+					    
+					  </div>					
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-example-generic0" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic0" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					  </a>
+					</div>
+					<!------------- Carousel ends ----------->
+					
+			      </div>
+			    </div>
+			  </div>
+			  
 			</div>
 			@endunless
 			
