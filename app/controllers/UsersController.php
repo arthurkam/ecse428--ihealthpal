@@ -61,6 +61,16 @@ class UsersController extends BaseController
 			$user->height = Input::get('height');
 			$user->weight = Input::get("weight");
 			$user->save();
+			// $status = Status::create(array("id"=>$user->id,"weight"=>($user->weight),"height"=>($user->height),"created_at"=>time()));
+			DB::table('status')->insert(
+				array("id"=>$user->id,
+					"weight"=>($user->weight),
+					"height"=>($user->height),
+					"created_at"=>time(),
+					"weight_unit"=>"Kg",
+					"height_unit"=>"cm"
+					)
+			);	
 			Session::put('weight',Auth::user()->weight);
 			Session::put('height',Auth::user()->height);
 			return "200";
