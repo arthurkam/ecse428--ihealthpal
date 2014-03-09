@@ -11,8 +11,13 @@
   <div class="text-hide">
 
   </div>
-  <div class="tab-pane fade" id="Chart">
+  <div class="tab-pane active" id="Chart">
+    <h2>Height</h2>
+    <div id="weightChart" style="width:800px;height:300px"></div>
+  </br>
+  <h2>Weight</h2>
 
+    <div id="heightChart" style="width:800px;height:300px"></div>
   </div>
   <div class="tab-pane fade" id="Table">
     <table class="table">
@@ -30,10 +35,46 @@
         <td>{{$value->height}}</td>
         <td>{{$value->height_unit}}</td>
         <td>{{$value->created_at}}</td>
+        <?php
+        $t = $value->created_at;
+        $status[$key]['created'] = strtotime($t) * 1000
+        ?>
       </tr>
       @endforeach
     </table> 
   </div>
 </div>
 
+@stop
+@section('code')
+<script src='//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.min.js'></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.1/jquery.flot.time.min.js"></script>
+<script>
+$(function() {
+  var options = {
+      series: {
+          lines: { show: true },
+          points: { show: true }
+      },
+      xaxis:{
+        mode:"time"
+      }
+  };
+  var statusList = {{$status}};
+  var weightList={label:"Weight",data:[]};
+  var heightList={label:"Height",data:[]};
+  //i guess ill just do it in the front end.
+  for(var i in statusList){
+    var currStat  = statusList[i];
+    weightList.data.push([currStat.created,currStat.weight]);
+    heightList.data.push([currStat.created,currStat.height]);
+
+  }
+  console.log(weightList);
+
+  $.plot("#weightChart",[weightList],options);
+  $.plot("#heightChart",[heightList],options);
+
+});
+</script>
 @stop
