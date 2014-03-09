@@ -275,9 +275,9 @@
 					  <div class="carousel-inner">
 					    
 					    <div class="item active">
-					      <img src="/img/stat_tutorial1.png" alt="stat tutorial1">
+					      <img src="/img/progress_tutorial1.png" alt="progress tutorial1">
 					      <div class="carousel-caption">
-							<p style="color:black">Select Progresss Icon</p>
+							<p style="color:black">Select Progress Icon</p>
 					      </div>
 					    </div>
 					    
@@ -306,7 +306,55 @@
 			    </div>
 			    <div id="collapseFive" class="panel-collapse collapse">
 			      <div class="panel-body">
-			        <p>Coming Soon</p>
+			        <!------------- Carousel ----------->
+					<div id="carousel-example-generic5" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic5" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic5" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic5" data-slide-to="2"></li>
+					    <li data-target="#carousel-example-generic5" data-slide-to="3"></li>
+					  </ol>
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+					    
+					    <div class="item active">
+					      <img src="/img/bmi_tutorial1.png" alt="bmi tutorial1">
+					      <div class="carousel-caption">
+							<p style="color:black">Select BMI Calculator Icon</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/bmi_tutorial2.png" alt="bmi tutorial2">
+					      <div class="carousel-caption">
+							<p style="color:black">Body Mass Index is calculated based on height and weight recorded in 'Setting' page</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/bmi_tutorial3.png" alt="bmi tutorial3">
+					      <div class="carousel-caption">
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/bmi_tutorial4.png" alt="bmi tutorial4">
+					      <div class="carousel-caption">
+							<p style="color:black">1. New BMI is calculated</p>
+							<p style="color:black">2. Since the box was checked, new weight and height values are updated in 'Setting' page</p>
+					      </div>
+					    </div>
+					    
+					    
+					  </div>					
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-example-generic5" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic5" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					  </a>
+					</div>
+					<!------------- Carousel ends ----------->
+					
 			      </div>
 			    </div>
 			  </div>
