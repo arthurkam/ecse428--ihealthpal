@@ -74,32 +74,32 @@
 					  <div class="carousel-inner">
 					    
 					    <div class="item active">
-					      <img src="/img/diary_tutorial_1.png" alt="diary tutorial1">
+					      <img src="/img/diary_tutorial1.png" alt="diary tutorial1">
 					      <div class="carousel-caption">
 							<p style="color:black">Select Diary Icon</p>
 					      </div>
 					    </div>
 					    <div class="item">
-					      <img src="/img/diary_tutorial_2.png" alt="diary tutorial2">
+					      <img src="/img/diary_tutorial2.png" alt="diary tutorial2">
 					      <div class="carousel-caption">
 							<p style="color:black">1. Overview page is displayed</p>
 							<p style="color:black">2. To add the food in diary page, click 'Log food' tab</p>
 					      </div>
 					    </div>
 					    <div class="item">
-					      <img src="/img/diary_tutorial_3.png" alt="diary tutorial3">
+					      <img src="/img/diary_tutorial3.png" alt="diary tutorial3">
 					      <div class="carousel-caption">
 					      </div>
 					    </div>
 					    <div class="item">
-					      <img src="/img/diary_tutorial_4.png" alt="diary tutorial4">
+					      <img src="/img/diary_tutorial4.png" alt="diary tutorial4">
 					      <div class="carousel-caption">
 							<p style="color:black">1. New food item is added in the diary page</p>
 							<p style="color:black">2. Nutrition information of the added food is displayed</p>
 					      </div>
 					    </div>
 					    <div class="item">
-					      <img src="/img/diary_tutorial_5.png" alt="diary tutorial5">
+					      <img src="/img/diary_tutorial5.png" alt="diary tutorial5">
 					      <div class="carousel-caption">
 							<p style="color:black">1. If you cannot find the food, you can manually add the nutrition information of food</p>
 							<p style="color:black"></p>
