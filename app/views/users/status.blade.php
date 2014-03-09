@@ -53,11 +53,11 @@
 		<br>
 		{{Form::open(array('url' => 'status/set'))}}
 		{{Form::label('Update your height:')}}
-		{{Form::text('height', '10', array('class' => 'form-control'));}}
+		{{Form::text('height', '', array('class' => 'form-control'));}}
 		{{Form::select('height_unit', array('cm' => 'cm', 'inch' =>'inch'));}}
 		<br>
 		{{Form::label('Update your weight')}}
-		{{Form::text('weight', '10', array('class' => 'form-control'));}}
+		{{Form::text('weight', '', array('class' => 'form-control'));}}
 		{{Form::select('weight_unit', array('Kg' => 'Kg', 'Lb' =>'Lb'));}}
 		<br>
 		<br>
