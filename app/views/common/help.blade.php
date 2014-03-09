@@ -206,7 +206,6 @@
 					    <li data-target="#carousel-example-generic3" data-slide-to="1"></li>
 					    <li data-target="#carousel-example-generic3" data-slide-to="2"></li>
 					    <li data-target="#carousel-example-generic3" data-slide-to="3"></li>
-					    <li data-target="#carousel-example-generic3" data-slide-to="4"></li>
 					  </ol>
 					  <!-- Wrapper for slides -->
 					  <div class="carousel-inner">
@@ -214,7 +213,7 @@
 					    <div class="item active">
 					      <img src="/img/stat_tutorial1.png" alt="stat tutorial1">
 					      <div class="carousel-caption">
-							<p style="color:black">Select Diary Icon</p>
+							<p style="color:black">Select Personal Stats Icon</p>
 					      </div>
 					    </div>
 					    <div class="item">
@@ -262,7 +261,38 @@
 			    </div>
 			    <div id="collapseFour" class="panel-collapse collapse">
 			      <div class="panel-body">
-			        <p>Coming Soon</p>
+			      
+			        <!------------- Carousel ----------->
+					<div id="carousel-example-generic4" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic4" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic4" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic4" data-slide-to="2"></li>
+					    <li data-target="#carousel-example-generic4" data-slide-to="3"></li>
+					  </ol>
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+					    
+					    <div class="item active">
+					      <img src="/img/stat_tutorial1.png" alt="stat tutorial1">
+					      <div class="carousel-caption">
+							<p style="color:black">Select Progresss Icon</p>
+					      </div>
+					    </div>
+					    
+					    
+					  </div>					
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-example-generic4" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic4" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					  </a>
+					</div>
+					<!------------- Carousel ends ----------->
+					
 			      </div>
 			    </div>
 			  </div>
