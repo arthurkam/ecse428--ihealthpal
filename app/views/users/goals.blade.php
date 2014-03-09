@@ -19,13 +19,13 @@
 		 	<td>Start Date</td>
 	 	</tr>
 	 	@foreach($goals as $key => $value)
-  		<tr>
-	  		<td class = "success">{{{$value->goal_type}}}</td>
-	  		<td class = "success">{{{$value->weight}}}</td>
-	  		<td class = "success">{{{$value->weight_unit}}}</td>
-	  		<td class = "success">{{{$value->time_interval}}}</td>
-	  		<td class = "success">{{{$value->time_unit}}}</td>
-	  		<td class = "success">{{{$value->created_at}}}</td>
+  		<tr class = "success">
+	  		<td>{{{$value->goal_type}}}</td>
+	  		<td>{{{$value->weight}}}</td>
+	  		<td>{{{$value->weight_unit}}}</td>
+	  		<td>{{{$value->time_interval}}}</td>
+	  		<td>{{{$value->time_unit}}}</td>
+	  		<td>{{{$value->created_at}}}</td>
   		</tr>
   	@endforeach
 
