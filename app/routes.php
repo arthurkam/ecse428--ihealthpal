@@ -32,6 +32,15 @@
 	// Route to process the form
 	Route::post('users/dologin', array('uses' => 'HomeController@doLogin'));
 	
+	// Route to Forgotten Password form
+	Route::any('password/forgot', array('uses' => 'RemindersController@checkUser'));
+	
+	// Route to check security question and give new password
+	Route::any('password/checkSecurityQuestion', array('uses' => 'RemindersController@checkSecurityQuestion'));
+	
+		// Route to resetting the password
+/* 	Route::any('password/reset', array('uses' => 'RemindersController@goToReset')); */
+	
 	// Route of reminding password
 	Route::controller('password', 'RemindersController');
 

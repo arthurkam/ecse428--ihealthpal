@@ -29,9 +29,11 @@
 		   </br>
 		   {{Form::label('security_question', 'Security Question :')}}
 		   </br>
-		   {{ Form::select('security_question', array('1' => 'What is your mother\'s maiden name?', '2' => 'Who is your best friend from childhood?',
-		   							'3' => 'What is the name of your first pet?', '4' => 'What is the name of your spouse?',
-		   							'5' => 'Who is your favourite athlete?')) }}
+		   {{ Form::select('security_question', array('What is your mother\'s maiden name?' => 'What is your mother\'s maiden name?', 
+		   											  'Who is your best friend from childhood?' => 'Who is your best friend from childhood?',
+		   											  'What is the name of your first pet?' => 'What is the name of your first pet?',
+		   											  'What is the name of your spouse?' => 'What is the name of your spouse?',
+		   											  'Who is your favourite athlete?' => 'Who is your favourite athlete?')) }}
 
 		   </br>
 		   </br>
