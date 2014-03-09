@@ -306,6 +306,7 @@
 			    </div>
 			    <div id="collapseFive" class="panel-collapse collapse">
 			      <div class="panel-body">
+			      
 			        <!------------- Carousel ----------->
 					<div id="carousel-example-generic5" class="carousel slide" data-ride="carousel">
 					  <!-- Indicators -->
@@ -368,7 +369,79 @@
 			    </div>
 			    <div id="collapseSix" class="panel-collapse collapse">
 			      <div class="panel-body">
-			        <p>Coming Soon</p>
+			        
+			        <!------------- Carousel ----------->
+					<div id="carousel-example-generic6" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic6" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic6" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic6" data-slide-to="2"></li>
+					    <li data-target="#carousel-example-generic6" data-slide-to="3"></li>
+					    <li data-target="#carousel-example-generic6" data-slide-to="4"></li>
+					    <li data-target="#carousel-example-generic6" data-slide-to="5"></li>					  
+					  </ol>
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+					    
+					    <div class="item active">
+					      <img src="/img/setting_tutorial1.png" alt="setting tutorial1">
+					      <div class="carousel-caption">
+							<p style="color:black">Select Settings Icon</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/setting_tutorial2.png" alt="setting tutorial2">
+					      <div class="carousel-caption">
+							<p style="color:black">1. Personal information is displayed</p>
+							<p style="color:black">2. Personal information can be edited in 'Edit' tab</p>
+							<p style="color:black">3. The account can be deleted in 'Delete' tab</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/setting_tutorial3.png" alt="setting tutorial3">
+					      <div class="carousel-caption">
+  					        <h style="color:black"><b>Edit Tab</b></h>
+							<p style="color:black">1. Type new personal information in boxes</p>
+							<p style="color:black">2. Click 'Save Changes' button</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/setting_tutorial4.png" alt="setting tutorial4">
+					      <div class="carousel-caption">
+  					        <h style="color:black"><b>Edit Tab</b></h>
+							<p style="color:black">1. Success of change in personal information is displayed</p>
+							<p style="color:black">2. New personal information is displayed</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/setting_tutorial5.png" alt="setting tutorial5">
+					      <div class="carousel-caption">
+  					        <h style="color:black"><b>Delete Tab</b></h>
+							<p style="color:black">1. Explanation of deleting account is displayed</p>
+							<p style="color:black">2. Click 'Delete Account' button</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/setting_tutorial6.png" alt="setting tutorial6">
+					      <div class="carousel-caption">
+  					        <h style="color:black"><b>Delete Tab</b></h>
+							<p style="color:black">1. Alert message is displayed to confirm the account deletion</p>
+							<p style="color:black">2. Click 'Continue' button to permanently delete the account</p>
+					      </div>
+					    </div>
+					    
+					  </div>					
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-example-generic6" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic6" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					  </a>
+					</div>
+					<!------------- Carousel ends ----------->
+			        
 			      </div>
 			    </div>
 			  </div>
