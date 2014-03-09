@@ -12,19 +12,23 @@
 
   </div>
   <div class="tab-pane fade" id="Chart">
-    
+
   </div>
   <div class="tab-pane fade" id="Table">
     <table class="table">
       <tr class="info">
         <td>Weight</td>
+        <td>Weight Unit</td>
         <td>Height</td>
+        <td>Height Unit</td>
         <td>Time</td>
       </tr>
       @foreach($status as $key => $value)
       <tr class="success">
         <td>{{$value->weight}}</td>
+        <td>{{$value->weight_unit}}</td>
         <td>{{$value->height}}</td>
+        <td>{{$value->height_unit}}</td>
         <td>{{$value->created_at}}</td>
       </tr>
       @endforeach
