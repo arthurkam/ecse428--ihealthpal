@@ -9,7 +9,9 @@ class ProgressController extends BaseController
 		
 		if(Auth::check())
 		{
-			return View::make('users.progress');	
+			$id = Auth::user()->id;
+      		$status = Status::where('id', $id)->get();
+			return View::make('users.progress')->with('status',$status);	
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
