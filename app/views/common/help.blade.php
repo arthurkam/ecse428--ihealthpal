@@ -346,6 +346,9 @@
 					    <li data-target="#carousel-example-generic4" data-slide-to="1"></li>
 					    <li data-target="#carousel-example-generic4" data-slide-to="2"></li>
 					    <li data-target="#carousel-example-generic4" data-slide-to="3"></li>
+					    <li data-target="#carousel-example-generic4" data-slide-to="4"></li>
+					    <li data-target="#carousel-example-generic4" data-slide-to="5"></li>
+					    <li data-target="#carousel-example-generic4" data-slide-to="6"></li>
 					  </ol>
 					  <!-- Wrapper for slides -->
 					  <div class="carousel-inner">
@@ -356,7 +359,44 @@
 							<p style="color:black">Select Progress Icon</p>
 					      </div>
 					    </div>
-					    
+					    <div class="item">
+					      <img src="/img/progress_tutorial2.png" alt="progress tutorial2">
+					      <div class="carousel-caption">
+							<p style="color:black">Graphs show the changes in height and weight</p>
+							<p style="color:black">Graphs are plotted with height and weight values from 'Personal Stats' page</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/progress_tutorial3.png" alt="progress tutorial3">
+					      <div class="carousel-caption">
+							<p style="color:black">Graphs show the changes in height and weight</p>
+							<p style="color:black">Graphs are plotted with height and weight values from 'Personal Stats' page</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/progress_tutorial4.png" alt="progress tutorial4">
+					      <div class="carousel-caption">
+							<p style="color:black">Plot values of weight and height are displayed as table in 'Table' tab</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="/img/progress_tutorial5.png" alt="progress tutorial5">
+					      <div class="carousel-caption">
+							<p style="color:black">If new body status is added in 'Add New Status' tab of 'Personal Stats' page, the graphs are updated</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					    <img src="/img/progress_tutorial6.png" alt="progress tutorial6">
+					      <div class="carousel-caption">
+							<p style="color:black">If new body status is added in 'Add New Status' tab of 'Personal Stats' page, the graphs are updated</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					    <img src="/img/progress_tutorial7.png" alt="progress tutorial7">
+					      <div class="carousel-caption">
+							<p style="color:black">If new body status is added in 'Add New Status' tab of 'Personal Stats' page, the table is updated with new personal status</p>
+					      </div>
+					    </div>
 					    
 					  </div>					
 					  <!-- Controls -->
