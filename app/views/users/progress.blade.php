@@ -12,10 +12,10 @@
 
   </div>
   <div class="tab-pane active" id="chart">
-    <h2>Height</h2>
+    <h2>Weight</h2>
     <div id="weightChart" style="width:800px;height:400px"></div>
   </br>
-  <h2>Weight</h2>
+  <h2>Height</h2>
 
     <div id="heightChart" style="width:800px;height:400px"></div>
   </div>
