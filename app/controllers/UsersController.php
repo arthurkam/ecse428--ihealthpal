@@ -94,6 +94,7 @@ class UsersController extends BaseController
 	
 	public function deleteAccount()
 	{
+		
 		if(Auth::check())
 		{
 			$id = Auth::user()->id;
@@ -106,8 +107,8 @@ class UsersController extends BaseController
 				Auth::logout();
 				return Redirect::to('/');
 			}
-			
-			
+		return Redirect::to('/settings')->with('message',"Your password was wrong.");
+		
 		}
 	}
 	
