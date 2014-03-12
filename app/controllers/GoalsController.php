@@ -21,7 +21,15 @@ class GoalsController extends BaseController
 			
 	public function setGoals()
 	{
-		if(Auth::check())
+		$validator = Validator::make(
+			array(
+				'weight' => Input::get('weight')			
+			),
+			array(
+				'weight' => 'required|integer',
+			)
+		);
+		if(Auth::check() && $validator->passes())
 		{
 			$goal = new Goal;
 			$goal->id = Auth::user()->id;
@@ -34,6 +42,9 @@ class GoalsController extends BaseController
 			
 			return Redirect::to('goals');
 		}	
+		else if(Auth::check() && $validator->fails()){
+			return Redirect::to('goals')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
+		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 	
