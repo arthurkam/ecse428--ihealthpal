@@ -104,7 +104,7 @@ class UsersController extends BaseController
 			{
 				$user->delete();
 				Auth::logout();
-				return Redirect::to('/');
+				return Redirect::to('/')->with('message',"Your account has been deleted!");
 			}
 			
 			
