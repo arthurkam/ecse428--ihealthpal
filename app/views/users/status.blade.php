@@ -5,6 +5,7 @@
 	<ul class="nav nav-tabs">
 		<li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
 		<li><a href="#Add" data-toggle="tab">Add New Status</a></li>
+		<li><a href="#Allergy" data-toggle="tab">Add Allergy</a></li>
 	</ul>
 
 	<div class="tab-pane fade in active" id="overview">
@@ -63,6 +64,31 @@
 		<br>
 		{{Form::submit('Set the Status!', array('class' => 'btn btn-success'));}}
 		{{Form::close()}}
+	</div>
+
+	<div class="tab-pane fade" id="Allergy">
+		<br>
+		{{Form::open()}}
+		{{Form::checkbox('eggs','eggs')}}
+		{{Form::label('eggs')}}
+		<br>
+		{{Form::checkbox('fish','fish')}}
+		{{Form::label('fish')}}
+		<br>
+		{{Form::checkbox('milk','milk')}}
+		{{Form::label('milk')}}
+		<br>
+		{{Form::checkbox('peanuts','peanuts')}}
+		{{Form::label('peanuts')}}
+		<br>
+		{{Form::checkbox('shellfish','shellfish')}}
+		{{Form::label('shellfish')}}
+		<br>
+		{{Form::checkbox('soya','soya')}}
+		{{Form::label('soya')}}
+		<br>
+		{{Form::checkbox('wheat','wheat')}}
+		{{Form::label('wheat')}}
 	</div>
 </div>
 @stop
