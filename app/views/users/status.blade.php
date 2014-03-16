@@ -91,7 +91,7 @@
 		{{Form::checkbox('wheat','wheat')}}
 		{{Form::label('wheat')}}
 	</div>
-	<div class="tab-pane fade" id="Disease">
+	<div class="tab-pane fade" id="Diseases">
 		<br>
 		{{Form::open()}}
 		{{Form::checkbox('fibromyalgia','fibromyalgia')}}
