@@ -111,6 +111,9 @@
 		<br>
 		{{Form::checkbox('adult ADHD','adult ADHD')}}
 		{{Form::label('adult ADHD')}}
+		<br>
+		{{Form::label('Others:')}}
+		{{Form::text('others', ''}}
 	</div>
 </div>
 @stop
