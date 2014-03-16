@@ -8,7 +8,7 @@ public function showAchievements()
 		
 		if(Auth::check())
 		{
-			return View::make('achievements');
+			return View::make('users.achievements');
 		}
 		
 		return Redirect::to('/')->with('message', 'Please log in first!');
