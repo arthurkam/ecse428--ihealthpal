@@ -113,7 +113,7 @@
 		{{Form::label('adult ADHD')}}
 		<br>
 		{{Form::label('Others:')}}
-		{{Form::text('others', ''}}
+		{{Form::text('others')}}
 	</div>
 </div>
 @stop
