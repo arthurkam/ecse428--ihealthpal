@@ -56,6 +56,9 @@
 	// Route to set Goal
 	Route::any('goals/set',array('uses' => 'GoalsController@setGoals'));
 
+	// Route to Achievements page
+	Route::any('achievements', array('uses' => 'AchievementsController@showAchievements'));
+
 	// Route to the account settings, after login
 	Route::any('settings', array('uses' => 'UsersController@showSettings'));
 	
