@@ -32,7 +32,11 @@
         </div>
         <div class="col-md-3">
             <h3>Achievements</h3>
-            <a href="achievements"><input type="image" name="achievements" value="settings" src="img/achievement_icon.jpg" width="100" style="margin-bottom:15px"; /></a>
+            <a href="achievements"><input type="image" name="achievements" value="achievements" src="img/achievement_icon.jpg" width="100" style="margin-bottom:15px"; /></a>
+        </div>
+        <div class="col-md-3">
+            <h3>Exercises</h3>
+            <a href="exercises"><input type="image" name="exercises" value="exercises" src="img/dumbbells_icon.jpg" width="100" style="margin-bottom:15px"; /></a>
         </div>
         <div class="col-md-3">
             <h3>Settings</h3>
