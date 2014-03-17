@@ -39,6 +39,10 @@
             <a href="exercises"><input type="image" name="exercises" value="exercises" src="img/dumbbells_icon.jpg" width="100" style="margin-bottom:15px"; /></a>
         </div>
         <div class="col-md-3">
+            <h3>Meal Plan</h3>
+            <a href="mealPlan"><input type="image" name="mealPlan" value="mealPlan" src="img/mealplan_icon.png" width="100" style="margin-bottom:15px"; /></a>
+        </div>
+        <div class="col-md-3">
             <h3>Settings</h3>
             <a href="settings"><input type="image" name="settings" value="settings" src="img/settings_icon.png" width="60" style="margin-bottom:15px"; /></a>
         </div>
