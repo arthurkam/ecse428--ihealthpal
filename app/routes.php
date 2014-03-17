@@ -59,8 +59,11 @@
 	// Route to Achievements page
 	Route::any('achievements', array('uses' => 'AchievementsController@showAchievements'));
 
-	// Route to Achievements page
+	// Route to Exercise page
 	Route::any('exercises', array('uses' => 'ExercisesController@showExercises'));
+	
+	// Route to Meal Plan page
+	Route::any('mealPlan', array('uses' => 'mealPlanController@showMealPlan'));
 
 	// Route to the account settings, after login
 	Route::any('settings', array('uses' => 'UsersController@showSettings'));
