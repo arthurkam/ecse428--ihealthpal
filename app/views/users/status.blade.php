@@ -5,6 +5,8 @@
 	<ul class="nav nav-tabs">
 		<li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
 		<li><a href="#Add" data-toggle="tab">Add New Status</a></li>
+		<li><a href="#Allergy" data-toggle="tab">Add Allergy</a></li>
+		<li><a href="#Diseases" data-toggle="tab">Add Disease</a></li>
 	</ul>
 
 	<div class="tab-pane fade in active" id="overview">
@@ -63,6 +65,55 @@
 		<br>
 		{{Form::submit('Set the Status!', array('class' => 'btn btn-success'));}}
 		{{Form::close()}}
+	</div>
+
+	<div class="tab-pane fade" id="Allergy">
+		<br>
+		{{Form::open()}}
+		{{Form::checkbox('eggs','eggs')}}
+		{{Form::label('eggs')}}
+		<br>
+		{{Form::checkbox('fish','fish')}}
+		{{Form::label('fish')}}
+		<br>
+		{{Form::checkbox('milk','milk')}}
+		{{Form::label('milk')}}
+		<br>
+		{{Form::checkbox('peanuts','peanuts')}}
+		{{Form::label('peanuts')}}
+		<br>
+		{{Form::checkbox('shellfish','shellfish')}}
+		{{Form::label('shellfish')}}
+		<br>
+		{{Form::checkbox('soya','soya')}}
+		{{Form::label('soya')}}
+		<br>
+		{{Form::checkbox('wheat','wheat')}}
+		{{Form::label('wheat')}}
+	</div>
+	<div class="tab-pane fade" id="Diseases">
+		<br>
+		{{Form::open()}}
+		{{Form::checkbox('fibromyalgia','fibromyalgia')}}
+		{{Form::label('fibromyalgia')}}
+		<br>
+		{{Form::checkbox('diabetes','diabetes')}}
+		{{Form::label('diabetes')}}
+		<br>
+		{{Form::checkbox('depression','depression')}}
+		{{Form::label('depression')}}
+		<br>
+		{{Form::checkbox('metabolic syndrome','metabolic syndrome')}}
+		{{Form::label('metabolic syndrome')}}
+		<br>
+		{{Form::checkbox('binge-eating disorder','binge-eating disorder')}}
+		{{Form::label('binge-eating disorder')}}
+		<br>
+		{{Form::checkbox('adult ADHD','adult ADHD')}}
+		{{Form::label('adult ADHD')}}
+		<br>
+		{{Form::label('Others:')}}
+		{{Form::text('others')}}
 	</div>
 </div>
 @stop
