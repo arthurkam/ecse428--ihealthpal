@@ -17,8 +17,6 @@ class GoalsController extends BaseController
 		}
 			return Redirect::to('/')->with('message', 'Please log in first!');
 	}
-	
-			
 	public function setGoals()
 	{
 		$day_len = 86400;
@@ -66,7 +64,7 @@ class GoalsController extends BaseController
 			$achievement->completed = false;
 			$achievement->missed = false;
 			$achievement->save();
-
+			$test = AchievementHelper::checkAchievements();
 			return Redirect::to('goals');
 		}	
 		else if(Auth::check() && $validator->fails()){
@@ -74,6 +72,5 @@ class GoalsController extends BaseController
 		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
-	
 }
 

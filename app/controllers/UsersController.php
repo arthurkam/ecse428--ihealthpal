@@ -74,6 +74,8 @@ class UsersController extends BaseController
 			);	
 			Session::put('weight',Auth::user()->weight);
 			Session::put('height',Auth::user()->height);
+			$test = AchievementHelper::checkAchievements();
+
 			return "200";
 
 		}
@@ -152,13 +154,19 @@ class UsersController extends BaseController
 				$user->height = Input::get('height');
 				$user->weight = Input::get("weight");
 		 		$user->save();
-
+		 		$status = new Status;
+		 		$status->id = Auth::user()->id;
+		 		$status->weight = Input::get('weight');
+		 		$status->weight_unit = "Kg";
+		 		$status->height = Input::get('height');
+		 		$status->height_unit = "cm";
+		 		$status->save();
 				Session::put('firstname',Auth::user()->firstname);
 				Session::put('lastname',Auth::user()->lastname);
 				Session::put('email',Auth::user()->email);
 				Session::put('weight',Auth::user()->weight);
 				Session::put('height',Auth::user()->height);
-
+				$test = AchievementHelper::checkAchievements();
 				return Redirect::to('/settings')->with('message',"Success! User information updated.");
 		 	}
 		}
