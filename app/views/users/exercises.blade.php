@@ -14,6 +14,11 @@
                           background-color: #3399FF;
                           color: #FFFFFF;
                         }
+        .routine { border: 2px solid #C8C8C8;
+                    margin: 8px;
+                    display: inline-block;
+                    width: 400px;
+                  }
     </style>
 @stop
 
@@ -23,7 +28,8 @@
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
-	<li class="active"><a href="#chest" data-toggle="tab">Chest</a></li>
+	<li class="active"><a href="#routines" data-toggle="tab">Routines</a></li>
+  <li><a href="#chest" data-toggle="tab">Chest</a></li>
 	<li><a href="#back" data-toggle="tab">Back</a></li>
 	<li><a href="#arms" data-toggle="tab">Arms</a></li>
 	<li><a href="#legs" data-toggle="tab">Legs</a></li>
@@ -35,7 +41,213 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane fade in active" id="chest">
+    <div class="tab-pane fade in active" id="routines">
+        <!-- WORKOUT ROUTINES -->
+        <div class="row">
+          <!-- Mass Gain -->
+          <h2>Build your Own Training Program in 4 Simple Steps</h2>
+          <p class="bg-primary" style="width:720px;"><b>Step 1:</b> Determine your goals.
+          <br /><b>Step 2:</b> Select the program whose purpose corresponds to your latest goal.
+          <br /><b>Step 3:</b> Choose exercises as per selected program.
+          <br /><b>Step 4:</b> Follow the indicated guidelines during your workout sessions.</p>
+          <p style="font-size: 16px;"><i>*For optimal results, iHealthPal recommend using its meal plan suggestions together with one of the following workout routines.</i></p>
+          </p>
+          <div class="routine">
+            <table class="table">
+              <tr class="success">
+                <td colspan="2">
+                    <p style="margin:0; padding:0;">Mass Gain
+                      <img src="img/exercises/routines/gain_mass.png" width="40">
+                    </p>
+                </td>
+              </tr>
+              <tr>
+                <th>Purpose</th>
+                <td>To strengthen and enlarge the muscles of the body through exercise</td>
+              </tr>
+              <tr>
+                <th>Target Audience</th>
+                <td>Those who want to gain muscular mass</td>
+              </tr>
+              <tr>
+                <th>Duration</th>
+                <td>8 to 16 weeks</td>
+              </tr>
+              <tr>
+                <th>Frequency</th>
+                <td>3 to 4 times a week</td>
+              </tr>
+              <tr>
+                <th>Series</th>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Repetitions</th>
+                <td>12</td>
+              </tr>
+              <tr>
+                <th>Intensity</th>
+                <td>High</td>
+              </tr>
+              <tr>
+                <th>Workout Routine</th>
+                <td>
+                  • 6 to 8 distinct exercises<br />
+                  • Max of 2 per muscular region<br />
+                  • 10 minutes of cardio (high intensity)
+                </td>
+              </tr>
+            </table>
+          </div>
+          <!-- Weight Loss -->
+          <div class="routine">
+            <table class="table">
+              <tr class="danger">
+                <td colspan="2">
+                    <p style="margin:0; padding:0;">Weight Loss
+                      <img src="img/exercises/routines/weight_loss.png" width="40">
+                    </p>
+                </td>
+              </tr>
+              <tr>
+                <th>Purpose</th>
+                <td>To reduce body mass and body fat through aerobic exercise</td>
+              </tr>
+              <tr>
+                <th>Target Audience</th>
+                <td>Those who want to lose weight and stay fit</td>
+              </tr>
+              <tr>
+                <th>Duration</th>
+                <td>8 to 16 weeks</td>
+              </tr>
+              <tr>
+                <th>Frequency</th>
+                <td>3 to 5 times a week</td>
+              </tr>
+              <tr>
+                <th>Series</th>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Repetitions</th>
+                <td>12</td>
+              </tr>
+              <tr>
+                <th>Intensity</th>
+                <td>Low</td>
+              </tr>
+              <tr>
+                <th>Workout Routine</th>
+                <td>
+                  • 5 to 6 distinct exercises<br />
+                  • Max of 2 per muscular region<br />
+                  • 30 minutes of cardio (moderate intensity)
+                </td>
+              </tr>
+            </table>
+          </div>  
+        </div>
+        <div class="row">
+          <!-- Mass Gain -->
+          <div class="routine">
+            <table class="table">
+              <tr class="warning">
+                <td colspan="2">
+                  <p style="margin:0; padding:0;">Strength
+                      <img src="img/exercises/routines/strength.png" width="40">
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <th>Purpose</th>
+                <td>To build the strength, anaerobic endurance, and size of skeletal muscles</td>
+              </tr>
+              <tr>
+                <th>Target Audience</th>
+                <td>Those who want to get stronger</td>
+              </tr>
+              <tr>
+                <th>Duration</th>
+                <td>8 to 16 weeks</td>
+              </tr>
+              <tr>
+                <th>Frequency</th>
+                <td>3 times a week</td>
+              </tr>
+              <tr>
+                <th>Series</th>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Repetitions</th>
+                <td>6</td>
+              </tr>
+              <tr>
+                <th>Intensity</th>
+                <td>Very high</td>
+              </tr>
+              <tr>
+                <th>Workout Routine</th>
+                <td>
+                  • 5 to 6 distinct exercises<br />
+                  • Max of 2 per muscular region<br />
+                  • 10 minutes of cardio (high intensity)
+                </td>
+              </tr>
+            </table>
+          </div>
+          <!-- Weight Loss -->
+          <div class="routine">
+            <table class="table">
+              <tr class="info">
+                <td colspan="2">
+                  <p style="margin:0; padding:0;">Flexibility
+                      <img src="img/exercises/routines/flexibility.png" width="40">
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <th>Purpose</th>
+                <td>To stretch muscles and help the body stay limber</td>
+              </tr>
+              <tr>
+                <th>Target Audience</th>
+                <td>Those who want to become more flexible and gain freedom of movement</td>
+              </tr>
+              <tr>
+                <th>Duration</th>
+                <td>8 to 16 weeks</td>
+              </tr>
+              <tr>
+                <th>Frequency</th>
+                <td>3 times a week</td>
+              </tr>
+              <tr>
+                <th>Series</th>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Hold Time</th>
+                <td>30 to 60 seconds</td>
+              </tr>
+              <tr>
+                <th>Intensity</th>
+                <td>Low</td>
+              </tr>
+              <tr>
+                <th>Workout Routine</th>
+                <td>
+                  • 3 to 4 distinct stretching exercises<br />
+                  • Max of 2 per muscular region<br />
+                  • 10 to 15 minutes of cardio (low intensity)
+                </td>
+              </tr>
+            </table>
+          </div>  
+        </div>
+    </div>
+    <div class="tab-pane fade" id="chest">
     	<!-- CHEST -->
         <div class="row">
     	   <div class="exercise">
