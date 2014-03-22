@@ -57,7 +57,9 @@
 	Route::any('goals/set',array('uses' => 'GoalsController@setGoals'));
 
 	// Route to Achievements page
-	Route::any('achievements', array('uses' => 'AchievementsController@showAchievements'));
+	Route::get('achievements', array('uses' => 'AchievementsController@showAchievements'));
+
+	Route::post ('achievements', array('uses' => 'AchievementsController@editAchievements'));
 
 	// Route to Exercise page
 	Route::any('exercises', array('uses' => 'ExercisesController@showExercises'));

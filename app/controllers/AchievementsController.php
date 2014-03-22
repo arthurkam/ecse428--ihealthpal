@@ -40,7 +40,7 @@ public function showAchievements()
 		
 		if(Auth::check())
 		{
-			$test = AchievementHelper::checkAchievements();
+			// $test = AchievementHelper::checkAchievements();
 
 			$id = Auth::user()->id;
 			//get all the gaols
@@ -79,6 +79,36 @@ public function showAchievements()
 		
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
+	public function editAchievements(){
+		$id = Auth::user()->id;
 
+		$achievements = Achievement::where('uid',$id)->get();
+
+		$input =  Input::get("edit");
+		// print_r($input);
+		$input = json_decode(json_encode($input), true);
+		foreach ($input as $achievementId => $completion){
+			echo($completion==="true"?"true":"false");
+			foreach($achievements as $achievement){
+				if($achievement->id==$achievementId && $achievement->uid ==$id){
+					if($achievement->completed !=($completion==="true"?1:0)){
+						$achievement->completedDate = date( 'Y-m-d H:i:s', time());
+					}
+					$achievement->completed = ($completion==="true"?1:0);
+					echo($achievement->id);
+					// if($completion==="false"){
+					// 	$achievement->missed=1;
+					// }
+					// else{
+					// 	$achievement->missed=0;
+					// }
+					$achievement->save();
+				}
+			}
+		}
+		// return "";
+		return Redirect::to('/achievements')->with('message',"Success! User information updated.");
+
+	}
 }
 ?>
