@@ -99,7 +99,7 @@ Sorry you achievements are empty, please set a goal or something
     @endif
   </div>
   <div class="tab-pane" id="inProgress">
-    @if (isset($inProgress)==0)
+    @if (isset($inProgress)==0 && $inProgress!==null)
     You don't have no achievements that are in progress. Set a goal for yourself!
     @else
     <h3>Your current weight is {{$tes =Auth::user()->weight}} Kg.</h3>
