@@ -10,7 +10,7 @@ class GoalsController extends BaseController
 		if(Auth::check())
 		{
 			$id = Auth::user()->id;
-			$goals = Goal::where('uid', $id)->get();
+			$goals = Goal::where('id', $id)->get();
   			
   			return View::make('users.goals')->with('goals',$goals);	
 			
