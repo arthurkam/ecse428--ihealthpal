@@ -28,8 +28,9 @@
 	<li><a href="#arms" data-toggle="tab">Arms</a></li>
 	<li><a href="#legs" data-toggle="tab">Legs</a></li>
 	<li><a href="#abs" data-toggle="tab">Abs</a></li>
-    <li><a href="#cardio" data-toggle="tab">Cardio</a></li>
-    <li><a href="#workout" data-toggle="tab">My Workout</a></li>
+  <li><a href="#cardio" data-toggle="tab">Cardio</a></li>
+  <li><a href="#stretching" data-toggle="tab">Stretching</a></li>
+  <li><a href="#workout" data-toggle="tab">My Workout</a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -177,6 +178,37 @@
               <img src="img/exercises/cardio/elliptic.jpg" width="150">
            </div> 
         </div>  
+    </div>
+    <div class="tab-pane fade" id="stretching">
+        <!-- STRETCHING -->
+        <div class="row">
+           <div class="exercise">
+              <p style="margin:0; padding:0;">Adductors Stretching</p>                                                       
+              <img src="img/exercises/stretching/adductors_stretching.jpg" width="150">
+           </div>
+            <div class="exercise">
+              <p style="margin:0; padding:0;">Back Stretching</p>                                                       
+              <img src="img/exercises/stretching/back_stretching.jpg" width="150">
+           </div>
+            <div class="exercise">
+              <p style="margin:0; padding:0;">Oblique Stretching</p>                                                       
+              <img src="img/exercises/stretching/oblique_stretching.jpg" width="150">
+           </div> 
+        </div> 
+        <div class="row">
+           <div class="exercise">
+              <p style="margin:0; padding:0;">Pectoral Stretching</p>                                                       
+              <img src="img/exercises/stretching/pec_stretching.jpg" width="150">
+           </div>
+            <div class="exercise">
+              <p style="margin:0; padding:0;">Shoulder Capsule Stretching</p>                                                       
+              <img src="img/exercises/stretching/shoulder_stretching.jpg" width="150">
+           </div>
+            <div class="exercise">
+              <p style="margin:0; padding:0;">Triceps Stretching</p>                                                       
+              <img src="img/exercises/stretching/triceps_stretching.jpg" width="150">
+           </div> 
+        </div> 
     </div>
     <div class="tab-pane fade" id="workout">
         <!-- MY WORKOUT -->
