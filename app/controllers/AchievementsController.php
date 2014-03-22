@@ -72,6 +72,7 @@ public function showAchievements()
 				"achievements"=>$achievements
 				);
 			return View::make('users.achievements',$ret);
+
 		}
 		
 		return Redirect::to('/')->with('message', 'Please log in first!');
