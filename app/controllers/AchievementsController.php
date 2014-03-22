@@ -43,7 +43,7 @@ public function showAchievements()
 			$id = Auth::user()->id;
 			//get all the gaols
 			$achievements = Achievement::where('uid',$id)->get();
-			$inProgress;
+			$inProgress= null;
 			$completed = array();
 			$missed = array();
 			$latestStart =0;
