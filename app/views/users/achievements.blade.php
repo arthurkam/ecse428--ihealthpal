@@ -1,12 +1,16 @@
 @extends('layouts.main')
 @section('content')
-
-<h2>Achievements</h2>
+<style>
+.hiddenEdit{
+  display:none;
+}
+</style>
+<h2>Achievements <span><a class="btn btn-danger"id="edit" a="#">edit</a></span></h2>
 @if(count($achievements)===0)
 Sorry you achievements are empty, please set a goal or something
 @else
 <ul class="nav nav-tabs">
-  <li class="active"><a href="#all" data-toggle="tab">All</a></li>
+  <li class="active"><a href="#all" id="clickAll" data-toggle="tab">All</a></li>
   <li><a href="#completed" data-toggle="tab">Completed</a></li>
   <li><a href="#inProgress" data-toggle="tab">In Progress</a></li>
   <!-- <li><a href="#missed" data-toggle="tab">In Progress</a></li> -->
@@ -26,11 +30,14 @@ Sorry you achievements are empty, please set a goal or something
             <th>
                 Completed Date
             </th>
+            <th class="hiddenEdit">
+              Completed?
+            </th>
         </tr>
     @foreach ($achievements as $achievement)
     <tr  <?
             $date = $achievement->completedDate;
-            if($date!=="0000-00-00 00:00:00"){
+            if($achievement->completed==1){
               echo 'class="success"';
             }
           ?> >
@@ -43,7 +50,7 @@ Sorry you achievements are empty, please set a goal or something
         <td>
           <?
             $date = $achievement->completedDate;
-            if($date==="0000-00-00 00:00:00"){
+            if($achievement->completed!==1){
               echo "not completed";
             }
             else{
@@ -52,10 +59,21 @@ Sorry you achievements are empty, please set a goal or something
           ?>
 
         </td>
+        <td class="hiddenEdit">
+          <input type="checkbox" value="{{$achievement->id}}"
+          <?
+            if($achievement->completed==1){
+              echo "checked";
+            }
+          ?> 
+          >
+        </td>
     </tr>
     @endforeach
     </table>
-
+    <div class="hiddenEdit">
+      <a id="save" href="#">save</a>
+    </div>
   </div>
   <div class="tab-pane" id="completed">
     @if (count($completed)==0)
@@ -137,5 +155,54 @@ Sorry you achievements are empty, please set a goal or something
 @endif
 @stop
 @section('code')
+<script>
+(function($) {
+    $.extend({
+        doGet: function(url, params) {
+            document.location = url + '?' + $.param(params);
+        },
+        doPost: function(url, params) {
+            var $form = $("<form method='POST'>").attr("action", url);
+            $.each(params, function(name, value) {
+                $("<input type='hidden'>")
+                    .attr("name", name)
+                    .attr("value", value)
+                    .appendTo($form);
+            });
+            $form.appendTo("body");
+            $form.submit();
+        }
+    });
+})(jQuery);
+$(document).ready(function(){
+  $("#edit").on("click",function(){
+    //toggle to all page
+    $("#clickAll").click();
+    $(".hiddenEdit").show();
+    return false;
 
+  });
+  $("#save").on("click",function(){
+    //get all the checkboxes
+    var data={};
+    var inputs = $("#all tr input");
+    var $form = $("<form method='POST'>").attr("action", "/achievements");
+
+
+    for(var i=0;i<inputs.length;i++){
+      data[inputs[i].value] = inputs[i].checked;
+      $("<input type='hidden'>")
+      .attr("name", "edit["+inputs[i].value+"]")
+      .attr("value", inputs[i].checked)
+      .appendTo($form);
+    }
+    $form.appendTo("body");
+    $form.submit();
+    data ={edit:data};
+    console.log($.param(data));
+
+    return false;
+  });
+});
+  </script>
 @stop
