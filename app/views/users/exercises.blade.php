@@ -36,7 +36,6 @@
 	<li><a href="#abs" data-toggle="tab">Abs</a></li>
   <li><a href="#cardio" data-toggle="tab">Cardio</a></li>
   <li><a href="#stretching" data-toggle="tab">Stretching</a></li>
-  <li><a href="#workout" data-toggle="tab">My Workout</a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -421,9 +420,6 @@
               <img src="img/exercises/stretching/triceps_stretching.jpg" width="150">
            </div> 
         </div> 
-    </div>
-    <div class="tab-pane fade" id="workout">
-        <!-- MY WORKOUT -->
     </div>
 </div>
 
