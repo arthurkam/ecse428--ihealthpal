@@ -40,6 +40,8 @@ public function showAchievements()
 		
 		if(Auth::check())
 		{
+			$test = AchievementHelper::checkAchievements();
+
 			$id = Auth::user()->id;
 			//get all the gaols
 			$achievements = Achievement::where('uid',$id)->get();

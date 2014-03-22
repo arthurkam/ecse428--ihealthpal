@@ -29,6 +29,8 @@ class StatusController extends BaseController
 			$user->height = Input::get('height');
 			$user->weight = Input::get("weight");
 			$user->save();
+			$test = AchievementHelper::checkAchievements();
+
 			return Redirect::to('status');
 		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
