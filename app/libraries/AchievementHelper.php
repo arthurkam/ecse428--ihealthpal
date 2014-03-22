@@ -16,12 +16,15 @@ class AchievementHelper{
                     //if type==lose weight + currWeight is <= desired weight
                     if($achievement->goal_type==="Lose" && $currWeight<=($achievement->weight)){
                         $achievement->completed=true;
+                        $achievement->completedDate = date( 'Y-m-d H:i:s', time());
                         $achievement->save();
                         array_push($completedArray,$achievement->id);
                     }
                     //if they successfully gain the desired of weight
                     else if($achievement->goal_type==="Gain" && ($currWeight>=$achievement->weight)){
                         $achievement->completed=true;
+                        $achievement->completedDate = date( 'Y-m-d H:i:s', time());
+
                         $achievement->save();
                         array_push($completedArray,$achievement->id);
                     }

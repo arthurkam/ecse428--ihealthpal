@@ -49,6 +49,7 @@ class GoalsController extends BaseController
 			$weightMultiplier = Input::get("goal_type")==="Lose"?-1:1;
 			//weight is goal weight
 			$achievement->weight = $weightMultiplier*Input::get('weight')+Auth::user()->weight;
+			$achievement->oWeight = Auth::user()->weight;
 			$achievement->weight_unit = Input::get('weight_unit');
 			$achievement->goal_type = Input::get('goal_type');
 
@@ -58,7 +59,7 @@ class GoalsController extends BaseController
 						Input::get('time_unit')==='Months'?$month_len:
 							$year_len));
 			$endDate+=time();
-			$achievement->start_date = date( 'Y-m-d H:i:s', time());;
+			$achievement->start_date = date( 'Y-m-d H:i:s', time());
 			$achievement->eta = date( 'Y-m-d H:i:s', $endDate);
 
 			$achievement->completed = false;
