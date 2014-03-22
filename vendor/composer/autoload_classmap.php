@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Achievement' => $baseDir . '/app/models/Achievement.php',
+    'AchievementsController' => $baseDir . '/app/controllers/AchievementsController.php',
     'ActionsTest' => $vendorDir . '/anahkiasen/former/tests/ActionsTest.php',
     'AddTimestampToGoals' => $baseDir . '/app/database/migrations/2014_03_04_061712_add_timestamp_to_goals.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
@@ -34,6 +36,7 @@ return array(
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
     'ContainerTestCase' => $vendorDir . '/anahkiasen/former/tests/TestCases/ContainerTestCase.php',
+    'CreateAllergiesTable' => $baseDir . '/app/database/migrations/2014_03_22_161505_create_allergies_table.php',
     'CreateGoalsTable' => $baseDir . '/app/database/migrations/2014_02_28_233305_create_goals_table.php',
     'CreatePasswordRemindersTable' => $baseDir . '/app/database/migrations/2014_02_19_052325_create_password_reminders_table.php',
     'CreateProfilesTable' => $baseDir . '/app/database/migrations/2014_02_16_032657_create_profiles_table.php',
@@ -57,6 +60,7 @@ return array(
     'DummyMacros' => $vendorDir . '/anahkiasen/former/tests/Dummy/DummyMacros.php',
     'DummyToArray' => $vendorDir . '/anahkiasen/former/tests/Dummy/DummyToArray.php',
     'ElementTest' => $vendorDir . '/anahkiasen/html-object/tests/Elements/ElementTest.php',
+    'ExercisesController' => $baseDir . '/app/controllers/ExercisesController.php',
     'Facebook' => $vendorDir . '/facebook/php-sdk/src/facebook.php',
     'FacebookApiException' => $vendorDir . '/facebook/php-sdk/src/base_facebook.php',
     'FieldTest' => $vendorDir . '/anahkiasen/former/tests/Traits/FieldTest.php',
@@ -70,6 +74,7 @@ return array(
     'File_X509' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/X509.php',
     'Food' => $baseDir . '/app/models/Food.php',
     'FoodController' => $baseDir . '/app/controllers/FoodController.php',
+    'FoodEntry' => $baseDir . '/app/models/FoodEntry.php',
     'FormTest' => $vendorDir . '/anahkiasen/former/tests/FormTest.php',
     'FormerTest' => $vendorDir . '/anahkiasen/former/tests/FormerTest.php',
     'FormerTests' => $vendorDir . '/anahkiasen/former/tests/TestCases/FormerTests.php',
@@ -1336,6 +1341,7 @@ return array(
     'Predis\\Session\\SessionHandler' => $vendorDir . '/predis/predis/lib/Predis/Session/SessionHandler.php',
     'Predis\\Transaction\\AbortedMultiExecException' => $vendorDir . '/predis/predis/lib/Predis/Transaction/AbortedMultiExecException.php',
     'Predis\\Transaction\\MultiExecContext' => $vendorDir . '/predis/predis/lib/Predis/Transaction/MultiExecContext.php',
+    'ProgressController' => $baseDir . '/app/controllers/ProgressController.php',
     'Psr\\Log\\AbstractLogger' => $vendorDir . '/psr/log/Psr/Log/AbstractLogger.php',
     'Psr\\Log\\InvalidArgumentException' => $vendorDir . '/psr/log/Psr/Log/InvalidArgumentException.php',
     'Psr\\Log\\LogLevel' => $vendorDir . '/psr/log/Psr/Log/LogLevel.php',
@@ -1350,6 +1356,9 @@ return array(
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
     'Stack\\Builder' => $vendorDir . '/stack/builder/src/Stack/Builder.php',
     'Stack\\StackedHttpKernel' => $vendorDir . '/stack/builder/src/Stack/StackedHttpKernel.php',
+    'Status' => $baseDir . '/app/models/Status.php',
+    'StatusController' => $baseDir . '/app/controllers/StatusController.php',
+    'StatusTableSeeder' => $baseDir . '/app/database/seeds/StatusTableSeeder.php',
     'Symfony\\Component\\BrowserKit\\Client' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php',
     'Symfony\\Component\\BrowserKit\\Cookie' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/Cookie.php',
     'Symfony\\Component\\BrowserKit\\CookieJar' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/CookieJar.php',
@@ -1877,4 +1886,5 @@ return array(
     'Whoops\\Run' => $vendorDir . '/filp/whoops/src/Whoops/Run.php',
     'ZurbFramework4Test' => $vendorDir . '/anahkiasen/former/tests/Framework/ZurbFramework4Test.php',
     'ZurbFrameworkTest' => $vendorDir . '/anahkiasen/former/tests/Framework/ZurbFrameworkTest.php',
+    'mealPlanController' => $baseDir . '/app/controllers/mealPlanController.php',
 );
