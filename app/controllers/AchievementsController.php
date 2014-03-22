@@ -42,7 +42,7 @@ public function showAchievements()
 		{
 			$id = Auth::user()->id;
 			//get all the gaols
-			$achievements = Goal::where('uid',$id)->get();
+			$achievements = Goal::where('id',$id)->get();
 			return View::make('users.achievements');
 		}
 		
