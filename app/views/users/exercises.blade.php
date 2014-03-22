@@ -46,7 +46,7 @@
         <div class="row">
           <!-- Mass Gain -->
           <h2>Build your Own Training Program in 4 Simple Steps</h2>
-          <p class="bg-primary" style="width:720px;"><b>Step 1:</b> Determine your goals.
+          <p class="bg-primary" style="width:720px;"><b>Step 1:</b> Determine your <a href="goals" style="color: #FFFFFF;">goals</a>.
           <br /><b>Step 2:</b> Select the program whose purpose corresponds to your latest goal.
           <br /><b>Step 3:</b> Choose exercises as per selected program.
           <br /><b>Step 4:</b> Follow the indicated guidelines during your workout sessions.</p>
