@@ -42,8 +42,36 @@ public function showAchievements()
 		{
 			$id = Auth::user()->id;
 			//get all the gaols
-			$achievements = Goal::where('uid',$id)->get();
-			return View::make('users.achievements');
+			$achievements = Achievement::where('uid',$id)->get();
+			$inProgress;
+			$completed = array();
+			$missed = array();
+			$latestStart =0;
+			foreach($achievements as $achievement){
+				//in progress
+				if($achievement->completed==0 && $achievement->missed==0){
+					// array_push($inProgress,$achievement);
+					if(strtotime($achievement->start_date)>$latestStart){
+						$latestStart = strtotime($achievement->start_date);
+						$inProgress = $achievement;
+					}
+				}
+				//done
+				else if ($achievement->completed==1){
+					array_push($completed,$achievement);
+
+				}
+				//missed
+				else{
+					array_push($missed,$achievement);
+				}
+			}
+			$ret = array("inProgress"=>$inProgress,
+				"completed"=>$completed,
+				"missed"=>$missed,
+				"achievements"=>$achievements
+				);
+			return View::make('users.achievements',$ret);
 		}
 		
 		return Redirect::to('/')->with('message', 'Please log in first!');
