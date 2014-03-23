@@ -200,7 +200,7 @@
   </div>
 
 <! http://www.bodybuilding.com/fun/mohr60.htm#1 >  
-  <div class="tab-pane active" id="massGain2">
+  <div class="tab-pane" id="massGain2">
     <div class="row">
     
     <div class="panel panel-default">
