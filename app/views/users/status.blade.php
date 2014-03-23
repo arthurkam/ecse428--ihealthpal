@@ -22,12 +22,12 @@
 			{{$shellfish = Allergy::where('uid',$id)->pluck('ShellFish')}}
 			{{$soya = Allergy::where('uid',$id)->pluck('Soya')}}
 			{{$wheat = Allergy::where('uid',$id)->pluck('Wheat')}}
-			{{$fibromyalgia = Disease::where('uid, $id)->pluck('Fibromyalgia')}}
-			{{$diabetes = Disease::where('uid, $id)->pluck('Diabetes')}}
-			{{$depression = Disease::where('uid, $id)->pluck('Depression')}}
-			{{$metabolic = Disease::where('uid, $id)->pluck('Metabolic syndrome')}}
-			{{$binge = Disease::where('uid, $id)->pluck('Binge-eating disorder')}}
-			{{$ADHD = Disease::where('uid, $id)->pluck('Adult ADHD')}}			
+			{{$fibromyalgia = Disease::where('uid', $id)->pluck('Fibromyalgia')}}
+			{{$diabetes = Disease::where('uid', $id)->pluck('Diabetes')}}
+			{{$depression = Disease::where('uid', $id)->pluck('Depression')}}
+			{{$metabolic = Disease::where('uid', $id)->pluck('Metabolic syndrome')}}
+			{{$binge = Disease::where('uid', $id)->pluck('Binge-eating disorder')}}
+			{{$ADHD = Disease::where('uid', $id)->pluck('Adult ADHD')}}			
 		</div>
 
 		<table class="table">
