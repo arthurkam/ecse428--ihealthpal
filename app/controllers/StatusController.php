@@ -77,7 +77,7 @@ class StatusController extends BaseController
 	{
 		if(Auth::check()) {
 			$id = Auth::user()->id;
-			$numOfUser = DB:table('diseases')->where('uid',$id)->count();
+			$numOfUser = DB::table('diseases')->where('uid',$id)->count();
 			if($numOfUser != 0) {
 				DB::table('diseases')->where('uid', $id)->update(array(
 					'Fibromyalgia' => Input::get('Fibromyalgia'), 
