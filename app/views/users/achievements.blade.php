@@ -50,7 +50,7 @@ Sorry you achievements are empty, please set a goal or something
         <td>
           <?
             $date = $achievement->completedDate;
-            if($achievement->completed!==1){
+            if($achievement->completed!=1){
               echo "not completed";
             }
             else{
@@ -156,24 +156,6 @@ Sorry you achievements are empty, please set a goal or something
 @stop
 @section('code')
 <script>
-(function($) {
-    $.extend({
-        doGet: function(url, params) {
-            document.location = url + '?' + $.param(params);
-        },
-        doPost: function(url, params) {
-            var $form = $("<form method='POST'>").attr("action", url);
-            $.each(params, function(name, value) {
-                $("<input type='hidden'>")
-                    .attr("name", name)
-                    .attr("value", value)
-                    .appendTo($form);
-            });
-            $form.appendTo("body");
-            $form.submit();
-        }
-    });
-})(jQuery);
 $(document).ready(function(){
   $("#edit").on("click",function(){
     //toggle to all page
