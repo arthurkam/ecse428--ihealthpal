@@ -69,7 +69,7 @@
 
 	<div class="tab-pane fade" id="Allergy">
 		<br>
-		{{Form::open()}}
+		{{Form::open(array('url' => 'allergy/set'))}}
 		{{Form::checkbox('eggs','eggs')}}
 		{{Form::label('eggs')}}
 		<br>
@@ -90,6 +90,8 @@
 		<br>
 		{{Form::checkbox('wheat','wheat')}}
 		{{Form::label('wheat')}}
+		<br>
+		{{Form::submit('Set Allergies!',array('class'=>'btn btn-success'));}}
 	</div>
 	<div class="tab-pane fade" id="Diseases">
 		<br>
