@@ -62,7 +62,7 @@
                     <td>{{Form::label('firstname', 'First Name : ')}}</td>
                     <td>{{Form::text('firstname', $firstname, $attributes = array('class' => 'form-control'))}}</td>
                     </tr>
-                  <tr>
+                  <tr>  
                     <td>{{Form::label('lastname', 'Last Name : ')}}</td>
                     <td>{{Form::text('lastname', $lastname, $attributes = array('class' => 'form-control'))}}</td>
                   </tr>
