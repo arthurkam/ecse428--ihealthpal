@@ -24,7 +24,10 @@ class UsersController extends BaseController
 		  $user->height =0;
 		  $user->weight =0;
 		  $user->save();
- 
+		  $id = $user->id;
+		  $allergy = new Allergy;
+		  $allergy->uid = $id;
+		  $allergy->save();
 		  return Redirect::to('/')->with('message', 'Thanks for registering!');
 	   
 	   } else {

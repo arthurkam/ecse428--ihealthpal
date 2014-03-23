@@ -80,12 +80,6 @@
 		</button>
 		@endif
 
-		@if($milk != NULL)
-		<button type="button" class="btn btn-default btn-lg">
-			<span class="glyphicon glyphicon-tag">{{$milk}}</span> 
-		</button>
-		@endif
-
 		@if($shellfish != NULL)
 		<button type="button" class="btn btn-default btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$shellfish}}</span> 
