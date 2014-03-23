@@ -22,6 +22,12 @@
 			{{$shellfish = Allergy::where('uid',$id)->pluck('ShellFish')}}
 			{{$soya = Allergy::where('uid',$id)->pluck('Soya')}}
 			{{$wheat = Allergy::where('uid',$id)->pluck('Wheat')}}
+			{{$fibromyalgia = Disease::where('uid, $id)->pluck('Fibromyalgia')}}
+			{{$diabetes = Disease::where('uid, $id)->pluck('Diabetes')}}
+			{{$depression = Disease::where('uid, $id)->pluck('Depression')}}
+			{{$metabolic = Disease::where('uid, $id)->pluck('Metabolic syndrome')}}
+			{{$binge = Disease::where('uid, $id)->pluck('Binge-eating disorder')}}
+			{{$ADHD = Disease::where('uid, $id)->pluck('Adult ADHD')}}			
 		</div>
 
 		<table class="table">
@@ -96,6 +102,42 @@
 		@if($wheat != NULL)
 		<button type="button" class="btn btn-default btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$wheat}}</span> 
+		</button>
+		@endif
+		
+		@if($fibromyalgia != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$fibromyalgia}}</span> 
+		</button>
+		@endif
+		
+		@if($diabetes != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$diabetes}}</span> 
+		</button>
+		@endif
+		
+		@if($depression != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$depression}}</span> 
+		</button>
+		@endif
+		
+		@if($metabolic != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$metabolic}}</span> 
+		</button>
+		@endif
+		
+		@if($binge != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$binge}}</span> 
+		</button>
+		@endif
+		
+		@if($ADHD != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$ADHD}}</span> 
 		</button>
 		@endif
 		
