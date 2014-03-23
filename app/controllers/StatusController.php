@@ -39,32 +39,28 @@ class StatusController extends BaseController
 	}
 	
 	public function setAllergy()
-	{
-		
-		$id = Auth::user()->id;
-		DB::table('allergies')
-            ->where('uid', $id)
-            ->update(array(
-            'Eggs' => Input::get('eggs'), 
-            'Fish' => Input::get('fish'),
-            'Milk' => Input::get('milk'),
-            'Peanuts' => Input::get('peanuts'),
-            'Shellfish' => Input::get('shellfish'),
-            'Soya' => Input::get('soya'),
-            'Wheat' => Input::get('wheat')
-            )
-        );
-		/*$allergy = Allergy::where('uid',$id);
-		//$allergy->uid = Auth::user()->id;
-		$allergy->Eggs = Input::get('eggs');
-		$allergy->Fish = Input::get('fish');
-		$allergy->Milk = Input::get('milk');
-		$allergy->Peanuts = Input::get('peanuts');
-		$allergy->Shellfish = Input::get('shellfish');
-		$allergy->Soya = Input::get('soya');
-		$allergy->Wheat = Input::get('wheat');
-		$allergy->update();
-		*/
+	{	
+		if(Auth::check())
+		{		
+			$id = Auth::user()->id;
+			$numOfUser = DB::table('allergies')->where('uid',$id)->count();
+			if($numOfUser != 0){
+				DB::table('allergies')->where('uid', $id)->update(array(
+		            'Eggs' => Input::get('eggs'), 
+		            'Fish' => Input::get('fish'),
+		            'Milk' => Input::get('milk'),
+		            'Peanuts' => Input::get('peanuts'),
+		            'Shellfish' => Input::get('shellfish'),
+		            'Soya' => Input::get('soya'),
+		            'Wheat' => Input::get('wheat')
+		            	)
+				);
+			}
+			else{
+				
+			}
 		return Redirect::to('status')->with('message', "You have set your allergies");
+		}
+		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 }

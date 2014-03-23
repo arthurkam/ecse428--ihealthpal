@@ -14,6 +14,7 @@
 		<br>
 		<div class="text-hide">
 			{{$id = Auth::user()->id}}
+			{{$numOfUser = DB::table('allergies')->where('uid',$id)->count();}}
 			{{$eggs = Allergy::where('uid',$id)->pluck('Eggs')}}
 			{{$fish = Allergy::where('uid',$id)->pluck('Fish')}}
 			{{$milk = Allergy::where('uid',$id)->pluck('Milk')}}
@@ -98,6 +99,7 @@
 		</button>
 		@endif
 
+		{{$numOfUser}}
 		
 	</div>
 
