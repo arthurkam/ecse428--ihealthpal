@@ -56,6 +56,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function allergies(){
 		return $this->hasMany('Allergy');
 	}
+
+	public function diseases(){
+		return $this->hasMany('Disease');
+	}
 	
 	public static $rules = array(
 		'firstname'=>'required|alpha|min:2',
