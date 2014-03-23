@@ -143,9 +143,10 @@
 		<br>
 		{{Form::submit('Set Allergies!',array('class'=>'btn btn-success'));}}
 	</div>
+	
 	<div class="tab-pane fade" id="Diseases">
 		<br>
-		{{Form::open()}}
+		{{Form::open(array('url' => 'disease/set'))}}
 		{{Form::checkbox('fibromyalgia','fibromyalgia')}}
 		{{Form::label('fibromyalgia')}}
 		<br>
@@ -164,8 +165,7 @@
 		{{Form::checkbox('adult ADHD','adult ADHD')}}
 		{{Form::label('adult ADHD')}}
 		<br>
-		{{Form::label('Others:')}}
-		{{Form::text('others')}}
+		{{Form::submit('Set Diseases!',array('class'=>'btn btn-success'));}}
 	</div>
 </div>
 @stop
