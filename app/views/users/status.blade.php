@@ -184,6 +184,7 @@
 		{{Form::label('wheat')}}
 		<br>
 		{{Form::submit('Set Allergies!',array('class'=>'btn btn-success'));}}
+		{{Form::close()}}
 	</div>
 	
 	<div class="tab-pane fade" id="Diseases">
@@ -198,16 +199,17 @@
 		{{Form::checkbox('depression','depression')}}
 		{{Form::label('depression')}}
 		<br>
-		{{Form::checkbox('metabolic syndrome','metabolic syndrome')}}
+		{{Form::checkbox('metabolic_syndrome','metabolic syndrome')}}
 		{{Form::label('metabolic syndrome')}}
 		<br>
-		{{Form::checkbox('binge-eating disorder','binge-eating disorder')}}
+		{{Form::checkbox('binge_eating_disorder','binge-eating disorder')}}
 		{{Form::label('binge-eating disorder')}}
 		<br>
-		{{Form::checkbox('adult ADHD','adult ADHD')}}
+		{{Form::checkbox('adult_ADHD','adult ADHD')}}
 		{{Form::label('adult ADHD')}}
 		<br>
 		{{Form::submit('Set Diseases!',array('class'=>'btn btn-success'));}}
+		{{Form::close()}}
 	</div>
 </div>
 @stop
