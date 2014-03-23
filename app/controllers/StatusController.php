@@ -57,7 +57,7 @@ class StatusController extends BaseController
 				);
 			}
 			else{
-				$allergy = new Aellergy;
+				$allergy = new Allergy;
 		 		$allergy->uid = Auth::user()->id;
 		 		$allergy->Eggs = Input::get('eggs');
 		 		$allergy->Fish = Input::get('fish');
