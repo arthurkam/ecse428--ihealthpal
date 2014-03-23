@@ -40,6 +40,7 @@ class StatusController extends BaseController
 	
 	public function setAllergy()
 	{
+		
 		$id = Auth::user()->id;
 		DB::table('allergies')
             ->where('uid', $id)
