@@ -25,9 +25,9 @@
 			{{$fibromyalgia = Disease::where('uid', $id)->pluck('Fibromyalgia')}}
 			{{$diabetes = Disease::where('uid', $id)->pluck('Diabetes')}}
 			{{$depression = Disease::where('uid', $id)->pluck('Depression')}}
-			{{$metabolic = Disease::where('uid', $id)->pluck('Metabolic syndrome')}}
-			{{$binge = Disease::where('uid', $id)->pluck('Binge-eating disorder')}}
-			{{$ADHD = Disease::where('uid', $id)->pluck('Adult ADHD')}}			
+			{{$metabolic = Disease::where('uid', $id)->pluck('Metabolic_Syndrome')}}
+			{{$binge = Disease::where('uid', $id)->pluck('Binge_eating_Disorder')}}
+			{{$ADHD = Disease::where('uid', $id)->pluck('Adult_ADHD')}}			
 		</div>
 
 		<table class="table">
