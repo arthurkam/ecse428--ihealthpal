@@ -57,7 +57,16 @@ class StatusController extends BaseController
 				);
 			}
 			else{
-				
+				$allergy = new Aellergy;
+		 		$allergy->uid = Auth::user()->id;
+		 		$allergy->Eggs = Input::get('eggs');
+		 		$allergy->Fish = Input::get('fish');
+		 		$allergy->Milk = Input::get('milk');
+		 		$allergy->Peanuts = Input::get('peanuts');
+		 		$allergy->Shellfish = Input::get('shellfish');
+		 		$allergy->Soya = Input::get('soya');
+		 		$allergy->Wheat = Input::get('wheat');
+		 		$allergy->save();
 			}
 		return Redirect::to('status')->with('message', "You have set your allergies");
 		}
