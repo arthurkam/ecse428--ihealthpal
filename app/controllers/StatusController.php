@@ -45,7 +45,8 @@ class StatusController extends BaseController
 			$id = Auth::user()->id;
 			$numOfUser = DB::table('allergies')->where('uid',$id)->count();
 			if($numOfUser != 0){
-				DB::table('allergies')->where('uid', $id)->update(array(
+				DB::table('allergies')->where('uid', $id)->update(
+				array(
 		            'Eggs' => Input::get('eggs'), 
 		            'Fish' => Input::get('fish'),
 		            'Milk' => Input::get('milk'),
@@ -53,7 +54,7 @@ class StatusController extends BaseController
 		            'Shellfish' => Input::get('shellfish'),
 		            'Soya' => Input::get('soya'),
 		            'Wheat' => Input::get('wheat')
-		            	)
+		            )
 				);
 			}
 			else{
@@ -79,25 +80,27 @@ class StatusController extends BaseController
 			$id = Auth::user()->id;
 			$numOfUser = DB::table('diseases')->where('uid',$id)->count();
 			if($numOfUser != 0) {
-				DB::table('diseases')->where('uid', $id)->update(array(
-					'Fibromyalgia' => Input::get('Fibromyalgia'), 
-					'Diabetes' => Input::get('Diabetes'),
-					'Depression' => Input::get('Depression'),
-					'Metabolic Syndrome' => Input::get('Metabolic Syndrome'),
-					'Binge-eating Disorder' => Input::get('Binge-eating Disorder'),
-					'Adult ADHD' => Input::get('Adult ADHD'),
+				DB::table('diseases')->where('uid', $id)->update(
+				array(
+					'Fibromyalgia' => Input::get('fibromyalgia'), 
+					'Diabetes' => Input::get('diabetes'),
+					'Depression' => Input::get('depression'),
+					'Metabolic_Syndrome' => Input::get('metabolic_syndrome'),
+					'Binge_eating_Disorder' => Input::get('binge_eating_disorder'),
+					'Adult_ADHD' => Input::get('adult_ADHD'),
 					)
 				);
 			}
 			else {
 				$disease = new Disease;
 				$disease->uid = Auth::user()->id;
-				$disease->Fibromyalgia = Input::get('Fibromyalgia');
-				$disease->Diabetes = Input::get('Diabetes');
-				$disease->Depression = Input::get('Depression');
-				$disease->Metabolic = Input::get('Metabolic syndrome');
-				$disease->Binge = Input::get('Binge-eating disorder');
-				$disease->ADHD = Input::get('Adult ADHD');
+				$disease->Fibromyalgia = Input::get('fibromyalgia');
+				$disease->Diabetes = Input::get('diabetes');
+				$disease->Depression = Input::get('depression');
+				$disease->Metabolic_Syndrome = Input::get('metabolic_syndrome');
+				$disease->Binge_eating_Disorder = Input::get('binge_eating_disorder');
+				$disease->Adult_ADHD = Input::get('adult_ADHD');
+				$disease->save();
 			}
 			return Redirect::to('status')->with('message', "You have set your diseases");
 		}
