@@ -98,8 +98,6 @@
 			<span class="glyphicon glyphicon-tag">{{$wheat}}</span> 
 		</button>
 		@endif
-
-		{{$numOfUser}}
 		
 	</div>
 
