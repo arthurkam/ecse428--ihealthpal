@@ -64,79 +64,82 @@
 		</table>
 		{{Form::close()}}
 		@if($eggs != NULL)
-		<button type="button" class="btn btn-danger btn-lg">
+		<button type="button" class="btn btn-warning btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$eggs}}</span> 
 		</button>
 		@endif
 
 		@if($fish != NULL)
-		<button type="button" class="btn btn-danger btn-lg">
+		<button type="button" class="btn btn-warning btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$fish}}</span> 
 		</button>
 		@endif
 		
 		@if($milk != NULL)
-		<button type="button" class="btn btn-danger btn-lg">
+		<button type="button" class="btn btn-warning btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$milk}}</span> 
 		</button>
 		@endif
 		
 		@if($peanuts != NULL)
-		<button type="button" class="btn btn-danger btn-lg">
+		<button type="button" class="btn btn-warning btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$peanuts}}</span> 
 		</button>
 		@endif
 
 		@if($shellfish != NULL)
-		<button type="button" class="btn btn-danger btn-lg">
+		<button type="button" class="btn btn-warning btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$shellfish}}</span> 
 		</button>
 		@endif
 
 		@if($soya != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-warning btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$soya}}</span> 
 		</button>
 		@endif
 
 		@if($wheat != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-warning btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$wheat}}</span> 
 		</button>
 		@endif
 		
+		<br>
+		<br>
+		
 		@if($fibromyalgia != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$fibromyalgia}}</span> 
 		</button>
 		@endif
 		
 		@if($diabetes != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$diabetes}}</span> 
 		</button>
 		@endif
 		
 		@if($depression != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$depression}}</span> 
 		</button>
 		@endif
 		
 		@if($metabolic != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$metabolic}}</span> 
 		</button>
 		@endif
 		
 		@if($binge != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$binge}}</span> 
 		</button>
 		@endif
 		
 		@if($ADHD != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$ADHD}}</span> 
 		</button>
 		@endif
@@ -190,23 +193,23 @@
 	<div class="tab-pane fade" id="Diseases">
 		<br>
 		{{Form::open(array('url' => 'disease/set'))}}
-		{{Form::checkbox('fibromyalgia','fibromyalgia')}}
-		{{Form::label('fibromyalgia')}}
+		{{Form::checkbox('fibromyalgia','Fibromyalgia')}}
+		{{Form::label('Fibromyalgia')}}
 		<br>
-		{{Form::checkbox('diabetes','diabetes')}}
-		{{Form::label('diabetes')}}
+		{{Form::checkbox('diabetes','Diabetes')}}
+		{{Form::label('Diabetes')}}
 		<br>
-		{{Form::checkbox('depression','depression')}}
-		{{Form::label('depression')}}
+		{{Form::checkbox('depression','Depression')}}
+		{{Form::label('Depression')}}
 		<br>
-		{{Form::checkbox('metabolic_syndrome','metabolic syndrome')}}
+		{{Form::checkbox('metabolic_syndrome','Metabolic Syndrome')}}
 		{{Form::label('metabolic syndrome')}}
 		<br>
-		{{Form::checkbox('binge_eating_disorder','binge-eating disorder')}}
+		{{Form::checkbox('binge_eating_disorder','Binge-eating Disorder')}}
 		{{Form::label('binge-eating disorder')}}
 		<br>
-		{{Form::checkbox('adult_ADHD','adult ADHD')}}
-		{{Form::label('adult ADHD')}}
+		{{Form::checkbox('adult_ADHD','Adult ADHD')}}
+		{{Form::label('Adult ADHD')}}
 		<br>
 		{{Form::submit('Set Diseases!',array('class'=>'btn btn-success'));}}
 		{{Form::close()}}
