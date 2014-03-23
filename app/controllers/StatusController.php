@@ -30,7 +30,9 @@ class StatusController extends BaseController
 			$user->weight = Input::get("weight");
 			$user->save();
 			$test = AchievementHelper::checkAchievements();
-
+			if(count($test)>0){
+				return Redirect::to('status')->with('message',"Congratulations! You have completed a goal!");
+			}
 			return Redirect::to('status');
 		}
 		return Redirect::to('/')->with('message', 'Please log in first!');

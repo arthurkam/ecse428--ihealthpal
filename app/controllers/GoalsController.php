@@ -66,6 +66,9 @@ class GoalsController extends BaseController
 			$achievement->missed = false;
 			$achievement->save();
 			$test = AchievementHelper::checkAchievements();
+			if(count($test)>0){
+				return Redirect::to('goals')->with('message',"Congratulations! You have completed a goal!");
+			}
 			return Redirect::to('goals');
 		}	
 		else if(Auth::check() && $validator->fails()){

@@ -4,17 +4,34 @@
 .hiddenEdit{
   display:none;
 }
+.attention{
+  background: whitesmoke;
+  padding: 10px;
+  margin-bottom: 17px;
+  border: solid 0.5em rgb(228, 228, 228);
+  border-radius: 1em;
+}
 </style>
-<h2>Achievements <span><a class="btn btn-danger"id="edit" a="#">edit</a></span></h2>
+<div class="">
+<h2>Achievements <span><a class="btn btn-danger btn-xs"id="edit" a="#">edit</a></span></h2>
+</div>
 @if(count($achievements)===0)
-Sorry you achievements are empty, please set a goal or something
+Sorry your achievement list is empty. Please set a goal in the goals page.
 @else
+  <div class="attention">
+  @if (isset($inProgress)==0 && $inProgress===null)
+   <h3>You don't have achievements that are in progress. Set a goal and challenge yourself!</h3>
+   @else
+   <h3>Your current weight is {{$tes =Auth::user()->weight}} Kg.</h3>
+   <h3>Your target weight is {{$inProgress->weight}} Kg.</h3>
+   <h3>You have {{number_format((strtotime($inProgress->eta)-time())/83600,0)}} days left.</h3>
+  @endif
+</div>
 <ul class="nav nav-tabs">
   <li class="active"><a href="#all" id="clickAll" data-toggle="tab">All</a></li>
   <li><a href="#completed" data-toggle="tab">Completed</a></li>
-  <li><a href="#inProgress" data-toggle="tab">In Progress</a></li>
+  <!-- <li><a href="#inProgress" data-toggle="tab">In Progress</a></li> -->
   <!-- <li><a href="#missed" data-toggle="tab">In Progress</a></li> -->
-
 </ul>
 
 <div class="tab-content">
@@ -42,10 +59,10 @@ Sorry you achievements are empty, please set a goal or something
             }
           ?> >
         <td>
-          {{$achievement->oWeight}} kg at {{$achievement->start_date}}
+          <strong>{{$achievement->oWeight}}</strong> kg at {{$achievement->start_date}}
         </td>
         <td>
-          {{$achievement->weight}} kg at {{$achievement->eta}}
+          <strong>{{$achievement->weight}}</strong> kg at {{$achievement->eta}}
         </td>
         <td>
           <?
@@ -72,7 +89,7 @@ Sorry you achievements are empty, please set a goal or something
     @endforeach
     </table>
     <div class="hiddenEdit">
-      <a id="save" href="#">save</a>
+      <a id="save" class="btn btn-success" href="#">save</a>
     </div>
   </div>
   <div class="tab-pane" id="completed">
@@ -94,35 +111,20 @@ Sorry you achievements are empty, please set a goal or something
       @foreach ($completed as $achievement)
       <tr>
           <td>
-            {{$achievement->oWeight}}
+            {{$achievement->oWeight}} kg
           </td>
           <td>
-            {{$achievement->weight}}
+            {{$achievement->weight}} kg
           </td>
           <td>
             <?
-              // $date = $achievement->completedDate;
-              //if($date==="0000-00-00 00:00:00"){
-              //  echo "not completed";
-              //}
-              //else{
                 echo $date;
-              //}
             ?>
 
           </td>
       </tr>
     @endforeach
     </table>
-    @endif
-  </div>
-  <div class="tab-pane" id="inProgress">
-    @if (isset($inProgress)==0 && $inProgress===null)
-    You don't have no achievements that are in progress. Set a goal for yourself!
-    @else
-    <h3>Your current weight is {{$tes =Auth::user()->weight}} Kg.</h3>
-    <h3>Your target weight is {{$inProgress->weight}} Kg.</h3>
-    <h3>You have {{number_format((strtotime($achievement->eta)-time())/83600,0)}} days left.</h3>
     @endif
   </div>
   <div class="tab-pane" id="missed">
