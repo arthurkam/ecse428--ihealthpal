@@ -58,31 +58,31 @@
 		</table>
 		{{Form::close()}}
 		@if($eggs != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$eggs}}</span> 
 		</button>
 		@endif
 
 		@if($fish != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$fish}}</span> 
 		</button>
 		@endif
 		
 		@if($milk != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$milk}}</span> 
 		</button>
 		@endif
 		
 		@if($peanuts != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$peanuts}}</span> 
 		</button>
 		@endif
 
 		@if($shellfish != NULL)
-		<button type="button" class="btn btn-default btn-lg">
+		<button type="button" class="btn btn-danger btn-lg">
 			<span class="glyphicon glyphicon-tag">{{$shellfish}}</span> 
 		</button>
 		@endif
