@@ -5,24 +5,33 @@
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
-  <li class="active"><a href="#massGain" data-toggle="tab">Mass Gain Meal Plan</a></li>
-  <li><a href="#weightLoss" data-toggle="tab">Weight Loss Meal Plan</a></li>
+  <li class="active"><a href="#massGain1" data-toggle="tab">Mass Gain Meal Plan 1</a></li>
+  <li><a href="#massGain2" data-toggle="tab">Mass Gain Meal Plan 2</a></li>
+  <li><a href="#weightLoss1" data-toggle="tab">Weight Loss Meal Plan 1</a></li>
+  <li><a href="#weightLoss2" data-toggle="tab">Weight Loss Meal Plan 2</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
 
-  <div class="tab-pane active" id="massGain">
+  <div class="tab-pane active" id="massGain1">
     <div class="row">
     ...
 	</div>
   </div>
   
-  <div class="tab-pane" id="weightLoss">
+  <div class="tab-pane active" id="massGain2">
+    <div class="row">
+    ...
+	</div>
+  </div>
+  
+  <! http://www.doctoroz.com/videos/7-day-dash-diet-meal-plan?page=2 >
+  <div class="tab-pane" id="weightLoss1">
   <div class="row">
 	  <div class="panel panel-default">
 	  <!-- Default panel contents -->
-	  <div class="panel-heading"><font size="5"><b>Weight Loss Meal Plan</b></font></div>
+	  <div class="panel-heading"><font size="5"><b>Weight Loss Meal Plan 1</b></font></div>
 	  <div class="panel-body">
 	    <p><font size="3">The overall goal of this meal plan is to lower your consumption of sodium, which aids in lowering your blood pressure. Since the diet focuses on eating the right foods with the right portions, it's also effective for short- and long-term weight loss</font></p>
 	  </div>
@@ -192,6 +201,145 @@
 	</div>
   </div>
 </div>
+
+
+<! http://chienna.wordpress.com/2012/03/01/extreme-korean-celebrity-diets/ >
+<div class="tab-pane" id="weightLoss2">
+  <div class="row">
+	  <div class="panel panel-default">
+	  <!-- Default panel contents -->
+	  <div class="panel-heading"><font size="5"><b>Weight Loss Meal Plan 2</b></font></div>
+	  <div class="panel-body">
+	    <p><font size="3">This is more intense weight-loss meal plan, called 'Danish Diet'. It it known to be a diet plan that is used at the Royal Danish Hospital. This meal plan is very strictly high-protein and low-hydrocarbon diet for 14 days. The majority of the diet plan is composed of animal protein and black coffee. Repeat the meal schedule below twice over two weeks.</font></p>
+	  </div>
+	
+	  <!-- Table -->
+	  <table class="table">
+	    <tr>
+	      <td width="50">     </td>
+		  <td width="100"><b>Day 1</b></td>
+		  <td width="100"><b>Day 2</b></td> 
+		  <td width="100"><b>Day 3</b></td>
+		  <td width="100"><b>Day 4</b></td>
+		  <td width="100"><b>Day 5</b></td>
+		  <td width="100"><b>Day 6</b></td>
+		  <td width="100"><b>Day 7</b></td>
+		</tr>
+		<tr>
+		  <td><b>Breakfast</b></td>
+		  <td>
+		  <li>3 Hard-boiled Eggs</li>
+		  <li>1 Grapefruit</li>
+		  <li>1 Banana or 1 Toast</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>1 Hard-boiled Egg</li>
+		  <li>1 Grapefruit</li>
+		  <li>Black Coffee</li></td> 
+		  <td>
+		  <li>1 Hard-boiled Egg</li>
+		  <li>1 Grapefruit</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>1 Hard-boiled Egg</li>
+		  <li>1 Grapefruit</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>1 Hard-boiled Egg</li>
+		  <li>1 Grapefruit</li>
+		  <li>1 Banana or 1 Toast</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>2 Hard-boiled Eggs</li>
+		  <li>1 Grapefruit</li>
+		  <li>1 Banana or 1 Toast</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>2 Hard-boiled Eggs</li>
+		  <li>1 Grapefruit</li>
+		  <li>Black Coffee</li></td>
+		</tr>
+		<tr>
+		  <td><b>Lunch</b></td>
+		  <td>
+		  <li>2 Hard-boiled Eggs</li>
+		  <li>1 Banana or 1 Toast</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>2 Hard-boiled Eggs</li>
+		  <li>1 Grapefruit</li>
+		  <li>1 Banana or 1 Toast</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>Vegetable Salad (Lettuce, Cucumber with Balsamic Vinegar of Lemon Dressing)</li>
+		  <li>1 Grapefruit</li>
+		  <li>1 Banana or 1 Toast</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>Vegetable Salad (Lettuce, Cucumber with Balsamic Vinegar of Lemon Dressing)</li>
+		  <li>1 Grapefruit</li>
+		  <li>1 Banana or 1 Toast</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>3 Hard-boiled Eggs</li>
+		  <li>Boiled Spinach</li>
+		  <li>1 Banana or 1 Toast</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>Fruit Salad (Cucumber, Lettuce, Apple, Strawberry, Banana)</li></td>
+		  <td>
+		  <li>1 Chicken Breast</li>
+		  <li>Celery</li>
+		  <li>Tomato</li>
+		  <li>1 Grapefruit</li>
+		  <li>Black Coffee</li></td>
+		</tr>
+		<tr>
+		  <td><b>Dinner</b></td>
+		  <td>
+		  <li>3 Hard-boiled Egg</li>
+		  <li>Vegetable Salad (Lettuce, Cucumber with Balsamic Vinegar of Lemon Dressing)</li>
+		  </td>
+		  <td>
+		  <li>Beef Steak 200g</li>
+		  <li>Vegetable Salad (Lettuce, Cucumber with Balsamic Vinegar of Lemon Dressing)</li>
+		  <li>Black Coffee</li>
+		  </td>
+		  <td>
+		  <li>1 Hard-boiled Egg</li>
+		  <li>1 Chicken Breast</li>
+		  <li>Black Coffee</li>
+		  </td>
+		  <td>
+		  <li>3 Hard-boiled Eggs</li>
+		  <li>Boiled Spinach</li>
+		  <li>Black Coffee</li>
+		  </td>
+		  <td>
+		  <li>1 Piece of White Fish</li>
+		  <li>Vegetable Salad (Lettuce, Cucumber with Balsamic Vinegar of Lemon Dressing)</li>
+		  <li>1 Banana or 1 Toast</li>
+		  <li>Black Coffee</li>
+		  </td>
+		  <td>
+		  <li>Beef Steak 200g</li>
+		  <li>Celery</li>
+		  <li>Tomato</li>
+		  <li>Black Coffee</li></td>
+		  <td>
+		  <li>1 Chicken Breast</li>
+		  <li>Tomato</li>
+		  <li>1 Grapefruit</li>
+		  <li>Steamed Cabbage</li>
+		  <li>Black Coffee</li>
+		  </td>
+		</tr>
+	  </table>
+	</div>
+  </div>
+</div>
+
+
 </div>
         
       
