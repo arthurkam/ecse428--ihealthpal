@@ -25,6 +25,10 @@
 @section('content')
 
 <h2>Exercises & Workout Routines</h2>
+<div class="text-hide">
+	{{$id = Auth::user()->id}}
+
+</div>
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
