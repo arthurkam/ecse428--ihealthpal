@@ -19,7 +19,7 @@
        </div>
         <div class="col-md-4">
           <h2>Share</h2>
-          <img src="/img/share_icon.png" alt"share" width="100" style="margin-bottom:15px;">
+          <img src="/img/share_icon2.png" alt"share" width="100" style="margin-bottom:15px;">
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
       </div>
