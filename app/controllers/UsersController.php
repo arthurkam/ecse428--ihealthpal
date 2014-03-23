@@ -28,6 +28,9 @@ class UsersController extends BaseController
 		  $allergy = new Allergy;
 		  $allergy->uid = $id;
 		  $allergy->save();
+		  $disease = new Disease;
+		  $disease->uid = $id;
+		  $disease->save();
 		  return Redirect::to('/')->with('message', 'Thanks for registering!');
 	   
 	   } else {

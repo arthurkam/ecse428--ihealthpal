@@ -93,6 +93,9 @@
 	
 	// Route to set allergy
 	Route::any('allergy/set', array('uses' => 'StatusController@setAllergy'));
+
+	// Route to set disease
+	Route::any('disease/set', array('uses' => 'StatusController@setDisease'));
 	
 	// Route to the Progress page, after login
 	Route::any('progress', array('uses' => 'ProgressController@showProgress'));
