@@ -63,4 +63,21 @@ class StatusController extends BaseController
 		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
+	
+	public function setDisease()
+	{
+		$id = Auth::user()->id;
+		DB::table('diseases')
+            ->where('uid', $id)
+            ->update(array(
+            'Fibromyalgia' => Input::get('Fibromyalgia'), 
+            'Diabetes' => Input::get('Diabetes'),
+            'Depression' => Input::get('Depression'),
+            'Metabolic Syndrome' => Input::get('Metabolic Syndrome'),
+            'Binge-eating Disorder' => Input::get('Binge-eating Disorder'),
+            'Adult ADHD' => Input::get('Adult ADHD'),
+            )
+        );
+		return Redirect::to('status')->with('message', "You have set your diseases");
+	}
 }
