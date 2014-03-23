@@ -59,7 +59,7 @@
 	// Route to Achievements page
 	Route::get('achievements', array('uses' => 'AchievementsController@showAchievements'));
 
-	Route::post ('achievements', array('uses' => 'AchievementsController@editAchievements'));
+	Route::post('achievements', array('uses' => 'AchievementsController@editAchievements'));
 
 	// Route to Exercise page
 	Route::any('exercises', array('uses' => 'ExercisesController@showExercises'));
@@ -90,6 +90,9 @@
 	
 	// Route to update status
 	Route::any('status/set', array('uses' => 'StatusController@setStatus'));
+	
+	// Route to set allergy
+	Route::any('allergy/set', array('uses' => 'StatusController@setAllergy'));
 	
 	// Route to the Progress page, after login
 	Route::any('progress', array('uses' => 'ProgressController@showProgress'));

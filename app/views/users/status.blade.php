@@ -14,6 +14,13 @@
 		<br>
 		<div class="text-hide">
 			{{$id = Auth::user()->id}}
+			{{$eggs = Allergy::where('uid',$id)->pluck('Eggs')}}
+			{{$fish = Allergy::where('uid',$id)->pluck('Fish')}}
+			{{$milk = Allergy::where('uid',$id)->pluck('Milk')}}
+			{{$peanuts = Allergy::where('uid',$id)->pluck('Peanuts')}}
+			{{$shellfish = Allergy::where('uid',$id)->pluck('ShellFish')}}
+			{{$soya = Allergy::where('uid',$id)->pluck('Soya')}}
+			{{$wheat = Allergy::where('uid',$id)->pluck('Wheat')}}
 		</div>
 
 		<table class="table">
@@ -49,6 +56,55 @@
 			</tr>
 		</table>
 		{{Form::close()}}
+		@if($eggs != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$eggs}}</span> 
+		</button>
+		@endif
+
+		@if($fish != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$fish}}</span> 
+		</button>
+		@endif
+		
+		@if($milk != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$milk}}</span> 
+		</button>
+		@endif
+		
+		@if($peanuts != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$peanuts}}</span> 
+		</button>
+		@endif
+
+		@if($milk != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$milk}}</span> 
+		</button>
+		@endif
+
+		@if($shellfish != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$shellfish}}</span> 
+		</button>
+		@endif
+
+		@if($soya != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$soya}}</span> 
+		</button>
+		@endif
+
+		@if($wheat != NULL)
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-tag">{{$wheat}}</span> 
+		</button>
+		@endif
+
+		
 	</div>
 
 	<div class="tab-pane fade" id="Add">
