@@ -8,7 +8,9 @@ class ExercisesController extends BaseController {
 		
 		if(Auth::check())
 		{
-			return View::make('users.exercises');
+			$uid = Auth::user()->id;
+			$exercises = DB::table('exercises')->where('uid',$uid)->get();
+			return View::make('users.exercises')->with('exercises',$exercises);	
 		}
 		
 		return Redirect::to('/')->with('message', 'Please log in first!');
