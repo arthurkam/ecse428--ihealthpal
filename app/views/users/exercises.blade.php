@@ -294,7 +294,7 @@
 		  <option>45-Degree Bench Press</option>
 		  <option>Inclined Bench Press</option>
 		  <option>Declined Press</option>
-		  <option>Declined Press</option>
+		  <option>Fly On Ball</option>
 		</select>		
 		<br>
 		<div class="form-group">

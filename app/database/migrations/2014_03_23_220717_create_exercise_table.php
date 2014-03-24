@@ -12,7 +12,15 @@ class CreateExerciseTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('exercises', function(Blueprint $table)
+		{
+			$table->integer('uid');
+			$table->string('exercise');
+			$table->double('weight');
+			$table->integer('sets');
+			$table->integer('reps');
+			$table->timestamps();
+		});	
 	}
 
 	/**
@@ -22,7 +30,7 @@ class CreateExerciseTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('exercises');
 	}
 
 }
