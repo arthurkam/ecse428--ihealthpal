@@ -27,13 +27,14 @@
 <h2>Exercises & Workout Routines</h2>
 <div class="text-hide">
 	{{$id = Auth::user()->id}}
-
+	
 </div>
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
-	<li class="active"><a href="#routines" data-toggle="tab">Routines</a></li>
-  <li><a href="#chest" data-toggle="tab">Chest</a></li>
+	<li class="active"><a href="#overview" data-toggle="tab">Overview</a></li> 
+	<li><a href="#routines" data-toggle="tab">Routines</a></li>
+	<li><a href="#chest" data-toggle="tab">Chest</a></li>
 	<li><a href="#back" data-toggle="tab">Back</a></li>
 	<li><a href="#arms" data-toggle="tab">Arms</a></li>
 	<li><a href="#legs" data-toggle="tab">Legs</a></li>
@@ -44,7 +45,12 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane fade in active" id="routines">
+	<div class="tab-pane fade in active" id="overview">
+		
+	</div>
+</div>
+<div class="tab-content">
+    <div class="tab-pane" id="routines">
         <!-- WORKOUT ROUTINES -->
         <div class="row">
           <!-- Mass Gain -->
@@ -280,6 +286,33 @@
               <img src="img/exercises/chest/fly_ball.jpg" width="150">
            </div>       
         </div>
+        <br>
+        {{Form::open()}}
+		<select class="form-control">
+		  <option>Bench Press</option>
+		  <option>Ball Bench Press</option>
+		  <option>45-Degree Bench Press</option>
+		  <option>Inclined Bench Press</option>
+		  <option>Declined Press</option>
+		  <option>Declined Press</option>
+		</select>		
+		<br>
+		<div class="form-group">
+			  <label for="Weight" class="col-sm-2 control-label">Weight</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" id="weight" placeholder="Number" min="1">
+			  </div>
+			  <label for="Sets" class="col-sm-2 control-label">Sets</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" id="sets" placeholder="Number" min="1">
+			  </div>
+			  <label for="Reps" class="col-sm-2 control-label">Reps</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" id="reps" placeholder="Number" min="1">
+			  </div>
+		</div>
+		{{Form::submit('Save', array('class' => 'btn btn-success'))}}
+        {{Form::close()}}
     </div>
     <div class="tab-pane fade" id="back">
     	<!-- BACK -->
