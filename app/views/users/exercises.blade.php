@@ -25,11 +25,7 @@
 @section('content')
 
 <h2>Exercises & Workout Routines</h2>
-<div class="text-hide">
-	{{$id = Auth::user()->id}}
-	
-</div>
-
+<div class="tab-content">
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
 	<li class="active"><a href="#overview" data-toggle="tab">Overview</a></li> 
@@ -44,7 +40,7 @@
 </ul>
 
 <!-- Tab panes -->
-<div class="tab-content">
+
 	<div class="tab-pane fade in active" id="overview">
 		<table class="table">
 	 	<tr class="info">
@@ -52,7 +48,7 @@
 		 	<td>Weight</td>
 		 	<td>Sets</td>
 		 	<td>Reps</td>
-		 	<td>Start Date</td>
+		 	<td>Finish Date</td>
 	 	</tr>
 
 		@foreach($exercises as $key => $value)
@@ -67,8 +63,7 @@
   	
 		</table>
 	</div>
-</div>
-<div class="tab-content">
+
     <div class="tab-pane" id="routines">
         <!-- WORKOUT ROUTINES -->
         <div class="row">
