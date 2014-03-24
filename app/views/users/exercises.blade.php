@@ -288,7 +288,7 @@
         </div>
         <br>
         {{Form::open(array('url' => 'exercises/save'))}}
-		<select class="form-control">
+		<select class="form-control" name="exercise">
 		  <option>Bench Press</option>
 		  <option>Ball Bench Press</option>
 		  <option>45-Degree Bench Press</option>
@@ -300,15 +300,15 @@
 		<div class="form-group">
 			  <label for="Weight" class="col-sm-2 control-label">Weight</label>
 			  <div class="col-sm-10">
-				  <input type="number" class="form-control" id="weight" placeholder="Number" min="1">
+				  <input type="number" class="form-control" name="weight" placeholder="Number" min="1">
 			  </div>
 			  <label for="Sets" class="col-sm-2 control-label">Sets</label>
 			  <div class="col-sm-10">
-				  <input type="number" class="form-control" id="sets" placeholder="Number" min="1">
+				  <input type="number" class="form-control" name="sets" placeholder="Number" min="1">
 			  </div>
 			  <label for="Reps" class="col-sm-2 control-label">Reps</label>
 			  <div class="col-sm-10">
-				  <input type="number" class="form-control" id="reps" placeholder="Number" min="1">
+				  <input type="number" class="form-control" name="reps" placeholder="Number" min="1">
 			  </div>
 		</div>
 		{{Form::submit('Save', array('class' => 'btn btn-success'))}}
