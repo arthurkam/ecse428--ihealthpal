@@ -287,7 +287,7 @@
            </div>       
         </div>
         <br>
-        {{Form::open()}}
+        {{Form::open(array('url' => 'exercises/save'))}}
 		<select class="form-control">
 		  <option>Bench Press</option>
 		  <option>Ball Bench Press</option>

@@ -64,6 +64,9 @@
 	// Route to Exercise page
 	Route::any('exercises', array('uses' => 'ExercisesController@showExercises'));
 	
+	// Route to save exercise
+	Route::any('exercises/save', array('uses' =>'ExercisesController@saveExercises'));
+	
 	// Route to Meal Plan page
 	Route::any('mealPlan', array('uses' => 'mealPlanController@showMealPlan'));
 
