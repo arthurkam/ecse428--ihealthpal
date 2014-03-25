@@ -343,7 +343,30 @@
               <p style="margin:0; padding:0;">Lat Pull-Down</p>                                                       
               <img src="img/exercises/back/lat_pull_down.jpg" width="150">
            </div> 
-        </div>         
+        </div>
+        {{Form::open(array('url' => 'exercises/save'))}}
+		<select class="form-control" name="exercise">
+		  <option>Rowing</option>
+		  <option>Inverted Fly</option>
+		  <option>Lat Pull-Down</option>
+		</select>		
+		<br>
+		<div class="form-group">
+			  <label for="Weight" class="col-sm-2 control-label">Weight</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="weight" placeholder="Number" min="1">
+			  </div>
+			  <label for="Sets" class="col-sm-2 control-label">Sets</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="sets" placeholder="Number" min="1">
+			  </div>
+			  <label for="Reps" class="col-sm-2 control-label">Reps</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="reps" placeholder="Number" min="1">
+			  </div>
+		</div>
+		{{Form::submit('Save', array('class' => 'btn btn-success'))}}
+        {{Form::close()}}
     </div>
     <div class="tab-pane fade" id="arms">
     	<!-- ARMS -->
@@ -374,7 +397,34 @@
               <p style="margin:0; padding:0;">Arm Extensions On Machine</p>                                                       
               <img src="img/exercises/arms/arm_extensions_machine.jpg" width="150">
            </div>       
-        </div>        
+        </div>
+        {{Form::open(array('url' => 'exercises/save'))}}
+		<select class="form-control" name="exercise">
+		  <option>Bent-Over Biceps Curl</option>
+		  <option>Biceps Military Press</option>
+		  <option>Ball Biceps</option>
+		  <option>Triceps On Bench</option>
+		  <option>Triceps Extension</option>
+		  <option>Arm Extensions On Machine</option>
+		</select>		
+		<br>
+		<div class="form-group">
+			  <label for="Weight" class="col-sm-2 control-label">Weight</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="weight" placeholder="Number" min="1">
+			  </div>
+			  <label for="Sets" class="col-sm-2 control-label">Sets</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="sets" placeholder="Number" min="1">
+			  </div>
+			  <label for="Reps" class="col-sm-2 control-label">Reps</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="reps" placeholder="Number" min="1">
+			  </div>
+		</div>
+		{{Form::submit('Save', array('class' => 'btn btn-success'))}}
+        {{Form::close()}}
+        
     </div>
     <div class="tab-pane fade" id="legs">
     	<!-- LEGS -->
@@ -405,7 +455,33 @@
               <p style="margin:0; padding:0;">Seated Adductors</p>                                                       
               <img src="img/exercises/legs/seated_adductors.jpg" width="150">
            </div>       
-        </div>        
+        </div> 
+        {{Form::open(array('url' => 'exercises/save'))}}
+		<select class="form-control" name="exercise">
+		  <option>Squat</option>
+		  <option>Dead Lift</option>
+		  <option>Leg Press</option>
+		  <option>Leg Extensions</option>
+		  <option>Seated Abductors</option>
+		  <option>Seated Adductors</option>
+		</select>		
+		<br>
+		<div class="form-group">
+			  <label for="Weight" class="col-sm-2 control-label">Weight</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="weight" placeholder="Number" min="1">
+			  </div>
+			  <label for="Sets" class="col-sm-2 control-label">Sets</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="sets" placeholder="Number" min="1">
+			  </div>
+			  <label for="Reps" class="col-sm-2 control-label">Reps</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="reps" placeholder="Number" min="1">
+			  </div>
+		</div>
+		{{Form::submit('Save', array('class' => 'btn btn-success'))}}
+        {{Form::close()}}
     </div>
     <div class="tab-pane fade" id="abs">
     	<!-- ABS -->
