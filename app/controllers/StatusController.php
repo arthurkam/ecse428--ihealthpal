@@ -17,23 +17,37 @@ class StatusController extends BaseController
 	{
 		if(Auth::check())
 		{
-			$status = new Status;
-			$status->id = Auth::user()->id;
-			$status->weight = Input::get('weight');
-			$status->weight_unit = Input::get('weight_unit');
-			$status->height = Input::get('height');
-			$status->height_unit = Input::get('height_unit');
-			$status->save();
-
-			$user = Auth::user();
-			$user->height = Input::get('height');
-			$user->weight = Input::get("weight");
-			$user->save();
-			$test = AchievementHelper::checkAchievements();
-			if(count($test)>0){
-				return Redirect::to('status')->with('message',"Congratulations! You have completed a goal!");
+			$validator = Validator::make(
+				array(
+					'weight' => Input::get('weight'),
+					'height' => Input::get('height')
+				),
+				array(
+					'weight' => 'required|Numeric|min:1',
+					'height' => 'required|Numeric|min:1'
+				)
+			);
+			if($validator->passes()){
+				
+				$status = new Status;
+				$status->id = Auth::user()->id;
+				$status->weight = Input::get('weight');
+				$status->weight_unit = Input::get('weight_unit');
+				$status->height = Input::get('height');
+				$status->height_unit = Input::get('height_unit');
+				$status->save();
+	
+				$user = Auth::user();
+				$user->height = Input::get('height');
+				$user->weight = Input::get("weight");
+				$user->save();
+				$test = AchievementHelper::checkAchievements();
+				if(count($test)>0){
+					return Redirect::to('status')->with('message',"Congratulations! You have completed a goal!");
+				}
+				return Redirect::to('status');
 			}
-			return Redirect::to('status');
+			return Redirect::to('goals')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();		
 		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
