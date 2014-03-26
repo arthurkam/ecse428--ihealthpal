@@ -40,31 +40,7 @@
 </ul>
 
 <!-- Tab panes -->
-
-	<div class="tab-pane fade in active" id="overview">
-		<table class="table">
-	 	<tr class="info">
-		 	<td>Exercise type</td>
-		 	<td>Weight</td>
-		 	<td>Sets</td>
-		 	<td>Reps</td>
-		 	<td>Finish Date</td>
-	 	</tr>
-
-		@foreach($exercises as $key => $value)
-  		<tr class = "success">
-	  		<td>{{{$value->exercise}}}</td>
-	  		<td>{{{$value->weight}}}</td>
-	  		<td>{{{$value->sets}}}</td>
-	  		<td>{{{$value->reps}}}</td>
-	  		<td>{{{$value->created_at}}}</td>
-  		</tr>
-  		@endforeach
-  	
-		</table>
-	</div>
-
-    <div class="tab-pane" id="routines">
+    <div class="tab-pane fade in active" id="routines">
         <!-- WORKOUT ROUTINES -->
         <div class="row">
           <!-- Mass Gain -->
@@ -623,6 +599,28 @@
         {{Form::close()}}
  
     </div>
+    <div class="tab-pane" id="overview">
+    <table class="table">
+    <tr class="info">
+      <td>Exercise type</td>
+      <td>Weight</td>
+      <td>Sets</td>
+      <td>Reps</td>
+      <td>Finish Date</td>
+    </tr>
+
+    @foreach($exercises as $key => $value)
+      <tr class = "success">
+        <td>{{{$value->exercise}}}</td>
+        <td>{{{$value->weight}}}</td>
+        <td>{{{$value->sets}}}</td>
+        <td>{{{$value->reps}}}</td>
+        <td>{{{$value->created_at}}}</td>
+      </tr>
+      @endforeach
+    
+    </table>
+  </div>
 </div>
 
 
