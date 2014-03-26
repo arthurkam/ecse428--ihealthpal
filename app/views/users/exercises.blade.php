@@ -605,10 +605,6 @@
  
     </div>
     <div class="tab-pane" id="overview">
-    
-    <button type="button" onclick="printSummary()" class="btn btn-default">
-      <span class="glyphicon glyphicon-print"></span>&nbsp;Print Summary
-    </button>
 
     <table class="table">
     <tr class="info">
@@ -630,6 +626,10 @@
       @endforeach
     
     </table>
+
+    <button onclick="printSummary()" class="btn btn-default">
+      <span class="glyphicon glyphicon-print"></span>&nbsp;Print Summary
+    </button>
   </div>
 </div>
 
