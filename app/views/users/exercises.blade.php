@@ -631,7 +631,7 @@
       <span class="glyphicon glyphicon-print"></span>&nbsp;Print Summary
     </button>
     {{Form::open(array('url' => 'exercises/delete'))}}
-    {{Form::submit('Delete', array('class' => 'btn btn-danger'))}}
+    {{Form::submit('Delete Exercises', array('class' => 'btn btn-danger'))}}
     {{Form::close()}}
 
   </div>
