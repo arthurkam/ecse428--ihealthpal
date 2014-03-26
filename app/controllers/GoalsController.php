@@ -29,8 +29,8 @@ class GoalsController extends BaseController
 				'time_interval'=>Input::get('time_interval'),			
 			),
 			array(
-				'time_interval'=>'required|integer',
-				'weight' => 'required|integer',
+				'time_interval'=>'required|integer|min:1',
+				'weight' => 'required|integer|min:1',
 			)
 		);
 		if(Auth::check() && $validator->passes())
