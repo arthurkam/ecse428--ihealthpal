@@ -5,6 +5,11 @@
     <style type="text/css">
         .ui-helper-hidden-accessible { display:none; }
     </style>
+    <script>
+    printSummary(){
+      window.print();
+    }
+    </script>
 @stop
 
 @section('content') 
@@ -55,6 +60,10 @@
             </tr>
           @endforeach
         </table>
+
+        <button type="button" onclick="printSummary()" class="btn btn-default">
+          <span class="glyphicon glyphicon-print"></span>&nbsp;Print Summary
+        </button>
       </div>
 
       <div class="tab-pane fade" id="logFood">

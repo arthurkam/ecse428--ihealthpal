@@ -20,6 +20,11 @@
                     width: 400px;
                   }
     </style>
+    <script>
+      printSummary(){
+        window.print();
+      }
+    </script>
 @stop
 
 @section('content')
@@ -600,6 +605,11 @@
  
     </div>
     <div class="tab-pane" id="overview">
+    
+    <button type="button" onclick="printSummary()" class="btn btn-default">
+      <span class="glyphicon glyphicon-print"></span>&nbsp;Print Summary
+    </button>
+
     <table class="table">
     <tr class="info">
       <td>Exercise type</td>
