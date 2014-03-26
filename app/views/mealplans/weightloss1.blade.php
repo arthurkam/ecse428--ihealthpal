@@ -1,5 +1,5 @@
   <! http://www.doctoroz.com/videos/7-day-dash-diet-meal-plan?page=2 >
-  <div class="tab-pane" id="weightLoss1">
+  <div class="tab-pane <?if (isset($active) && $active){echo "active";}?>" id="weightLoss1">
   <div class="row">
       <div class="panel panel-default">
       <!-- Default panel contents -->

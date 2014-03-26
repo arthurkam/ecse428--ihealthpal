@@ -41,8 +41,8 @@
      	</ul>
      	<!-- Tab panes -->
      	<div class="tab-content">
-  @include('mealplans.weightloss1')
-  @include('mealplans.weightloss2')
+        @include('mealplans.weightloss1',array("active"=>true))
+            @include('mealplans.weightloss2')
      	</div> 
     @endif
 @endif
