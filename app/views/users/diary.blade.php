@@ -56,7 +56,7 @@
           @endforeach
         </table>
 
-        <button type="button" onclick="printSummary()" class="btn btn-default">
+        <button type="button" id="printPage" class="btn btn-default">
           <span class="glyphicon glyphicon-print"></span>&nbsp;Print Summary
         </button>
       </div>
@@ -158,8 +158,12 @@
     </script>
 
     <script>
-      printSummary(){
+    $(document).ready(function(){
+      $("#printPage").on('click',function(){
         window.print();
-      }
+        return false;
+      })
+    })
+
     </script>
 @stop

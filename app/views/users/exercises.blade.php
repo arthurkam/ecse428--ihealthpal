@@ -622,7 +622,7 @@
     
     </table>
 
-    <button onclick="printSummary()" class="btn btn-default">
+    <button  id="printPage" class="btn btn-default">
       <span class="glyphicon glyphicon-print"></span>&nbsp;Print Summary
     </button>
     <br />
@@ -638,8 +638,12 @@
 
 @section('code')
     <script>
-      printSummary(){
+    $(document).ready(function(){
+      $("#printPage").on('click',function(){
         window.print();
-      }
+        return false;
+      })
+    })
+
     </script>
 @stop
