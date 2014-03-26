@@ -56,7 +56,7 @@ class ExercisesController extends BaseController {
 		if(Auth::check())
 		{
 			$uid = Auth::user()->id;
-			DB::table('users')->where('uid', $uid)->delete();
+			DB::table('exercises')->where('uid', $uid)->delete();
 			$exercises = DB::table('exercises')->where('uid',$uid)->get();
 			return View::make('users.exercises')->with('exercises',$exercises);	
 		}
