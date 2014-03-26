@@ -33,8 +33,13 @@ class GoalsController extends BaseController
 				'weight' => 'required|integer|min:1',
 			)
 		);
-		if(Auth::check() && $validator->passes())
+		if(Auth::check() && $validator->passes() && Auth::user()->weight!=0)
 		{
+
+			if(Input::get('goal_type')==="Lose" && Auth::user()->weight+-1*Input::get('weight'<=0)){
+				return Redirect::to('goals')->with('message', 'Please set a valid and positive goal!');
+
+			}
 			$goal = new Goal;
 			$goal->uid = Auth::user()->id;
 			$goal->goal_type = Input::get('goal_type');
@@ -74,6 +79,9 @@ class GoalsController extends BaseController
 		else if(Auth::check() && $validator->fails()){
 			return Redirect::to('goals')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
 		}
+		else if(Auth::user()->weight==0){			
+			return Redirect::to('goals')->with('message', 'Please update your current weight in the system before setting goals.');
+}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
 }
