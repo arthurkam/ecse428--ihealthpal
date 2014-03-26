@@ -9,9 +9,13 @@ class GoalsController extends BaseController
 		
 		if(Auth::check())
 		{
+
 			$id = Auth::user()->id;
 			$goals = Goal::where('uid', $id)->get();
-  			
+			if(Auth::user()->weight==0){
+				Session::flash('message', 'Please a weight in our systems first!');
+
+			}
   			return View::make('users.goals')->with('goals',$goals);	
 			
 		}
