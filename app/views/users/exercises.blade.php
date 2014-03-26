@@ -20,11 +20,6 @@
                     width: 400px;
                   }
     </style>
-    <script>
-      printSummary(){
-        window.print();
-      }
-    </script>
 @stop
 
 @section('content')
@@ -639,4 +634,12 @@
 </div>
 
 
+@stop
+
+@section('code')
+    <script>
+      printSummary(){
+        window.print();
+      }
+    </script>
 @stop

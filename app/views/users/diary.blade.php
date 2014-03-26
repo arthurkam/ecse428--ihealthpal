@@ -5,11 +5,6 @@
     <style type="text/css">
         .ui-helper-hidden-accessible { display:none; }
     </style>
-    <script>
-    printSummary(){
-      window.print();
-    }
-    </script>
 @stop
 
 @section('content') 
@@ -160,5 +155,11 @@
         });
         $('#food').first().focus();
       });
+    </script>
+
+    <script>
+      printSummary(){
+        window.print();
+      }
     </script>
 @stop
