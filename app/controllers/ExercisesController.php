@@ -48,5 +48,20 @@ class ExercisesController extends BaseController {
 		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
+
+	public function deleteExercises()
+	{
+		Session::regenerate();
+		
+		if(Auth::check())
+		{
+			$uid = Auth::user()->id;
+			$exercises = DB::table('exercises')->where('uid',$uid)->get();
+			$exercises->delete();
+			return View::make('users.exercises')->with('exercises',$exercises);	
+		}
+		
+		return Redirect::to('/')->with('message', 'Please log in first!');
+	}
 }
 ?>
