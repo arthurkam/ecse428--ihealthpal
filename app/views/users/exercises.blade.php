@@ -630,6 +630,7 @@
     <button onclick="printSummary()" class="btn btn-default">
       <span class="glyphicon glyphicon-print"></span>&nbsp;Print Summary
     </button>
+    <br />
     {{Form::open(array('url' => 'exercises/delete'))}}
     {{Form::submit('Delete Exercises', array('class' => 'btn btn-danger'))}}
     {{Form::close()}}
