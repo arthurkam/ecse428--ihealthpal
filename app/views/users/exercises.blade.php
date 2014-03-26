@@ -28,8 +28,7 @@
 <div class="tab-content">
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
-	<li class="active"><a href="#overview" data-toggle="tab">Overview</a></li> 
-	<li><a href="#routines" data-toggle="tab">Routines</a></li>
+	<li class="active"><a href="#routines" data-toggle="tab">Routines</a></li> 
 	<li><a href="#chest" data-toggle="tab">Chest</a></li>
 	<li><a href="#back" data-toggle="tab">Back</a></li>
 	<li><a href="#arms" data-toggle="tab">Arms</a></li>
@@ -37,6 +36,7 @@
 	<li><a href="#abs" data-toggle="tab">Abs</a></li>
   <li><a href="#cardio" data-toggle="tab">Cardio</a></li>
   <li><a href="#stretching" data-toggle="tab">Stretching</a></li>
+  <li><a href="#overview" data-toggle="tab">My Workout</a></li>
 </ul>
 
 <!-- Tab panes -->
