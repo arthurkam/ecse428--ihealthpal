@@ -498,7 +498,31 @@
               <p style="margin:0; padding:0;">Plank On Elbows</p>                                                       
               <img src="img/exercises/abs/plank_elbows.jpg" width="150">
            </div> 
-        </div>                 
+        </div> 
+        {{Form::open(array('url' => 'exercises/save'))}}
+		<select class="form-control" name="exercise">
+		  <option>Crunch</option>
+		  <option>Hips Lifts</option>
+		  <option>Plank On Elbows</option>
+		</select>		
+		<br>
+		<div class="form-group">
+			  <label for="Weight" class="col-sm-2 control-label">Weight</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="weight" placeholder="Number" min="1">
+			  </div>
+			  <label for="Sets" class="col-sm-2 control-label">Sets</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="sets" placeholder="Number" min="1">
+			  </div>
+			  <label for="Reps" class="col-sm-2 control-label">Reps</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="reps" placeholder="Number" min="1">
+			  </div>
+		</div>
+		{{Form::submit('Save', array('class' => 'btn btn-success'))}}
+        {{Form::close()}}
+                
     </div>
     <div class="tab-pane fade" id="cardio">
         <!-- CARDIO -->
@@ -515,7 +539,31 @@
               <p style="margin:0; padding:0;">Elliptical Trainer</p>                                                       
               <img src="img/exercises/cardio/elliptic.jpg" width="150">
            </div> 
-        </div>  
+        </div> 
+        {{Form::open(array('url' => 'exercises/save'))}}
+		<select class="form-control" name="exercise">
+		  <option>Biking</option>
+		  <option>Running</option>
+		  <option>Elliptical Trainer</option>
+		</select>		
+		<br>
+		<div class="form-group">
+			  <label for="Weight" class="col-sm-2 control-label">Weight</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="weight" placeholder="Number" min="1">
+			  </div>
+			  <label for="Sets" class="col-sm-2 control-label">Sets</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="sets" placeholder="Number" min="1">
+			  </div>
+			  <label for="Reps" class="col-sm-2 control-label">Reps</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="reps" placeholder="Number" min="1">
+			  </div>
+		</div>
+		{{Form::submit('Save', array('class' => 'btn btn-success'))}}
+        {{Form::close()}}
+ 
     </div>
     <div class="tab-pane fade" id="stretching">
         <!-- STRETCHING -->
@@ -547,6 +595,33 @@
               <img src="img/exercises/stretching/triceps_stretching.jpg" width="150">
            </div> 
         </div> 
+        {{Form::open(array('url' => 'exercises/save'))}}
+		<select class="form-control" name="exercise">
+		  <option>Adductors Stretching</option>
+		  <option>Back Stretching</option>
+		  <option>Oblique Stretching</option>
+		  <option>Pectoral Stretching</option>
+		  <option>Shoulder Capsule Stretching</option>
+		  <option>Triceps Stretching</option>
+		</select>		
+		<br>
+		<div class="form-group">
+			  <label for="Weight" class="col-sm-2 control-label">Weight</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="weight" placeholder="Number" min="1">
+			  </div>
+			  <label for="Sets" class="col-sm-2 control-label">Sets</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="sets" placeholder="Number" min="1">
+			  </div>
+			  <label for="Reps" class="col-sm-2 control-label">Reps</label>
+			  <div class="col-sm-10">
+				  <input type="number" class="form-control" name="reps" placeholder="Number" min="1">
+			  </div>
+		</div>
+		{{Form::submit('Save', array('class' => 'btn btn-success'))}}
+        {{Form::close()}}
+ 
     </div>
 </div>
 
