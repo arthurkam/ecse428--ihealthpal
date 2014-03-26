@@ -47,7 +47,7 @@ class StatusController extends BaseController
 				}
 				return Redirect::to('status');
 			}
-			return Redirect::to('goals')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();		
+			return Redirect::to('status')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();		
 		}
 		return Redirect::to('/')->with('message', 'Please log in first!');
 	}
