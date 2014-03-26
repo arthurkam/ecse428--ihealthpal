@@ -9,7 +9,6 @@
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
                 <li><a href="#edit" data-toggle="tab">Edit</a></li>
-                <li><a href="#share" data-toggle="tab">Share</a></li>
                 <li><a href="#delete" data-toggle="tab">Delete</a></li>
               </ul>
               <div class="text-hide">
@@ -87,12 +86,6 @@
                   <!--button type="submit" class="btn btn-primary">
                     <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Save Changes
                   </button-->
-                </div>
-                <div class="tab-pane fade" id="share">
-                  <br />
-                  <p>TO BE COMPLETED</p>
-                  <p>Add some of the following here: <br />
-                  Facebook / Twitter / LinkedIn / GooglePlus</p>
                 </div>
                 <div class="tab-pane fade" id="delete">
                   <br />
